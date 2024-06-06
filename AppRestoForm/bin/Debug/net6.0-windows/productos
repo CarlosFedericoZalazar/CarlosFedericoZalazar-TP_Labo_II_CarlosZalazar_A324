@@ -1,0 +1,32 @@
+[
+  {
+    "Nombre": "Coca Cola",
+    "Cantidad": 10,
+    "Precio": 0,
+    "Proveedor": "Coca"
+  },
+  {
+    "Nombre": "Coca Cola",
+    "Cantidad": 10,
+    "Precio": 0,
+    "Proveedor": "Coca"
+  },
+  {
+    "Nombre": "Vino",
+    "Cantidad": 30,
+    "Precio": 0,
+    "Proveedor": "Chola"
+  },
+  {
+    "Nombre": "Milanesa",
+    "Cantidad": 29,
+    "Precio": 0,
+    "Proveedor": "La granja"
+  },
+  {
+    "Nombre": "Milanesa",
+    "Cantidad": 29,
+    "Precio": 0,
+    "Proveedor": "La granja"
+  }
+]
