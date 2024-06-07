@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppRestoForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+519d1772e015c0aa7cd1630db4222649377aea26")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppRestoForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppRestoForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

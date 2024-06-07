@@ -41,7 +41,6 @@
             rbSi = new RadioButton();
             btnAceptar = new Button();
             btnCancelar = new Button();
-            button1 = new Button();
             btnAddProveedor = new Button();
             cbProveedor = new ComboBox();
             label1 = new Label();
@@ -168,15 +167,7 @@
             btnCancelar.TabIndex = 11;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(147, 365);
-            button1.Name = "button1";
-            button1.Size = new Size(186, 36);
-            button1.TabIndex = 12;
-            button1.Text = "GRABAR";
-            button1.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAddProveedor
             // 
@@ -221,7 +212,6 @@
             Controls.Add(label1);
             Controls.Add(cbProveedor);
             Controls.Add(btnAddProveedor);
-            Controls.Add(button1);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(gbAlcohol);
@@ -262,7 +252,6 @@
         private RadioButton rbSi;
         private Button btnAceptar;
         private Button btnCancelar;
-        private Button button1;
         private Button btnAddProveedor;
         private ComboBox cbProveedor;
         private Label label1;

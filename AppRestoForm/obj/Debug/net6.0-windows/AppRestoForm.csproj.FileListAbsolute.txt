@@ -25,18 +25,22 @@ C:\Users\Usuario\Desktop\TpLaboratorio II\AppRestoForm\obj\Debug\net6.0-windows\
 C:\Users\Usuario\Desktop\TpLaboratorio II\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.csproj.CopyComplete
 C:\Users\Usuario\Desktop\TpLaboratorio II\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.StockForm.resources
 C:\Users\Usuario\Desktop\TpLaboratorio II\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormStockDisponible.resources
+C:\Users\Usuario\Desktop\TP LABORATORIO\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.dll
+C:\Users\Usuario\Desktop\TP LABORATORIO\AppRestoForm\obj\Debug\net6.0-windows\refint\AppRestoForm.dll
+C:\Users\Usuario\Desktop\TP LABORATORIO\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.csproj.AssemblyReference.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormPrincipal.resources
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.StockForm.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormsSalon.FormMesa.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormsSalon.FormSalon.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormAddProveedor.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormHacerPedido.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormStockDisponible.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.csproj.GenerateResource.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.AssemblyInfoInputs.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.AssemblyInfo.cs
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.dll
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\refint\AppRestoForm.dll
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.pdb
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.sourcelink.json
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-windows\RestoApp.deps.json
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-windows\RestoApp.runtimeconfig.json
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-windows\RestoApp.exe
@@ -48,9 +52,9 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-window
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-windows\RestoApp.dll
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\bin\Debug\net6.0-windows\RestoApp.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.csproj.CopyComplete
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\refint\AppRestoForm.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\ref\AppRestoForm.dll
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormAddProveedor.resources
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormsSalon.FormSalon.resources
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormsSalon.FormMesa.resources
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormHacerPedido.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestoForm\obj\Debug\net6.0-windows\AppRestoForm.FormStock.resources

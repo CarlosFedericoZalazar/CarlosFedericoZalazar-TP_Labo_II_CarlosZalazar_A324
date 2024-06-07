@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace AppRestoForm
 {
-    public partial class StockForm : Form
+    public partial class FormStock : Form
     {
         FormPrincipal formPrincipal;
         IGenerarPedidos encargado;
-        public StockForm(FormPrincipal formPrincipal, IGenerarPedidos encargado)
+        public FormStock(FormPrincipal formPrincipal, IGenerarPedidos encargado)
         {
             InitializeComponent();
             this.formPrincipal = formPrincipal;
@@ -25,14 +25,15 @@ namespace AppRestoForm
 
         private void btnHacerPedido_Click(object sender, EventArgs e)
         {
-           
-            Encargado encargado = new Encargado("Carlos","Zalazar");
-            FormHacerPedido formularioHacerPedido = new FormHacerPedido(encargado);
-            formularioHacerPedido.ShowDialog();
+            FormHacerPedido formularioHacerPedido = new FormHacerPedido(encargado, this);
+            formularioHacerPedido.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FormStockDisponible formStockDisponible = new FormStockDisponible();
+            formStockDisponible.ShowDialog();
         }
     }
 }

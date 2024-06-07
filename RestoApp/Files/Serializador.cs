@@ -12,13 +12,10 @@ namespace RestoApp.Files
 {
     public class Serializador
     {
-        // Serializa un objeto a JSON y lo guarda en un archivo
-
         public class Archivo
         {
             public static void SaveJson<T>(string path, List<T> lista) 
             {
-                //path = $"C:\\Users\\Usuario\\Desktop\\TpLaboratorio II\\AppRestoForm\\Files\\{path}.json";
                 path = GetJsonFilePath(path)+".json";
                 using (var writer = new StreamWriter(path)) //Combine(file))) 
                 {
@@ -33,7 +30,6 @@ namespace RestoApp.Files
             public static BindingList<T> ReadJson<T>(string path)
             {
                 path = GetJsonFilePath(path) + ".json";
-                //path = $"C:\\Users\\Usuario\\Desktop\\TpLaboratorio II\\AppRestoForm\\Files\\{path}.json";
                 var lista = new BindingList<T>(); // Cambio List<T> a BindingList<T>
 
                 if (File.Exists(path))
@@ -48,7 +44,7 @@ namespace RestoApp.Files
                         {
                             foreach (var item in listaAux)
                             {
-                                lista.Add(item); // Agregar cada elemento de listaAux a personas
+                                lista.Add(item);
                             }
                         }
                     }
@@ -60,21 +56,11 @@ namespace RestoApp.Files
 
         public static string GetJsonFilePath(string fileName)
         {
-            string pathDestino = $"C:\\Users\\Usuario\\Desktop\\TpLaboratorio II\\AppRestoForm\\Files";
-
-            string carpetaNombre = fileName.ToUpper();
-
-            // Crear el path completo de la carpeta
-            string carpetaPath = Path.Combine(pathDestino, carpetaNombre);
-
-            // Crear la carpeta si no existe
-            if (!Directory.Exists(carpetaPath))
-            {
-                Directory.CreateDirectory(carpetaPath);
-            }
+            string pathDestino = $@"C:\Users\Usuario\Desktop\ARCHIVOS";
+            //string pathDestino = $@"C:\Users\Usuario\Desktop\TpLaboratorio II\AppRestoForm\Files";
 
             // Crear el path completo del archivo
-            string filePath = Path.Combine(carpetaPath, fileName);
+            string filePath = Path.Combine(pathDestino, fileName);
             return filePath;
         }
 

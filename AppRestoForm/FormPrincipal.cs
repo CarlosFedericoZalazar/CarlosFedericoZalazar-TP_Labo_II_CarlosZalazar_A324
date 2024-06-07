@@ -14,14 +14,14 @@ namespace AppRestoForm
         {
             Encargado encargado = new Encargado("Carlos", "Zalazar");
 
-            StockForm pedidosForm = new StockForm(this, encargado);
+            FormStock pedidosForm = new FormStock(this, encargado);
             pedidosForm.Show();
             this.Hide();
         }
 
         private void btnSalon_Click(object sender, EventArgs e)
         {
-            // HARCIDEAMOS MOZOS
+            // HARCODEAMOS MOZOS
             List<string> mozos = new List<string> { "Lucas", "Mariano", "Carlos" };
 
             FormSalon formSalon = new FormSalon(5, mozos);

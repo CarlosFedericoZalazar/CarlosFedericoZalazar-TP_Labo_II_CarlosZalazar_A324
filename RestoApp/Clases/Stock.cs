@@ -1,4 +1,5 @@
 ﻿using RestoApp.Files;
+using RestoApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -25,7 +26,7 @@ namespace RestoApp.Clases
         public Stock(string producto, int unidades)
         {
             _producto = producto;
-            _unidades = unidades;
+            Unidades = unidades;
         }
 
         public string NombreProducto { get=>_producto; set=>_producto=value; }
@@ -41,26 +42,53 @@ namespace RestoApp.Clases
 
         public static void CheckStock()
         {
-            var productosComestibles = Pedido.ReadPedido();
+            Stock registroStock=new Stock();
             string diaSemana = ObtenerDiaSemana();
-            foreach (var item in productosComestibles) 
+
+            // Buscamos todos los pedidos del jason pedidos.json
+            var pedidos = Pedido.ReadPedido();
+            foreach (var item in pedidos) 
             {
                 var aux = item.Proveedor.MedioDePago;
                 if (item.EstadoPedido == Pedido.Estado.Pendiente) 
                 {
-                    if (diaSemana == item.Proveedor.DiaDeEntrega.ToLower()) 
-                    {
-                        ProductoComestible producto = Producto.ProductoById(item.IdProducto);
-                        item.EstadoPedido = Pedido.Estado.Recibido;
-                        // VER USO DE HILOS ACA...
-                        //
-                        Stock stock = new Stock(producto.Nombre,producto.Cantidad);
-                        Save(stock);
+                    if (diaSemana == item.Proveedor.DiaDeEntrega.ToLower())
+                    {   
+                        foreach(Producto.Tipo tipo in Enum.GetValues(typeof(Producto.Tipo)))
+                        {
+                            if (Producto.Tipo.Comida == tipo)
+                            {
+                                try
+                                { 
+                                    var producto = ProductoComestible.ProductoComestibleById(item.IdProducto);
+                                    registroStock = new Stock(producto.Nombre, producto.Cantidad);                     
+                                }
+                                catch (MyExceptions.ProductoNoEncontradoException ex)
+                                {
+                                    Console.WriteLine(ex.Message);
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    var producto = ProductoBebible.ProductoBebibleById(item.IdProducto);
+                                    registroStock = new Stock(producto.Nombre, producto.Cantidad);
+                                }
+                                catch (MyExceptions.ProductoNoEncontradoException ex)
+                                {
+                                    Console.WriteLine(ex.Message);
+                                }
+                            }
+                            Save(registroStock);
+                        }    
+                        item.EstadoPedido=Pedido.Estado.Recibido;
+                        Pedido.Save(item);
                     }
                 }
             }
-            Pedido.Save(productosComestibles);
         }
+
         private static string ObtenerDiaSemana() 
         {
             DateTime fechaActual = DateTime.Now;
@@ -74,20 +102,12 @@ namespace RestoApp.Clases
 
         private static void Save(Stock stock) 
         {
-            List<Stock> nuevoStock = ReadStock();
-            nuevoStock.Add(stock);
-            Save(nuevoStock);
+            Serializador.Save<Stock>(stock, "Stock");
         }
-        public static void Save(List<Stock> listaStock)
-        {
-            Serializador.Archivo.SaveJson<Stock>("Stock_Comestible", listaStock);
-        }
+
         public static List<Stock> ReadStock()
         {
-            return Serializador.Archivo.ReadJson<Stock>("Stock_Comestible").ToList();
+            return Serializador.Archivo.ReadJson<Stock>("Stock").ToList();
         }
-
-
-
     }
 }

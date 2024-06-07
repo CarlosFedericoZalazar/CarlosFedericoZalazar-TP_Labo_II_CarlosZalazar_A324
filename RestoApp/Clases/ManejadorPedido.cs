@@ -50,6 +50,7 @@ namespace RestoApp.Clases
             Serializador.Archivo.SaveJson<ProductoBebible>("ProductoBebible", bebibles);
             Pedido pedido = new Pedido(producto.Id, proveedor);
             //Pedido pedido = new Pedido((ProductoBebible)producto.Id, proveedor);
+            Pedido.Save(pedido);
         }
 
         public void OrdenarComida(IProducto producto, int cantidad, Proveedor proveedor)

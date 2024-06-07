@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgStock = new DataGridView();
             comboBox1 = new ComboBox();
+            dgStock = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgStock).BeginInit();
             SuspendLayout();
-            // 
-            // dgStock
-            // 
-            dgStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgStock.Location = new Point(46, 60);
-            dgStock.Name = "dgStock";
-            dgStock.RowTemplate.Height = 27;
-            dgStock.Size = new Size(699, 307);
-            dgStock.TabIndex = 0;
             // 
             // comboBox1
             // 
@@ -50,13 +41,27 @@
             comboBox1.Size = new Size(145, 25);
             comboBox1.TabIndex = 1;
             // 
+            // dgStock
+            // 
+            dgStock.AllowUserToAddRows = false;
+            dgStock.AllowUserToDeleteRows = false;
+            dgStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgStock.Location = new Point(198, 73);
+            dgStock.Name = "dgStock";
+            dgStock.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgStock.RowTemplate.Height = 27;
+            dgStock.ScrollBars = ScrollBars.None;
+            dgStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgStock.Size = new Size(449, 249);
+            dgStock.TabIndex = 2;
+            // 
             // FormStockDisponible
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox1);
             Controls.Add(dgStock);
+            Controls.Add(comboBox1);
             Name = "FormStockDisponible";
             Text = "Stock Disponible";
             Load += FormStockDisponible_Load;
@@ -65,8 +70,7 @@
         }
 
         #endregion
-
-        private DataGridView dgStock;
         private ComboBox comboBox1;
+        private DataGridView dgStock;
     }
 }

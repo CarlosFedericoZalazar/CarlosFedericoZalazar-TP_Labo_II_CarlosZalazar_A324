@@ -19,23 +19,19 @@ namespace AppRestoForm
 {
     public partial class FormHacerPedido : Form
     {
-
+        FormStock formulalrioStock;
         IGenerarPedidos encargado;
         Dictionary<string, List<Proveedor>> dictProveedores = new Dictionary<string, List<Proveedor>>();
         List<IProducto> productos = new List<IProducto>();
-        public FormHacerPedido(IGenerarPedidos encargado)
+        public FormHacerPedido(IGenerarPedidos encargado, FormStock formulalrioHacerPedido)
         {
             InitializeComponent();
             this.encargado = encargado;
+            this.formulalrioStock = formulalrioHacerPedido;
         }
 
         private void HacerPedidoForm_Load(object sender, EventArgs e)
         {
-            //CargarDiccionarioProveedores();
-            //cbProveedor.DataSource = Serializador.Archivo.ReadJson<Proveedor>("proveedor");
-            //cbProveedor.DisplayMember = "Nombre";
-            //cbTipo.DataSource = Enum.GetValues(typeof(Producto.Tipo));
-            //cbTipo.SelectedIndex = 0;
             rbNo.Checked = true;
         }
 
@@ -46,7 +42,6 @@ namespace AppRestoForm
                 dictProveedores[nombre] = Serializador.Archivo.ReadJson<Proveedor>($"proveedor{nombre}").ToList();
             }
         }
-
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             Producto.Tipo type = (Producto.Tipo)cbTipo.SelectedItem;
@@ -147,6 +142,12 @@ namespace AppRestoForm
             cbProveedor.DisplayMember = "Nombre";
             cbTipo.DataSource = Enum.GetValues(typeof(Producto.Tipo));
             cbTipo.SelectedIndex = 0;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            formulalrioStock.Show();
+            this.Close();
         }
     }
 }

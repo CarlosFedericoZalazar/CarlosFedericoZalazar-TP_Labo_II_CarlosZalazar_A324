@@ -11,9 +11,7 @@ namespace RestoApp.Interfaces
     {
         int Id { get; set; }
         string Nombre { get; set; }
-        //int Cantidad { get; set; }
-        double Precio { get; set; }
         Tipo TipoProducto { get; set; }
-        //int Id { get; }
+        double Precio { get; set; }
     }
 }

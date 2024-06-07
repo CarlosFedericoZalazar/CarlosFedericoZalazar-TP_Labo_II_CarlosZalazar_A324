@@ -1,6 +1,6 @@
 ﻿namespace AppRestoForm
 {
-    partial class StockForm
+    partial class FormStock
     {
         /// <summary>
         /// Required designer variable.

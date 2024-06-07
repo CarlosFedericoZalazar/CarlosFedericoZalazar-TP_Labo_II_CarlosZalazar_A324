@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace RestoApp.Clases
 {
-    public class Producto : IProducto
+    public abstract class  Producto : IProducto
     {
         public enum Tipo
         {
             Bebida,
             Comida
         }        
-        private static readonly string IdFilePath = "C:\\Users\\Usuario\\Desktop\\lastId.txt"; // Ruta del archivo donde se guarda el último ID.
+        private static readonly string IdFilePath = @"C:\Users\Usuario\Desktop\ARCHIVOS\lastId.txt"; // Ruta del archivo donde se guarda el último ID.
         private int _id; // ID único para cada instancia.
 
         private string _nombre;
@@ -50,7 +50,7 @@ namespace RestoApp.Clases
                     return lastId;
                 }
             }
-            return 1; // Si no hay archivo o no se puede leer, empezamos en 1.
+            return 1; // INICIAMOS ARCHIVO DESDE 1
         }
 
         private static void SaveLastId(int lastId)
@@ -58,31 +58,12 @@ namespace RestoApp.Clases
             File.WriteAllText(IdFilePath, lastId.ToString());
         }
 
-        public static List<ProductoComestible> ReadProductosComestiblesFile()
-        {
-            return Serializador.Archivo.ReadJson<ProductoComestible>("ProductoComestible").ToList();
-        }
-
-        public static ProductoComestible ProductoById(int id)
-        {
-            var lista = ReadProductosComestiblesFile();
-            foreach (var item in lista) 
-            {
-                if(item.Id == id)
-                    return item;
-            }
-            throw new ProductoNoEncontradoException($"Producto con ID {id} no encontrado.");
-        }
-
-        // Excepción personalizada
         public class ProductoNoEncontradoException : Exception
         {
             public ProductoNoEncontradoException(string message) : base(message)
             {
             }
         }
-
-
 
     }
 }
