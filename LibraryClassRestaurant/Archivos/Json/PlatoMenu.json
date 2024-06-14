@@ -1,0 +1,18 @@
+[
+  {
+    "Nombre": "MILANESA CON FRITAS",
+    "CantidadDeIngredientes": {
+      "CARNE": 300,
+      "PAPAS": 500
+    },
+    "TiempoPreparacion": 10
+  },
+  {
+    "Nombre": "MILANESA CON FRITAS",
+    "CantidadDeIngredientes": {
+      "CARNE": 100,
+      "PATATAS": 150
+    },
+    "TiempoPreparacion": 15
+  }
+]

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Cocina\FormCocina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormABMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormABMProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cocina\FormAltaPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormAltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormAltaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormPanelEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormPanelPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panel Encargado\FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Salon\FormMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Salon\FormSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

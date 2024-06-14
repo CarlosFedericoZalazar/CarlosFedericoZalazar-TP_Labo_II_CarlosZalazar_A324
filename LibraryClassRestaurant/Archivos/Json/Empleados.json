@@ -1,0 +1,56 @@
+[
+  {
+    "Nombre": "Juan",
+    "Apellido": "Alvarez",
+    "Direccion": "Alemania 3394, lomas de zamora",
+    "Telefono": "2321313213",
+    "Sueldo": 234000,
+    "Profile": 2,
+    "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "Carmelio",
+    "Apellido": "Liksandro",
+    "Direccion": "la chota larga 12312",
+    "Telefono": "12312321",
+    "Sueldo": 245000,
+    "Profile": 1,
+    "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "Amanzio",
+    "Apellido": "Choteli",
+    "Direccion": "La concha de a lora",
+    "Telefono": "34242",
+    "Sueldo": 500000,
+    "Profile": 2,
+    "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "Emiliano",
+    "Apellido": "Lacurna",
+    "Direccion": "Roca 33, San Miguel",
+    "Telefono": "112345567",
+    "Sueldo": 300000,
+    "Profile": 0,
+    "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "MARCELO",
+    "Apellido": "CORAZA",
+    "Direccion": "Pingo Lucho 2320, Capital Federal",
+    "Telefono": "112349230",
+    "Sueldo": 450000,
+    "Profile": 0,
+    "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "AGUSTINA",
+    "Apellido": "ALBORAN",
+    "Direccion": "SAN LORENZO 2340, AVELLANEDA",
+    "Telefono": "1133456789",
+    "Sueldo": 500000,
+    "Profile": 0,
+    "EstadoEmpleado": 0
+  }
+]

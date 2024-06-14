@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AppRestaurante/1.0.0": {
+        "dependencies": {
+          "LibraryClassRestaurant": "1.0.0"
+        },
+        "runtime": {
+          "AppRestaurante.dll": {}
+        }
+      },
+      "LibraryClassRestaurant/1.0.0": {
+        "runtime": {
+          "LibraryClassRestaurant.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AppRestaurante/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibraryClassRestaurant/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

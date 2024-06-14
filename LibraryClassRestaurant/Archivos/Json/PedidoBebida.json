@@ -1,0 +1,59 @@
+[
+  {
+    "Bebida": {
+      "Cantidad": 400,
+      "Alcoholica": true,
+      "Nombre": "VINO \u0022SEXY FISH\u0022",
+      "Precio": 800000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-36263034",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 3
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-12T09:08:02.0036917-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 40,
+      "Alcoholica": false,
+      "Nombre": "SEVEN UP",
+      "Precio": 92000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-36263034",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 3
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-12T15:38:42.1008943-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 50,
+      "Alcoholica": false,
+      "Nombre": "NARANJA",
+      "Precio": 69950,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-36263034",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 3
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-13T09:47:43.2411245-03:00",
+    "Estado": 1
+  }
+]

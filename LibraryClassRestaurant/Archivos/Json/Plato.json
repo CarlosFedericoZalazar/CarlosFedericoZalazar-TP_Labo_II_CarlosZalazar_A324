@@ -1,0 +1,25 @@
+[
+  {
+    "Nombre": "MILANESA CON PURE",
+    "CantidadDeIngredientes": {
+      "MILANESA": 400,
+      "PATATA": 500
+    },
+    "TiempoPreparacion": 15
+  },
+  {
+    "Nombre": "FIDEO CON SALSA",
+    "CantidadDeIngredientes": {
+      "FIDEOS": 500,
+      "SALSA": 250
+    },
+    "TiempoPreparacion": 10
+  },
+  {
+    "Nombre": "PANCHO",
+    "CantidadDeIngredientes": {
+      "SALCHICHOTA": 200
+    },
+    "TiempoPreparacion": 5
+  }
+]
