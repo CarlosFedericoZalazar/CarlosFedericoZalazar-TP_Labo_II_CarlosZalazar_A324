@@ -73,7 +73,7 @@ namespace LibraryClassRestaurant.Archivos
 
         private static string GetJsonFilePath(string fileName)
         {
-            string pathDestino = $@"C:\Users\Usuario\Desktop\TP NINJA VERSION\LibraryClassRestaurant\Archivos\json";
+            string pathDestino = $@"C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\Archivos\json";
             string filePath = Path.Combine(pathDestino, fileName);
             return filePath;
         }

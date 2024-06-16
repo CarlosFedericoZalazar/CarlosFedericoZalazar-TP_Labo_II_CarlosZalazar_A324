@@ -1,11 +1,13 @@
 ﻿using LibraryClassRestaurant.Archivos;
 using LibraryClassRestaurant.Atencion;
+using LibraryClassRestaurant.Empleados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,46 +16,51 @@ namespace AppRestaurante.Salon
 {
     public partial class FormMesa : Form
     {
-        List<Plato> listaMenu = Serializador.Read<Plato>("Plato");
-
-
+        Stack<Menu> listaMenu = new Stack<Menu>();
+        public Cocinero Cocinero { get; set; }
         public FormSalon FormSalon { get; set; }
         public Mesa Mesa { get; set; }
-        public FormMesa(FormSalon formSalon, Mesa mesa)
+        public Mesero Mesero { get; set; }
+        public FormMesa(FormSalon formSalon, Mesa mesa, Mesero mesero, Cocinero cocinero)
         {
             InitializeComponent();
             Mesa = mesa;
             FormSalon = formSalon;
+            Mesero = mesero;
+            Cocinero = cocinero;
         }
-
         private void FormMesa_Load(object sender, EventArgs e)
         {
             this.Text += $" {Mesa.NumeroMesa}";
-            int cantidad = listaMenu.Count;
+            var lista = Cocinero.GetMenu();
 
-            cbMenu.DataSource = listaMenu;
+            int cantidad = lista.Count;
+            cbMenu.DataSource = lista;
 
             cbMenu.DisplayMember = "Nombre";
         }
 
         private void btnPedidoCocina_Click(object sender, EventArgs e)
         {
-            Task task = Task.Run(async () =>
-            {
-                try
-                {
-                    // Simulación de una operación asincrónica
-                    await Task.Delay(10000);
-                    // Necesitamos asegurar que el siguiente código se ejecute en el hilo de la UI
-                    this.Invoke((Action)(() => MostrarMensaje("Pedido Realizado en la Cocina")));
-                }
-                catch (Exception ex)
-                {
-                    this.Invoke((Action)(() => MostrarMensaje(ex.Message)));
-                }
-            });
-            this.Hide();
-            FormSalon.Show();
+            OrdenMesa ordenMesa = new OrdenMesa(Mesa.NumeroMesa, listaMenu);
+            Cocinero.Mensaje(ordenMesa.MostrarOrden(listaMenu));
+
+            //Task task = Task.Run(async () =>
+            //{
+            //    try
+            //    {
+            //        // Simulación de una operación asincrónica
+            //        await Task.Delay(10000);
+            //        // Necesitamos asegurar que el siguiente código se ejecute en el hilo de la UI
+            //        this.Invoke((Action)(() => MostrarMensaje("Pedido Realizado en la Cocina")));
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        this.Invoke((Action)(() => MostrarMensaje(ex.Message)));
+            //    }
+            //});
+            //this.Hide();
+            //FormSalon.Show();
 
         }
 
@@ -61,6 +68,44 @@ namespace AppRestaurante.Salon
         {
             MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FormSalon.Show();
+            this.Close();
+        }
+
+        private void btnAGregar_Click(object sender, EventArgs e)
+        {
+            var ordenMesa = (Menu)cbMenu.SelectedItem;
+            DialogResult result = MessageBox.Show($"¿Confirma {ordenMesa.Nombre}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Lógica si el usuario confirma
+                listaMenu.Push((Menu)cbMenu.SelectedItem);
+                MessageBox.Show("Registro ingresado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ultimoElement = listaMenu.Peek();
+                DialogResult result = MessageBox.Show($"¿Confirma eliminar {ultimoElement.Nombre}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    listaMenu.Pop();
+                    MessageBox.Show("Registro eiminado.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Ocurrió un error al intentar acceder a la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

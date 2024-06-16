@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnAddPlato = new Button();
             btnCancelar = new Button();
+            bindingSource1 = new BindingSource(components);
+            btnMenu = new Button();
+            comboBox1 = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
             // btnAddPlato
@@ -52,19 +57,40 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // FormABMCartaRestaurant
+            // btnMenu
+            // 
+            btnMenu.Location = new Point(85, 155);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(162, 56);
+            btnMenu.TabIndex = 2;
+            btnMenu.Text = "VER MENU";
+            btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Click += btnMenu_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(331, 172);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(175, 25);
+            comboBox1.TabIndex = 3;
+            // 
+            // FormCocina
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
+            Controls.Add(btnMenu);
             Controls.Add(btnCancelar);
             Controls.Add(btnAddPlato);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "FormABMCartaRestaurant";
+            Name = "FormCocina";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ADMINISTRADOR DE CARTA RESTAURANT";
             Load += FormABMCartaRestaurant_Load;
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
         }
 
@@ -72,5 +98,8 @@
 
         private Button btnAddPlato;
         private Button btnCancelar;
+        private BindingSource bindingSource1;
+        private Button btnMenu;
+        private ComboBox comboBox1;
     }
 }

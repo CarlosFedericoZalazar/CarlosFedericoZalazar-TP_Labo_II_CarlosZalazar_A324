@@ -10,6 +10,7 @@ namespace AppRestoForm
 {
     public partial class FormPrincipal : Form
     {
+        Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
         public FormPrincipal()
         {
             InitializeComponent();
@@ -29,24 +30,32 @@ namespace AppRestoForm
         private void btnSalon_Click(object sender, EventArgs e)
         {
             // LOGICA PARA MOSTRAR EL FORMULARIO DE SALON
-            FormSalon formSalon = new FormSalon(this, 10);
+            FormSalon formSalon = new FormSalon(this, 10, cocinero);
             formSalon.Show();
             this.Hide();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
+            // Inicializa el cocinero y suscribe al evento
+            //Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
+            cocinero.AvisoCocinero += Cocinero_MiEvento;
+            cocinero.GestorMenu.AvisoMenu += Cocinero_MiEvento;
         }
 
         private void btnCocina_Click(object sender, EventArgs e)
         {
 
-            Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
+            //Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
 
             FormCocina formABMCartaRestaurant = new FormCocina(this, cocinero);
             formABMCartaRestaurant.Show();
             this.Hide();
+        }
+
+        private void Cocinero_MiEvento(string mensaje)
+        {
+            MessageBox.Show(mensaje);
         }
     }
 }

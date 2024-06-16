@@ -15,20 +15,24 @@ namespace AppRestaurante.Salon
 {
     public partial class FormSalon : Form
     {
-        FormPrincipal formPrincipal;
+        public FormPrincipal FormPrincipal { get; set; }
+        public Cocinero Cocinero { get; set; }
+
         List<Empleado> listaMeseros = new List<Empleado>();
         List<Mesa> listaMesas = new List<Mesa>();
         public int CantidadMesas { get; set; }
-        public FormSalon(FormPrincipal formPrincipal, int cantidadMesas)
+        public FormSalon(FormPrincipal formPrincipal, int cantidadMesas, Cocinero cocinero)
         {
             InitializeComponent();
-            this.formPrincipal = formPrincipal;
+            FormPrincipal = formPrincipal;
             CantidadMesas = cantidadMesas;
+            Cocinero = cocinero;
         }
 
         private void FormSalon_Load(object sender, EventArgs e)
         {
             InstanciarMesas();
+            BindingList<Mesa> listaMesas = new BindingList<Mesa>(this.listaMesas);
             var listaMeseros = Encargado.ListarMeserosActivos<Mesero>();
             cbMeseros.DataSource = listaMeseros;
             cbMeseros.DisplayMember = "Nombre";
@@ -41,17 +45,42 @@ namespace AppRestaurante.Salon
         {
             for (int i = 0; i < CantidadMesas; i++)
             {
-                Mesa mesa = new Mesa();
-                mesa.NumeroMesa = i + 1;
+                Mesa mesa = new Mesa(i + 1);
                 listaMesas.Add(mesa);
             }
+            var hola = listaMesas;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPedido_Click(object sender, EventArgs e)
         {
-            FormMesa formMesa = new FormMesa(this, (Mesa)cbMesas.SelectedItem);
+            Mesero mesero = (Mesero)cbMeseros.SelectedItem;
+            FormMesa formMesa = new FormMesa(this, (Mesa)cbMesas.SelectedItem, mesero, Cocinero);
             formMesa.Show();
             this.Hide();
+        }
+
+        private void lblCancelar_Click(object sender, EventArgs e)
+        {
+            FormPrincipal.Show();
+            this.Close();
+        }
+
+        private void cbMesas_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbMesas.SelectedItem != null)
+            {
+                Mesa mesa = (Mesa)cbMesas.SelectedItem;
+                if(mesa.Estado == Mesa.EstadoMesa.Abierta)
+                {
+                    lblStatus.Text=Mesa.EstadoMesa.Abierta.ToString();
+                    
+                }
+                else
+                {
+                    lblStatus.Text = "";
+                }
+            }
         }
     }
 }

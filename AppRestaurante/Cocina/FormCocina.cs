@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppRestaurante.Cocina
 {
@@ -40,5 +41,12 @@ namespace AppRestaurante.Cocina
         {
 
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Cocinero.GetMenu();
+            comboBox1.DisplayMember = "Nombre";
+        }
+
     }
 }

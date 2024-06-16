@@ -32,9 +32,10 @@
             lblMesa = new Label();
             cbMeseros = new ComboBox();
             lblMeseros = new Label();
-            button1 = new Button();
+            btnPedido = new Button();
             lblCancelar = new Button();
             lblEncargado = new Label();
+            lblStatus = new Label();
             SuspendLayout();
             // 
             // cbMesas
@@ -42,15 +43,16 @@
             cbMesas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMesas.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             cbMesas.FormattingEnabled = true;
-            cbMesas.Location = new Point(85, 82);
+            cbMesas.Location = new Point(78, 82);
             cbMesas.Name = "cbMesas";
-            cbMesas.Size = new Size(43, 33);
+            cbMesas.Size = new Size(50, 33);
             cbMesas.TabIndex = 0;
+            cbMesas.SelectedValueChanged += cbMesas_SelectedValueChanged;
             // 
             // lblMesa
             // 
             lblMesa.AutoSize = true;
-            lblMesa.Location = new Point(85, 58);
+            lblMesa.Location = new Point(86, 58);
             lblMesa.Name = "lblMesa";
             lblMesa.Size = new Size(42, 17);
             lblMesa.TabIndex = 1;
@@ -73,15 +75,15 @@
             lblMeseros.TabIndex = 3;
             lblMeseros.Text = "MESEROS";
             // 
-            // button1
+            // btnPedido
             // 
-            button1.Location = new Point(231, 153);
-            button1.Name = "button1";
-            button1.Size = new Size(165, 85);
-            button1.TabIndex = 4;
-            button1.Text = "TOMAR PEDIDO DE MESA";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnPedido.Location = new Point(231, 153);
+            btnPedido.Name = "btnPedido";
+            btnPedido.Size = new Size(165, 85);
+            btnPedido.TabIndex = 4;
+            btnPedido.Text = "TOMAR PEDIDO DE MESA";
+            btnPedido.UseVisualStyleBackColor = true;
+            btnPedido.Click += btnPedido_Click;
             // 
             // lblCancelar
             // 
@@ -91,6 +93,7 @@
             lblCancelar.TabIndex = 5;
             lblCancelar.Text = "CANCELAR";
             lblCancelar.UseVisualStyleBackColor = true;
+            lblCancelar.Click += lblCancelar_Click;
             // 
             // lblEncargado
             // 
@@ -101,14 +104,26 @@
             lblEncargado.TabIndex = 6;
             lblEncargado.Text = "- Encargado de Turno:";
             // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatus.ForeColor = Color.Green;
+            lblStatus.Location = new Point(134, 86);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(16, 21);
+            lblStatus.TabIndex = 7;
+            lblStatus.Text = "-";
+            // 
             // FormSalon
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 278);
+            Controls.Add(lblStatus);
             Controls.Add(lblEncargado);
             Controls.Add(lblCancelar);
-            Controls.Add(button1);
+            Controls.Add(btnPedido);
             Controls.Add(lblMeseros);
             Controls.Add(cbMeseros);
             Controls.Add(lblMesa);
@@ -116,6 +131,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormSalon";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ATENCION EN SALON";
             Load += FormSalon_Load;
             ResumeLayout(false);
@@ -128,8 +144,9 @@
         private Label lblMesa;
         private ComboBox cbMeseros;
         private Label lblMeseros;
-        private Button button1;
+        private Button btnPedido;
         private Button lblCancelar;
         private Label lblEncargado;
+        private Label lblStatus;
     }
 }

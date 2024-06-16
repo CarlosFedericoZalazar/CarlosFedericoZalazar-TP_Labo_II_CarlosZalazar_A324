@@ -10,5 +10,7 @@ namespace LibraryClassRestaurant.Interfaces
     public interface ICocinero
     {
         public void AgregarPlato(Plato plato);
+        public List<Menu> GetMenu();
+        public void Mensaje(string mensaje);
     }
 }

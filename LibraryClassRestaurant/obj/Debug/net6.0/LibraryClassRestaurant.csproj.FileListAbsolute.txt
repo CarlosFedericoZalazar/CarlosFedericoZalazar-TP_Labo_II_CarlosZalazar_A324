@@ -9,3 +9,15 @@ C:\Users\Usuario\Desktop\TP NINJA VERSION\LibraryClassRestaurant\obj\Debug\net6.
 C:\Users\Usuario\Desktop\TP NINJA VERSION\LibraryClassRestaurant\obj\Debug\net6.0\refint\LibraryClassRestaurant.dll
 C:\Users\Usuario\Desktop\TP NINJA VERSION\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.pdb
 C:\Users\Usuario\Desktop\TP NINJA VERSION\LibraryClassRestaurant\obj\Debug\net6.0\ref\LibraryClassRestaurant.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\bin\Debug\net6.0\LibraryClassRestaurant.deps.json
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\bin\Debug\net6.0\LibraryClassRestaurant.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\bin\Debug\net6.0\LibraryClassRestaurant.pdb
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.sourcelink.json
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\refint\LibraryClassRestaurant.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\LibraryClassRestaurant.pdb
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\LibraryClassRestaurant\obj\Debug\net6.0\ref\LibraryClassRestaurant.dll

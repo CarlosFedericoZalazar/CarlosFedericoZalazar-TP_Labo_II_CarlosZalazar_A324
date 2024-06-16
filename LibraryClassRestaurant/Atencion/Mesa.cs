@@ -26,7 +26,7 @@ namespace LibraryClassRestaurant.Atencion
         public Mesa(int numeroMesa)
         {
             NumeroMesa = numeroMesa;
-            Estado = EstadoMesa.Abierta;
+            Estado = EstadoMesa.Cerrada;
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\TP NINJA VERSION\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\SEGUNDA VERSION TP\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\TP NINJA VERSION\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\SEGUNDA VERSION TP\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\TP NINJA VERSION\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\SEGUNDA VERSION TP\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj",
         "projectName": "LibraryClassRestaurant",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\TP NINJA VERSION\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\SEGUNDA VERSION TP\\LibraryClassRestaurant\\LibraryClassRestaurant.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\TP NINJA VERSION\\LibraryClassRestaurant\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\SEGUNDA VERSION TP\\LibraryClassRestaurant\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

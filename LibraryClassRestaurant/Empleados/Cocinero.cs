@@ -10,11 +10,14 @@ namespace LibraryClassRestaurant.Empleados
 {
     public class Cocinero:Empleado, IEmpleado, ICocinero
     {
-        private GestorMenu GestorMenu { get; set; }
+        public delegate void Notificador(string mensaje);
+        public event Notificador ?AvisoCocinero;
+
+        public Menu GestorMenu { get; set; }
         public Cocinero() { }
         public Cocinero(string nombre, string apellido, string direccion, string telefono, double sueldo, Perfil perfil) : base(nombre, apellido, direccion, telefono, sueldo, perfil)
         {
-            GestorMenu = GestorMenu.InstaciarGestorMenu();
+            GestorMenu = Menu.InstaciarMenu();
         }
 
         public void AgregarPlato(Plato plato) 
@@ -22,6 +25,15 @@ namespace LibraryClassRestaurant.Empleados
             this.GestorMenu.AgregarPlato(plato);
         }
 
+        public List<Menu> GetMenu()
+        {
+            return this.GestorMenu.GetMenu();
+        }
+
+        public void Mensaje(string mensaje)
+        {
+            AvisoCocinero?.Invoke(mensaje);
+        }
 
     }
 

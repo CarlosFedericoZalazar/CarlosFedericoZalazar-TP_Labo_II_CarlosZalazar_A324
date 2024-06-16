@@ -1,0 +1,41 @@
+[
+  {
+    "Nombre": "FIDEOS CON SALSA",
+    "Disponibilidad": 1,
+    "MensajeStatus": "Ingrediente FIDEOS NO DISPONIBLE\r\nIngrediente SALSA NO DISPONIBLE\r\n",
+    "Plato": {
+      "Nombre": "FIDEOS CON SALSA",
+      "CantidadDeIngredientes": {
+        "FIDEOS": 250,
+        "SALSA": 150
+      },
+      "TiempoPreparacion": 20
+    }
+  },
+  {
+    "Nombre": "PANCHO",
+    "Disponibilidad": 1,
+    "MensajeStatus": "Ingrediente PAN NO DISPONIBLE\r\nIngrediente SALCHICHA NO DISPONIBLE\r\n",
+    "Plato": {
+      "Nombre": "PANCHO",
+      "CantidadDeIngredientes": {
+        "PAN": 100,
+        "SALCHICHA": 150
+      },
+      "TiempoPreparacion": 10
+    }
+  },
+  {
+    "Nombre": "MILANESA CON PURE",
+    "Disponibilidad": 1,
+    "MensajeStatus": "Ingrediente MILANESA NO DISPONIBLE\r\nIngrediente PAPAS NO DISPONIBLE\r\n",
+    "Plato": {
+      "Nombre": "MILANESA CON PURE",
+      "CantidadDeIngredientes": {
+        "MILANESA": 150,
+        "PAPAS": 200
+      },
+      "TiempoPreparacion": 15
+    }
+  }
+]
