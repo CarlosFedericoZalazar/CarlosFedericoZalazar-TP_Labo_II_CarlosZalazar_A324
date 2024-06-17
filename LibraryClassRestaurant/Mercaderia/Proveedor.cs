@@ -25,28 +25,22 @@ namespace LibraryClassRestaurant.Mercaderia
             Jueves,
             Viernes
         }
-        private string _nombre;
-        private string _cuit;
-        private string _direccion;
-        private string _tipoProducto;
-        private MedioPago _medioPago;
-        private DiaEntrega _diaEntrega;
 
-        public string Nombre { get=>_nombre; set=>_nombre=value; }
-        public string Cuit { get => _cuit; set => _cuit = value;}
-        public string Direccion { get => _direccion; set => _direccion = value;}
-        public string TipoProducto {get => _tipoProducto;set => _tipoProducto = value;}
-        public MedioPago MedioDePago { get => _medioPago; set => _medioPago = value; }
-        public DiaEntrega DiaDeEntrega { get => _diaEntrega; set => _diaEntrega = value; }
+        public string Nombre { get; set; }
+        public string Cuit { get; set; }
+        public string Direccion { get; set; }
+        public string TipoProducto { get; set; }
+        public MedioPago MedioDePago { get; set; }
+        public DiaEntrega DiaDeEntrega { get; set; }
 
         public Proveedor() { }
         public Proveedor(string nombre, string cuit, string tipoProducto, MedioPago medioPago, DiaEntrega diaEntrega)
         {
-            _nombre = nombre;
-            _cuit = cuit;
-            _tipoProducto = tipoProducto;
+            Nombre = nombre;
+            Cuit = cuit;
+            TipoProducto = tipoProducto;
             MedioDePago = medioPago;
-            _direccion = "Avda. Siempre Viva 1064, Springfield";
+            Direccion = "Avda. Siempre Viva 1064, Springfield";
             DiaDeEntrega = diaEntrega;
         }
 

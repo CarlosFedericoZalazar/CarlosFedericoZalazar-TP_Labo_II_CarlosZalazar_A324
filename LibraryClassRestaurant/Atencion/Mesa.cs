@@ -14,7 +14,7 @@ namespace LibraryClassRestaurant.Atencion
 
         List<Bebida> Pedidos = new List<Bebida>();
         //List<Plato> PedidosPlatos = new List<Plato>(); // plato va a tener productos comestibles
-
+        public double MontoTotal { get; set; }
         public enum EstadoMesa
         {
             Abierta,

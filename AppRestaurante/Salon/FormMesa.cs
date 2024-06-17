@@ -1,6 +1,7 @@
 ﻿using LibraryClassRestaurant.Archivos;
 using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Empleados;
+using LibraryClassRestaurant.Mercaderia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,8 @@ namespace AppRestaurante.Salon
     public partial class FormMesa : Form
     {
         Stack<Menu> listaMenu = new Stack<Menu>();
+
+        List<StockBebidas> listaBebidas = StockBebidas.GetStockBebibles();
         public Cocinero Cocinero { get; set; }
         public FormSalon FormSalon { get; set; }
         public Mesa Mesa { get; set; }
@@ -34,17 +37,29 @@ namespace AppRestaurante.Salon
             this.Text += $" {Mesa.NumeroMesa}";
             var lista = Cocinero.GetMenu();
 
-            int cantidad = lista.Count;
+            
             cbMenu.DataSource = lista;
+            cbBebidas.DataSource = listaBebidas;
 
             cbMenu.DisplayMember = "Nombre";
+            cbBebidas.DisplayMember = "Producto";
         }
 
         private void btnPedidoCocina_Click(object sender, EventArgs e)
         {
-            OrdenMesa ordenMesa = new OrdenMesa(Mesa.NumeroMesa, listaMenu);
+            OrdenMesa ordenMesa = new OrdenMesa(Mesa, listaMenu, listaBebidas, Cocinero);
             Cocinero.Mensaje(ordenMesa.MostrarOrden(listaMenu));
-
+            //Enviando orden a cocina
+            var pedidosRechazados = Mesero.EnviarOrdenACocina(ordenMesa);
+            if (pedidosRechazados.Count > 0)
+            { 
+                
+                string mensajeDeCocina = OrdenMesa.MensajeFaltante(pedidosRechazados);
+                Cocinero.Mensaje(mensajeDeCocina);
+                //MessageBox.Show("No se pudo realizar el pedido, verifique los productos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             //Task task = Task.Run(async () =>
             //{
             //    try

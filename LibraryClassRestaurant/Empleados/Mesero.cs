@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Interfaces;
 
 namespace LibraryClassRestaurant.Empleados
@@ -13,7 +14,12 @@ namespace LibraryClassRestaurant.Empleados
         public Mesero(string nombre, string apellido, string direccion, string telefono, double sueldo, Perfil perfil) : base(nombre, apellido, direccion, telefono, sueldo, perfil)
         {
         }
-        
+        public List<Menu> EnviarOrdenACocina(OrdenMesa ordenMesa)
+        {
+            var PedidoRechazazdo = OrdenMesa.IniciarOrden(ordenMesa);
+            return PedidoRechazazdo;
+
+        }
 
     }
 }

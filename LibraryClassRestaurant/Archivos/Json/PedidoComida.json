@@ -1,0 +1,56 @@
+[
+  {
+    "Comida": {
+      "Cantidad": 1000,
+      "Nombre": "CARNE",
+      "Precio": 1800000,
+      "Proveedor": {
+        "Nombre": "CARNES CACHO",
+        "Cuit": "30-28141368",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-06-17T11:35:37.1296053-03:00",
+    "Estado": 1
+  },
+  {
+    "Comida": {
+      "Cantidad": 800,
+      "Nombre": "PAPA",
+      "Precio": 1200000,
+      "Proveedor": {
+        "Nombre": "LA KELI VERDURAS",
+        "Cuit": "30-26635648",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 2
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-06-17T11:35:54.3096296-03:00",
+    "Estado": 1
+  },
+  {
+    "Comida": {
+      "Cantidad": 50,
+      "Nombre": "POLLO",
+      "Precio": 100000,
+      "Proveedor": {
+        "Nombre": "LA KELI VERDURAS",
+        "Cuit": "30-26635648",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 2
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-06-17T11:36:36.9554982-03:00",
+    "Estado": 1
+  }
+]

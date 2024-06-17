@@ -33,7 +33,7 @@
             btnCerrarMesa = new Button();
             btnCancelar = new Button();
             btnAGregar = new Button();
-            comboBox1 = new ComboBox();
+            cbBebidas = new ComboBox();
             lblBebidas = new Label();
             btnBebidas = new Button();
             btnPedidoCocina = new Button();
@@ -87,14 +87,14 @@
             btnAGregar.UseVisualStyleBackColor = true;
             btnAGregar.Click += btnAGregar_Click;
             // 
-            // comboBox1
+            // cbBebidas
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(79, 140);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(161, 25);
-            comboBox1.TabIndex = 5;
+            cbBebidas.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbBebidas.FormattingEnabled = true;
+            cbBebidas.Location = new Point(79, 140);
+            cbBebidas.Name = "cbBebidas";
+            cbBebidas.Size = new Size(161, 25);
+            cbBebidas.TabIndex = 5;
             // 
             // lblBebidas
             // 
@@ -145,7 +145,7 @@
             Controls.Add(btnPedidoCocina);
             Controls.Add(btnBebidas);
             Controls.Add(lblBebidas);
-            Controls.Add(comboBox1);
+            Controls.Add(cbBebidas);
             Controls.Add(btnAGregar);
             Controls.Add(btnCancelar);
             Controls.Add(btnCerrarMesa);
@@ -167,7 +167,7 @@
         private Button btnCerrarMesa;
         private Button btnCancelar;
         private Button btnAGregar;
-        private ComboBox comboBox1;
+        private ComboBox cbBebidas;
         private Label lblBebidas;
         private Button btnBebidas;
         private Button btnPedidoCocina;

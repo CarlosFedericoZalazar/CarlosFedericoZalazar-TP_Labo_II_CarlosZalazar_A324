@@ -17,8 +17,8 @@ namespace LibraryClassRestaurant.Atencion
         public event Notificador? AvisoMenu;
         public enum StatusMenu
         {
-            Disponible,
-            NoDisponible
+            NoDisponible,
+            Disponible
         }
         public string Nombre { get; set; }
         public List<Plato> listaMenu = new List<Plato>();
@@ -26,9 +26,7 @@ namespace LibraryClassRestaurant.Atencion
 
         public string MensajeStatus { get; set; }
 
-        public Plato Plato { get; set; }
-
-        List<StockComestible> listaStock = StockComestible.GetStockComestibles();
+        public Plato Plato { get; set; }        
 
         public Menu()
         {
@@ -55,9 +53,9 @@ namespace LibraryClassRestaurant.Atencion
         public void AgregarPlato(Plato plato)
         {
             Menu nuevoPlatoenMenu = CrearGestorMenu(plato, StatusMenu.Disponible);
-            Menu registroActualizado = ActualizarEstadoMenu(nuevoPlatoenMenu);
-            Mensaje(registroActualizado.MensajeStatus);
-            Serializador.Save<Menu>("Menu", registroActualizado);
+            //Menu registroActualizado = ActualizarEstadoMenu(nuevoPlatoenMenu, lista);
+            //Mensaje(registroActualizado.MensajeStatus);
+            Serializador.Save<Menu>("Menu", nuevoPlatoenMenu);
         }
 
         public static List<Menu>CargarMenuDisponible()
@@ -79,47 +77,47 @@ namespace LibraryClassRestaurant.Atencion
         {
             return Serializador.Read<Menu>("Menu");
         }
-        public Menu ActualizarEstadoMenu(Menu nuevoPlato)
-        {
-            StringBuilder informeProducto = new StringBuilder();
-            bool ingredienteDisponible = true;
+        //public static Menu ActualizarEstadoMenu(Menu nuevoPlato, List<StockComestible> listaStock)
+        //{
+        //    StringBuilder informeProducto = new StringBuilder();
+        //    bool ingredienteDisponible = true;
 
-            foreach (var item in nuevoPlato.Plato.CantidadDeIngredientes)
-            {
-                ingredienteDisponible = false; // Asumimos que el ingrediente no está disponible hasta que se demuestre lo contrario
+        //    foreach (var item in nuevoPlato.Plato.CantidadDeIngredientes)
+        //    {
+        //        ingredienteDisponible = false; // Asumimos que el ingrediente no está disponible hasta que se demuestre lo contrario
 
-                foreach (var stock in listaStock)
-                {
-                    if (item.Key == stock.Producto)
-                    {
-                        ingredienteDisponible = true; // Ingrediente encontrado en stock
+        //        foreach (var stock in listaStock)
+        //        {
+        //            if (item.Key == stock.Producto)
+        //            {
+        //                ingredienteDisponible = true; // Ingrediente encontrado en stock
 
-                        informeProducto.AppendLine($"Ingrediente {item.Key} OK");
+        //                informeProducto.AppendLine($"Ingrediente {item.Key} OK");
 
-                        if (item.Value < stock.Cantidad)
-                        {
-                            nuevoPlato.Disponibilidad = StatusMenu.Disponible; // CORROBORAR SI ESTA BIEN
-                            informeProducto.AppendLine($"Cantidad de {item.Key} OK");
-                        }
-                        else
-                        {
-                            informeProducto.AppendLine($"Cantidad de {item.Key} INSUFICIENTE");
-                        }
-                        break; // Salimos del loop de stock una vez que encontramos el ingrediente
-                    }
-                }
+        //                if (item.Value < stock.Cantidad)
+        //                {
+        //                    nuevoPlato.Disponibilidad = StatusMenu.Disponible; // CORROBORAR SI ESTA BIEN
+        //                    informeProducto.AppendLine($"Cantidad de {item.Key} OK");
+        //                }
+        //                else
+        //                {
+        //                    informeProducto.AppendLine($"Cantidad de {item.Key} INSUFICIENTE");
+        //                }
+        //                break; // Salimos del loop de stock una vez que encontramos el ingrediente
+        //            }
+        //        }
 
-                if (!ingredienteDisponible)
-                {
-                    informeProducto.AppendLine($"Ingrediente {item.Key} NO DISPONIBLE");
-                }
-            }
+        //        if (!ingredienteDisponible)
+        //        {
+        //            informeProducto.AppendLine($"Ingrediente {item.Key} NO DISPONIBLE");
+        //        }
+        //    }
 
-            nuevoPlato.MensajeStatus = informeProducto.ToString();
-            nuevoPlato.Disponibilidad = StatusMenu.NoDisponible;
+        //    nuevoPlato.MensajeStatus = informeProducto.ToString();
+        //    nuevoPlato.Disponibilidad = StatusMenu.NoDisponible;
 
-            return nuevoPlato;
-        }
+        //    return nuevoPlato;
+        //}
 
         public void Mensaje(string mensaje)
         {
