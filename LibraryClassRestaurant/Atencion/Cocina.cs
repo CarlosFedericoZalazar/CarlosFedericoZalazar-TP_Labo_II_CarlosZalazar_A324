@@ -1,4 +1,5 @@
-﻿using LibraryClassRestaurant.Mercaderia;
+﻿using LibraryClassRestaurant.Empleados;
+using LibraryClassRestaurant.Mercaderia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,6 @@ namespace LibraryClassRestaurant.Atencion
 {
     public static class Cocina
     {
-        public static Mesa RecibirPedido(Mesa mesa)
-        {
-            // Simulación de una operación asincrónica
-            Task.Delay(10000);
-            return mesa;
-        }
-
         /// <summary>
         /// VERIFICA SI HAY STOCK DE LOS PRODUCTOS PARA EL PEDIDO
         /// </summary>
@@ -91,80 +85,10 @@ namespace LibraryClassRestaurant.Atencion
             return cantidadOk;
         }
 
-        public static void Saludos() 
+        public static string Cocinar(List<StockComestible> stockProductos, Stack<Menu>pedidoMesa)
         {
-            
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //COPIA DE SEGURIDAD
-        //public static Menu ActualizarEstadoMenu(Menu nuevoPlato, List<StockComestible> listaStock)
-        //{
-        //    StringBuilder informeProducto = new StringBuilder();
-        //    bool ingredienteDisponible = true;
-
-        //    foreach (var item in nuevoPlato.Plato.CantidadDeIngredientes)
-        //    {
-        //        ingredienteDisponible = false; // Asumimos que el ingrediente no está disponible hasta que se demuestre lo contrario
-
-        //        foreach (var stock in listaStock)
-        //        {
-        //            if (item.Key == stock.Producto)
-        //            {
-        //                ingredienteDisponible = true; // Ingrediente encontrado en stock
-
-        //                informeProducto.AppendLine($"Ingrediente {item.Key} OK");
-
-        //                if (item.Value < stock.Cantidad)
-        //                {
-        //                    nuevoPlato.Disponibilidad = StatusMenu.Disponible; // CORROBORAR SI ESTA BIEN
-        //                    informeProducto.AppendLine($"Cantidad de {item.Key} OK");
-        //                }
-        //                else
-        //                {
-        //                    informeProducto.AppendLine($"Cantidad de {item.Key} INSUFICIENTE");
-
-        //                }
-        //                break; // Salimos del loop de stock una vez que encontramos el ingrediente
-        //            }
-        //        }
-
-        //        if (!ingredienteDisponible)
-        //        {
-        //            informeProducto.AppendLine($"Ingrediente {item.Key} NO DISPONIBLE");
-        //            nuevoPlato.Disponibilidad = StatusMenu.NoDisponible;
-        //        }
-        //    }
-
-        //    nuevoPlato.MensajeStatus = informeProducto.ToString();
-
-
-        //    return nuevoPlato;
-        //}
-
-
-
-
-
-
-        private static void DescontarMercaderia(Mesa mesa)
-        {
+            Thread.Sleep(3000);
+            return "Cocinando platos...";
         }
     }
 }

@@ -12,7 +12,8 @@ namespace LibraryClassRestaurant.Mercaderia
         public enum EstadoPedido
         {
             Pendiente,
-            Entregado
+            Entregado,
+            finalizado
         }
         public DateTime FechaPedido { get; set; }
         public EstadoPedido Estado { get; set; }

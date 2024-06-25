@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryClassRestaurant.Archivos;
+using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Interfaces;
 using LibraryClassRestaurant.Mercaderia;
 
@@ -18,17 +19,6 @@ namespace LibraryClassRestaurant.Empleados
         public Encargado() { }
         public Encargado(string nombre, string apellido, string direccion, string telefono, double sueldo, Perfil perfil) : base(nombre, apellido, direccion, telefono, sueldo, perfil)
         {
-        }
-
-        public Encargado(Empleado empleado)
-        {
-            this.Nombre = empleado.Nombre;
-            this.Apellido = empleado.Apellido;
-            this.Direccion = empleado.Direccion;
-            this.Telefono = empleado.Telefono;
-            this.Sueldo = empleado.Sueldo;
-            this.Profile = empleado.Profile;
-            this.EstadoEmpleado = empleado.EstadoEmpleado;
         }
 
         public static GestorMercaderia InstanciarManejadorPedido()
@@ -77,6 +67,26 @@ namespace LibraryClassRestaurant.Empleados
             GestorMercaderia.GestionarPedidos(producto);
         }
 
+        public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu>listaMenu)
+        {
+            Menu auxiliar = new Menu();
+            foreach (var item in listaMenu)
+            {
+                if (item.Nombre == menu.Nombre)
+                {
+                    item.Precio = precio;
+                    break;
+                }
+            }
+            Serializador.SaveJson<Menu>("Menu", listaMenu);
+            return listaMenu;
+        }
 
+        public List<Bebida>GetBebidas()
+        {
+            List<Bebida> listaBebidas = new List<Bebida>();
+            listaBebidas = Serializador.Read<Bebida>("PedidoBebida");
+            return listaBebidas;
+        }
     }
 }

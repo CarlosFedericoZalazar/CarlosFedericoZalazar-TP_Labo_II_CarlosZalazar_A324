@@ -40,8 +40,9 @@
             label1 = new Label();
             btnAceptar = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
+            ncTiempoPreparacion = new NumericUpDown();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ncTiempoPreparacion).BeginInit();
             SuspendLayout();
             // 
             // btnCancelar
@@ -151,20 +152,23 @@
             label2.TabIndex = 10;
             label2.Text = "TIEMPO PREPARACION";
             // 
-            // textBox1
+            // ncTiempoPreparacion
             // 
-            textBox1.Location = new Point(26, 226);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "(Minutos)";
-            textBox1.Size = new Size(172, 25);
-            textBox1.TabIndex = 11;
+            ncTiempoPreparacion.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            ncTiempoPreparacion.Location = new Point(75, 226);
+            ncTiempoPreparacion.Maximum = new decimal(new int[] { 45, 0, 0, 0 });
+            ncTiempoPreparacion.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            ncTiempoPreparacion.Name = "ncTiempoPreparacion";
+            ncTiempoPreparacion.Size = new Size(47, 39);
+            ncTiempoPreparacion.TabIndex = 12;
+            ncTiempoPreparacion.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FormAltaPlato
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(664, 360);
-            Controls.Add(textBox1);
+            Controls.Add(ncTiempoPreparacion);
             Controls.Add(label2);
             Controls.Add(btnAceptar);
             Controls.Add(label1);
@@ -184,6 +188,7 @@
             Load += FormAltaPlato_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ncTiempoPreparacion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,6 +207,6 @@
         private Label label1;
         private Button btnAceptar;
         private Label label2;
-        private TextBox textBox1;
+        private NumericUpDown ncTiempoPreparacion;
     }
 }

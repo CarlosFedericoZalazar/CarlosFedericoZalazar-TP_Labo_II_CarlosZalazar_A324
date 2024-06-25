@@ -1,0 +1,22 @@
+[
+  {
+    "Bebida": {
+      "Cantidad": 120,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "COCA COLA 1L",
+      "Precio": 216000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-36263034",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 3
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-18T21:39:14.3485346-03:00",
+    "Estado": 1
+  }
+]

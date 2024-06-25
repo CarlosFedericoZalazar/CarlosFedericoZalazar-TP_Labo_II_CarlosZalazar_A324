@@ -14,18 +14,21 @@ namespace AppRestoForm
 {
     public partial class FormPanelEncargado : Form
     {
-        IEncargado _encargado;
+        public IEncargado Encargado { get; set; }
+        public ICocinero Cocinero { get; set; }
+
         FormPrincipal formPrincipal;
-        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado)
+        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado, ICocinero cocinero)
         {
             InitializeComponent();
             this.formPrincipal = formPrincipal;
-            _encargado = encargado;
+            Encargado = encargado;
+            Cocinero = cocinero;
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            FormPanelPedidos formPanelPedidos = new FormPanelPedidos(this, _encargado);
+            FormPanelPedidos formPanelPedidos = new FormPanelPedidos(this, Encargado);
             formPanelPedidos.Show();
             this.Hide();
         }
@@ -55,6 +58,10 @@ namespace AppRestoForm
             formStock.Show();
         }
 
-
+        private void btnPrecios_Click(object sender, EventArgs e)
+        {
+            FormPrecios formPrecios = new FormPrecios(this, Encargado, Cocinero);
+            formPrecios.Show();
+        }
     }
 }

@@ -52,37 +52,20 @@ namespace AppRestaurante.Salon
             //Enviando orden a cocina
             var pedidosRechazados = Mesero.EnviarOrdenACocina(ordenMesa);
             if (pedidosRechazados.Count > 0)
-            { 
-                
+            {                 
                 string mensajeDeCocina = OrdenMesa.MensajeFaltante(pedidosRechazados);
                 Cocinero.Mensaje(mensajeDeCocina);
-                //MessageBox.Show("No se pudo realizar el pedido, verifique los productos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ordenMesa.ListaPedidosMesa = ordenMesa.QuitarMenuRechazado(pedidosRechazados);
+                MostrarMensaje("Se han quitado los Menu que no estan disponibles, agruegue u envie los los restantes");
                 return;
             }
-            
-            //Task task = Task.Run(async () =>
-            //{
-            //    try
-            //    {
-            //        // Simulación de una operación asincrónica
-            //        await Task.Delay(10000);
-            //        // Necesitamos asegurar que el siguiente código se ejecute en el hilo de la UI
-            //        this.Invoke((Action)(() => MostrarMensaje("Pedido Realizado en la Cocina")));
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        this.Invoke((Action)(() => MostrarMensaje(ex.Message)));
-            //    }
-            //});
-            //this.Hide();
-            //FormSalon.Show();
 
         }
+        
 
         private void MostrarMensaje(string mensaje)
         {
             MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

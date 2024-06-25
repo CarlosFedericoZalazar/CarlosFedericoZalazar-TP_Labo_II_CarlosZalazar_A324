@@ -31,6 +31,9 @@
     <Compile Update="Panel Encargado\FormPedido.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Panel Encargado\FormPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Panel Encargado\FormStock.cs">
       <SubType>Form</SubType>
     </Compile>

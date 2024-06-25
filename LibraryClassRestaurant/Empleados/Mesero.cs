@@ -16,7 +16,8 @@ namespace LibraryClassRestaurant.Empleados
         }
         public List<Menu> EnviarOrdenACocina(OrdenMesa ordenMesa)
         {
-            var PedidoRechazazdo = OrdenMesa.IniciarOrden(ordenMesa);
+            var PedidoRechazazdo = ordenMesa.IniciarOrden();
+            //var PedidoRechazazdo = OrdenMesa.IniciarOrden(ordenMesa);
             return PedidoRechazazdo;
 
         }

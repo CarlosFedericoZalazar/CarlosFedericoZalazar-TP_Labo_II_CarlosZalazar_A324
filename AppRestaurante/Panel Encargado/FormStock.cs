@@ -1,4 +1,85 @@
-﻿using LibraryClassRestaurant.Mercaderia;
+﻿//using LibraryClassRestaurant.Mercaderia;
+//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using System.Windows.Forms;
+//using static LibraryClassRestaurant.Empleados.Empleado;
+
+//namespace AppRestaurante.Panel_Encargado
+//{
+//    public partial class FormStock : Form
+//    {
+//        List<StockBebidas>stockBebidas = StockBebidas.GetStockBebibles();
+//        List<StockComestible> stockComestibles = StockComestible.GetStockComestibles();
+//        public FormStock()
+//        {
+//            InitializeComponent();
+//        }
+
+
+//        private void FormStock_Load(object sender, EventArgs e)
+//        {
+//            cbTipoStock.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
+//            CargarDataGred();
+//            //AjustarAnchoDataGred();
+//            lblStockBebidas.Text += stockBebidas.Count.ToString();
+//            lblStockComida.Text += stockComestibles.Count.ToString();
+//            dgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+//            dgStock.Columns["Alcoholica"].Visible = false;
+//            dgStock.Columns["Proveedor"].Visible = false;
+
+//            dgStock.Columns["Producto"].DisplayIndex = 0;
+//            dgStock.Columns["Cantidad"].DisplayIndex = 1;
+
+//        }
+
+//        void CargarDataGred()
+//        {
+//            dgStock.AutoGenerateColumns = false;
+//        }
+
+//        private void cbTipoStock_SelectedValueChanged(object sender, EventArgs e)
+//        {
+//            Producto.TipoProducto tipoProducto = (Producto.TipoProducto)cbTipoStock.SelectedItem;
+
+//            if (tipoProducto == Producto.TipoProducto.Bebida)
+//            {
+//                dgStock.DataSource = stockBebidas;
+//                lblCantidad.Text = "CANTIDAD (Unidades) ";
+//            }
+//            else
+//            {
+//                dgStock.DataSource = stockComestibles;
+//                lblCantidad.Text = "CANTIDAD (Kilogramos) ";
+//            }
+//        }
+
+//        public void AjustarAnchoDataGred()
+//        {
+//            int totalWidth = dgStock.RowHeadersWidth;
+
+//            foreach (DataGridViewColumn column in dgStock.Columns)
+//            {
+//                totalWidth += column.Width;
+//            }
+
+//            // Establecer el ancho del control al totalWidth calculado
+//            dgStock.Width = totalWidth;
+//        }
+//    }
+//}
+
+
+
+// CODIGO NINJA 
+
+
+using LibraryClassRestaurant.Mercaderia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,25 +89,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static LibraryClassRestaurant.Empleados.Empleado;
 
 namespace AppRestaurante.Panel_Encargado
 {
     public partial class FormStock : Form
     {
-        List<StockBebidas>stockBebidas = StockBebidas.GetStockBebibles();
+        List<StockBebidas> stockBebidas = StockBebidas.GetStockBebibles();
         List<StockComestible> stockComestibles = StockComestible.GetStockComestibles();
+
         public FormStock()
         {
             InitializeComponent();
         }
 
-
         private void FormStock_Load(object sender, EventArgs e)
         {
+            // Configuración inicial del formulario y carga de datos
             cbTipoStock.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
             CargarDataGred();
-            //AjustarAnchoDataGred();
             lblStockBebidas.Text += stockBebidas.Count.ToString();
             lblStockComida.Text += stockComestibles.Count.ToString();
             dgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -35,16 +115,18 @@ namespace AppRestaurante.Panel_Encargado
 
             dgStock.Columns["Producto"].DisplayIndex = 0;
             dgStock.Columns["Cantidad"].DisplayIndex = 1;
-
+            
         }
 
-        void CargarDataGred()
+        private void CargarDataGred()
         {
+            // Configurar el DataGridView para no generar columnas automáticamente
             dgStock.AutoGenerateColumns = false;
         }
 
         private void cbTipoStock_SelectedValueChanged(object sender, EventArgs e)
         {
+            // Cambiar la fuente de datos del DataGridView según el tipo de producto seleccionado
             Producto.TipoProducto tipoProducto = (Producto.TipoProducto)cbTipoStock.SelectedItem;
 
             if (tipoProducto == Producto.TipoProducto.Bebida)
@@ -56,20 +138,24 @@ namespace AppRestaurante.Panel_Encargado
             {
                 dgStock.DataSource = stockComestibles;
                 lblCantidad.Text = "CANTIDAD (Kilogramos) ";
+                // Manejar el evento CellFormatting para formatear la columna "Cantidad"
+                dgStock.CellFormatting += DgStock_CellFormatting;
             }
         }
 
-        public void AjustarAnchoDataGred()
+        private void DgStock_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            int totalWidth = dgStock.RowHeadersWidth;
-
-            foreach (DataGridViewColumn column in dgStock.Columns)
+            // Formatear la columna "Cantidad" del DataGridView
+            if (dgStock.Columns[e.ColumnIndex].Name == "Cantidad" && e.Value != null)
             {
-                totalWidth += column.Width;
-            }
+                double cantidad = (double)e.Value;
+                string formattedValue = cantidad.ToString("0.###"); // Formato con tres decimales máximo
 
-            // Establecer el ancho del control al totalWidth calculado
-            dgStock.Width = totalWidth;
+                // Asignar el valor formateado de vuelta a la celda
+                e.Value = formattedValue;
+                e.FormattingApplied = true;
+            }
         }
     }
 }
+

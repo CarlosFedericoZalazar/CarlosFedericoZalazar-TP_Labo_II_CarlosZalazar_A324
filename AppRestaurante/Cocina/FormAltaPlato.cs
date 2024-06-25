@@ -79,7 +79,9 @@ namespace AppRestaurante.Cocina
             }
 
             var nombre = txtNombrePlato.Text;
-            var tiempoPreparacion = int.Parse(textBox1.Text);
+            int tiempoPreparacion = (int)ncTiempoPreparacion.Value;
+
+            //var tiempoPreparacion = int.Parse(tiempoPreparacion);
             var cantidadIngredientes = dictIngredientes;
 
             Plato plato = new Plato(nombre, cantidadIngredientes, cantidadIngredientes, tiempoPreparacion);

@@ -1,4 +1,5 @@
-﻿using LibraryClassRestaurant.Empleados;
+﻿using LibraryClassRestaurant.Atencion;
+using LibraryClassRestaurant.Empleados;
 using LibraryClassRestaurant.Mercaderia;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,6 @@ namespace LibraryClassRestaurant.Interfaces
         public GestorMercaderia GestorMercaderia { get; set; }
         public void GestionarPedidos(ProductoComestible producto, Proveedor proveedor);
         public void GestionarPedidos(Bebida producto, Proveedor proveedor);
+        public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu);
     }
 }

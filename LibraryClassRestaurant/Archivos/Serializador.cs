@@ -11,9 +11,8 @@ using LibraryClassRestaurant.Interfaces;
 namespace LibraryClassRestaurant.Archivos
 {
     public static class Serializador 
-    {
-        
-        private static void SaveJson<T>(string path, List<T> lista) 
+    {        
+        public static void SaveJson<T>(string path, List<T> lista) 
         {             
             path = GetJsonFilePath(path)+".json"; // Ver donde guardamos los archivos
             using (var writer = new StreamWriter(path)) 

@@ -26,7 +26,8 @@ namespace LibraryClassRestaurant.Atencion
 
         public string MensajeStatus { get; set; }
 
-        public Plato Plato { get; set; }        
+        public Plato Plato { get; set; }
+        public double Precio { get; set; }
 
         public Menu()
         {
@@ -38,6 +39,7 @@ namespace LibraryClassRestaurant.Atencion
             Plato = plato;
             Disponibilidad = disponible;
             MensajeStatus = mensajeStatus;
+            Precio = 0;
         }
 
         public static Menu InstaciarMenu()

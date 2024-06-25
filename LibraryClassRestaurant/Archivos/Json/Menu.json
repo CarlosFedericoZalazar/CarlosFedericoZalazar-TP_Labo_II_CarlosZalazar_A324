@@ -6,23 +6,25 @@
     "Plato": {
       "Nombre": "MILANESA CON PURE",
       "CantidadDeIngredientes": {
-        "CARNE": 200,
-        "PAPA": 200
+        "CARNE": 300,
+        "PAPA": 250
       },
       "TiempoPreparacion": 10
-    }
+    },
+    "Precio": 3000
   },
   {
-    "Nombre": "FIDEOS C/ BOLOGNESA",
+    "Nombre": "MILANESA CON ENSALADA",
     "Disponibilidad": 1,
     "MensajeStatus": "",
     "Plato": {
-      "Nombre": "FIDEOS C/ BOLOGNESA",
+      "Nombre": "MILANESA CON ENSALADA",
       "CantidadDeIngredientes": {
-        "FIDEOS": 250,
-        "CARNE": 250
+        "CARNE": 300,
+        "LECHUGA": 500
       },
-      "TiempoPreparacion": 15
-    }
+      "TiempoPreparacion": 10
+    },
+    "Precio": 1500
   }
 ]

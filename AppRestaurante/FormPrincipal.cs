@@ -22,7 +22,7 @@ namespace AppRestoForm
 
             Delivery delivery = new Delivery();
 
-            FormPanelEncargado formPanelEncargado = new FormPanelEncargado(this, encargado);
+            FormPanelEncargado formPanelEncargado = new FormPanelEncargado(this, encargado,cocinero);
             formPanelEncargado.Show();
             this.Hide();
         }

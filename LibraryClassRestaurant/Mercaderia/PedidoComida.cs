@@ -27,5 +27,10 @@ namespace LibraryClassRestaurant.Mercaderia
         {
             return Serializador.Read<PedidoComida>("PedidoComida");
         }
+
+        public static void GuardarPedidoComida(List<PedidoComida> pedido)
+        {
+            Serializador.SaveJson<PedidoComida>("PedidoComida", pedido);
+        }
     }
 }
