@@ -47,6 +47,7 @@
             dgMenu.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgMenu.Size = new Size(349, 196);
             dgMenu.TabIndex = 0;
+            dgMenu.CellClick += dgMenu_CellClick;
             dgMenu.SelectionChanged += dgMenu_SelectionChanged;
             // 
             // btnModificarPrecio

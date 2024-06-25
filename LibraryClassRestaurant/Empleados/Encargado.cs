@@ -82,6 +82,22 @@ namespace LibraryClassRestaurant.Empleados
             return listaMenu;
         }
 
+        public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu)
+        {
+            List<PedidoBebida> listaBebidas = PedidoBebida.GetPedidosBebidas();
+
+            foreach (var item in listaBebidas)
+            {
+                if (item.Bebida.Nombre == bebida.Producto)
+                {
+                    item.Bebida.PrecioDeVenta = precio;
+                    break;
+                }
+            }
+            Serializador.SaveJson<PedidoBebida>("PedidoBebida", listaBebidas);
+            return StockBebidas.GetStockBebibles();
+        }
+
         public List<Bebida>GetBebidas()
         {
             List<Bebida> listaBebidas = new List<Bebida>();

@@ -32,7 +32,7 @@
             lblStockComida = new Label();
             lblStockBebidas = new Label();
             dgStock = new DataGridView();
-            cbTipoStock = new ComboBox();
+            cbTipoProducto = new ComboBox();
             lblTipoStock = new Label();
             lblProducto = new Label();
             lblCantidad = new Label();
@@ -82,14 +82,14 @@
             dgStock.Size = new Size(485, 224);
             dgStock.TabIndex = 4;
             // 
-            // cbTipoStock
+            // cbTipoProducto
             // 
-            cbTipoStock.FormattingEnabled = true;
-            cbTipoStock.Location = new Point(28, 29);
-            cbTipoStock.Name = "cbTipoStock";
-            cbTipoStock.Size = new Size(121, 25);
-            cbTipoStock.TabIndex = 5;
-            cbTipoStock.SelectedValueChanged += cbTipoStock_SelectedValueChanged;
+            cbTipoProducto.FormattingEnabled = true;
+            cbTipoProducto.Location = new Point(28, 29);
+            cbTipoProducto.Name = "cbTipoProducto";
+            cbTipoProducto.Size = new Size(121, 25);
+            cbTipoProducto.TabIndex = 5;
+            cbTipoProducto.SelectedValueChanged += cbTipoStock_SelectedValueChanged;
             // 
             // lblTipoStock
             // 
@@ -128,7 +128,7 @@
             Controls.Add(lblCantidad);
             Controls.Add(lblProducto);
             Controls.Add(lblTipoStock);
-            Controls.Add(cbTipoStock);
+            Controls.Add(cbTipoProducto);
             Controls.Add(dgStock);
             Controls.Add(lblStockBebidas);
             Controls.Add(lblStockComida);
@@ -147,7 +147,7 @@
         private Label lblStockComida;
         private Label lblStockBebidas;
         private DataGridView dgStock;
-        private ComboBox cbTipoStock;
+        private ComboBox cbTipoProducto;
         private Label lblTipoStock;
         private Label lblProducto;
         private Label lblCantidad;

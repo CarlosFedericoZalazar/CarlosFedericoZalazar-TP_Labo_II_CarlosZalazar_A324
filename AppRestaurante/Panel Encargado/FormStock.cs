@@ -105,7 +105,7 @@ namespace AppRestaurante.Panel_Encargado
         private void FormStock_Load(object sender, EventArgs e)
         {
             // Configuración inicial del formulario y carga de datos
-            cbTipoStock.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
+            cbTipoProducto.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
             CargarDataGred();
             lblStockBebidas.Text += stockBebidas.Count.ToString();
             lblStockComida.Text += stockComestibles.Count.ToString();
@@ -113,6 +113,7 @@ namespace AppRestaurante.Panel_Encargado
             dgStock.Columns["Alcoholica"].Visible = false;
             dgStock.Columns["Proveedor"].Visible = false;
 
+            dgStock.Columns["Precio"].Visible = false; // ver aca
             dgStock.Columns["Producto"].DisplayIndex = 0;
             dgStock.Columns["Cantidad"].DisplayIndex = 1;
             
@@ -127,19 +128,15 @@ namespace AppRestaurante.Panel_Encargado
         private void cbTipoStock_SelectedValueChanged(object sender, EventArgs e)
         {
             // Cambiar la fuente de datos del DataGridView según el tipo de producto seleccionado
-            Producto.TipoProducto tipoProducto = (Producto.TipoProducto)cbTipoStock.SelectedItem;
+            Producto.TipoProducto tipoProducto = (Producto.TipoProducto)cbTipoProducto.SelectedItem;
 
             if (tipoProducto == Producto.TipoProducto.Bebida)
             {
                 dgStock.DataSource = stockBebidas;
-                lblCantidad.Text = "CANTIDAD (Unidades) ";
             }
             else
             {
                 dgStock.DataSource = stockComestibles;
-                lblCantidad.Text = "CANTIDAD (Kilogramos) ";
-                // Manejar el evento CellFormatting para formatear la columna "Cantidad"
-                dgStock.CellFormatting += DgStock_CellFormatting;
             }
         }
 

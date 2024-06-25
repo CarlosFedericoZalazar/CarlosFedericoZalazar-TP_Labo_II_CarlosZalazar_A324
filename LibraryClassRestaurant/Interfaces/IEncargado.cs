@@ -21,5 +21,7 @@ namespace LibraryClassRestaurant.Interfaces
         public void GestionarPedidos(ProductoComestible producto, Proveedor proveedor);
         public void GestionarPedidos(Bebida producto, Proveedor proveedor);
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu);
+        public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu);
+        public List<Bebida> GetBebidas();
     }
 }

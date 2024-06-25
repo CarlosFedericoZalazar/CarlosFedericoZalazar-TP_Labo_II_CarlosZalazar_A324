@@ -24,7 +24,9 @@ namespace LibraryClassRestaurant.Mercaderia
 
         public static List<PedidoBebida> GetPedidosBebidas()
         {
-            return Serializador.Read<PedidoBebida>("PedidoBebida");
+            var pedidos = Serializador.Read<PedidoBebida>("PedidoBebida");
+            //return Serializador.Read<PedidoBebida>("PedidoBebida");
+            return pedidos;
         }
 
     }

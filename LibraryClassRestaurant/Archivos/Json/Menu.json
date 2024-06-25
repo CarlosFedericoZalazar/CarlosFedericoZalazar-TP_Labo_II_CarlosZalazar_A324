@@ -11,7 +11,7 @@
       },
       "TiempoPreparacion": 10
     },
-    "Precio": 3000
+    "Precio": 3100
   },
   {
     "Nombre": "MILANESA CON ENSALADA",
@@ -25,6 +25,6 @@
       },
       "TiempoPreparacion": 10
     },
-    "Precio": 1500
+    "Precio": 300
   }
 ]
