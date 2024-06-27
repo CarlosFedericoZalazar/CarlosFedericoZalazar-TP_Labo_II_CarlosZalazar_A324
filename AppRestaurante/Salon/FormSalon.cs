@@ -1,6 +1,7 @@
 ﻿using AppRestoForm;
 using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Empleados;
+using LibraryClassRestaurant.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,17 +19,19 @@ namespace AppRestaurante.Salon
         public event EventHandler<MesaEventArgs> InicializarMesa;
         public FormPrincipal FormPrincipal { get; set; }
         public Cocinero Cocinero { get; set; }
-
         public List<Mesa> ListaMesas { get; set; }
+
+        public IEncargado EncargadoTurno { get; set; }
 
         List<Empleado> listaMeseros = new List<Empleado>();
 
         public int CantidadMesas { get; set; }
-        public FormSalon(FormPrincipal formPrincipal, List<Mesa> listaMesas, Cocinero cocinero)
+        public FormSalon(FormPrincipal formPrincipal, List<Mesa> listaMesas, IEncargado encargado,Cocinero cocinero)
         {
             InitializeComponent();
             FormPrincipal = formPrincipal;
             ListaMesas = listaMesas;
+            EncargadoTurno = encargado;
             Cocinero = cocinero;
         }
 
@@ -36,6 +39,7 @@ namespace AppRestaurante.Salon
         {
             BindingList<Mesa> listaMesas = new BindingList<Mesa>(ListaMesas);
             var listaMeseros = Encargado.ListarMeserosActivos<Mesero>();
+            lblEncargado.Text += $" {EncargadoTurno.Nombre}";
             cbMeseros.DataSource = listaMeseros;
             cbMeseros.DisplayMember = "Nombre";
             cbMesas.DataSource = listaMesas;
@@ -48,13 +52,22 @@ namespace AppRestaurante.Salon
             Mesero mesero = (Mesero)cbMeseros.SelectedItem;
             var mesa = (Mesa)cbMesas.SelectedItem;
 
-            if(mesa.Estado == Mesa.EstadoMesa.Abierta)
+            if (mesa.Estado == Mesa.EstadoMesa.Abierta)
             {
                 mesa.Estado = Mesa.EstadoMesa.Abierta;
-                string mensaje = Caja.Cuenta(mesa.Orden);
+                string mensaje = LibraryClassRestaurant.Atencion.Caja.Cuenta(mesa.Orden);
                 DialogResult result = MessageBox.Show($"¿Desea pagar la cuenta? \n {mensaje}", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
+                    FormPagarCuenta formPagarCuenta = new FormPagarCuenta(mesero, mesa);
+                    formPagarCuenta.ShowDialog();
+
+                    // AGREGAR AL ENCARGADO AL FORMULARIO
+                    
+                    // encargado.CobrarMesa(mesa,caja);
+                    
+                    // SIN FALRA MAÑANA!!!!!!!!!!!!!!!!!!!!!!!!!!!! <------------
+
                     InicializarMesa+= FormMesa_PedidoRealizado;
                     RestaurarMesa(mesa);
                     return;
@@ -113,20 +126,6 @@ namespace AppRestaurante.Salon
             else
             {
                 lblStatus.Text = "";
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Mesa mesa = (Mesa)cbMesas.SelectedItem;
-            try 
-            {
-                string cadena = mesa.Orden.MostrarOrdenMenu();            
-                MessageBox.Show(cadena);
-            }
-            catch(System.NullReferenceException ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

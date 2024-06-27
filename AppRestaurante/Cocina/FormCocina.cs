@@ -48,5 +48,10 @@ namespace AppRestaurante.Cocina
             comboBox1.DisplayMember = "Nombre";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormBajaPlato formBajaPlato = new FormBajaPlato();
+            formBajaPlato.Show();
+        }
     }
 }

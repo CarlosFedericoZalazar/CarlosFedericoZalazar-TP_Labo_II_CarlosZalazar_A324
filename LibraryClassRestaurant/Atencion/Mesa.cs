@@ -42,5 +42,14 @@ namespace LibraryClassRestaurant.Atencion
             return listaMesas;
         }
 
+        public double MontoTotalMesa()
+        {
+            foreach(var item in Orden.ListaPedidosMesa)
+            {
+                MontoTotal += item.Precio;
+            }
+            return MontoTotal;
+        }
+
     }
 }

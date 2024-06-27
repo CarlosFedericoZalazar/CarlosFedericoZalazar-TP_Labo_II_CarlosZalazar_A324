@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSalon));
             cbMesas = new ComboBox();
             lblMesa = new Label();
             cbMeseros = new ComboBox();
@@ -36,7 +37,6 @@
             lblCancelar = new Button();
             lblEncargado = new Label();
             lblStatus = new Label();
-            button1 = new Button();
             SuspendLayout();
             // 
             // cbMesas
@@ -44,7 +44,7 @@
             cbMesas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMesas.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             cbMesas.FormattingEnabled = true;
-            cbMesas.Location = new Point(78, 111);
+            cbMesas.Location = new Point(68, 83);
             cbMesas.Name = "cbMesas";
             cbMesas.Size = new Size(50, 33);
             cbMesas.TabIndex = 0;
@@ -53,33 +53,37 @@
             // lblMesa
             // 
             lblMesa.AutoSize = true;
-            lblMesa.Location = new Point(86, 87);
+            lblMesa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMesa.Location = new Point(76, 59);
             lblMesa.Name = "lblMesa";
-            lblMesa.Size = new Size(42, 17);
+            lblMesa.Size = new Size(51, 21);
             lblMesa.TabIndex = 1;
             lblMesa.Text = "MESA";
             // 
             // cbMeseros
             // 
             cbMeseros.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbMeseros.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMeseros.FormattingEnabled = true;
-            cbMeseros.Location = new Point(231, 111);
+            cbMeseros.Location = new Point(221, 83);
             cbMeseros.Name = "cbMeseros";
-            cbMeseros.Size = new Size(165, 25);
+            cbMeseros.Size = new Size(165, 29);
             cbMeseros.TabIndex = 2;
             // 
             // lblMeseros
             // 
             lblMeseros.AutoSize = true;
-            lblMeseros.Location = new Point(274, 87);
+            lblMeseros.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMeseros.Location = new Point(264, 59);
             lblMeseros.Name = "lblMeseros";
-            lblMeseros.Size = new Size(66, 17);
+            lblMeseros.Size = new Size(80, 21);
             lblMeseros.TabIndex = 3;
             lblMeseros.Text = "MESEROS";
             // 
             // btnPedido
             // 
-            btnPedido.Location = new Point(231, 172);
+            btnPedido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPedido.Location = new Point(221, 144);
             btnPedido.Name = "btnPedido";
             btnPedido.Size = new Size(165, 85);
             btnPedido.TabIndex = 4;
@@ -89,20 +93,22 @@
             // 
             // lblCancelar
             // 
-            lblCancelar.Location = new Point(43, 172);
+            lblCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCancelar.Location = new Point(33, 144);
             lblCancelar.Name = "lblCancelar";
             lblCancelar.Size = new Size(165, 85);
             lblCancelar.TabIndex = 5;
-            lblCancelar.Text = "CANCELAR";
+            lblCancelar.Text = "PANEL PRINCIPAL";
             lblCancelar.UseVisualStyleBackColor = true;
             lblCancelar.Click += lblCancelar_Click;
             // 
             // lblEncargado
             // 
             lblEncargado.AutoSize = true;
-            lblEncargado.Location = new Point(12, 9);
+            lblEncargado.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblEncargado.Location = new Point(12, 18);
             lblEncargado.Name = "lblEncargado";
-            lblEncargado.Size = new Size(140, 17);
+            lblEncargado.Size = new Size(166, 21);
             lblEncargado.TabIndex = 6;
             lblEncargado.Text = "- Encargado de Turno:";
             // 
@@ -111,28 +117,18 @@
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblStatus.ForeColor = Color.Green;
-            lblStatus.Location = new Point(134, 115);
+            lblStatus.Location = new Point(124, 87);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(16, 21);
             lblStatus.TabIndex = 7;
             lblStatus.Text = "-";
             // 
-            // button1
-            // 
-            button1.Location = new Point(231, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(157, 29);
-            button1.TabIndex = 8;
-            button1.Text = "cantidadPLatos";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // FormSalon
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(440, 278);
-            Controls.Add(button1);
             Controls.Add(lblStatus);
             Controls.Add(lblEncargado);
             Controls.Add(lblCancelar);
@@ -141,6 +137,7 @@
             Controls.Add(cbMeseros);
             Controls.Add(lblMesa);
             Controls.Add(cbMesas);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormSalon";
@@ -161,6 +158,5 @@
         private Button lblCancelar;
         private Label lblEncargado;
         private Label lblStatus;
-        private Button button1;
     }
 }

@@ -33,6 +33,7 @@
             btnGestionarEmpleado = new Button();
             btnVolver = new Button();
             btnPrecios = new Button();
+            btnCaja = new Button();
             SuspendLayout();
             // 
             // btnPedidos
@@ -86,11 +87,22 @@
             btnPrecios.UseVisualStyleBackColor = true;
             btnPrecios.Click += btnPrecios_Click;
             // 
+            // btnCaja
+            // 
+            btnCaja.Location = new Point(291, 37);
+            btnCaja.Name = "btnCaja";
+            btnCaja.Size = new Size(184, 61);
+            btnCaja.TabIndex = 6;
+            btnCaja.Text = "CAJA";
+            btnCaja.UseVisualStyleBackColor = true;
+            btnCaja.Click += btnCaja_Click;
+            // 
             // FormPanelEncargado
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(296, 450);
+            ClientSize = new Size(522, 450);
+            Controls.Add(btnCaja);
             Controls.Add(btnPrecios);
             Controls.Add(btnVolver);
             Controls.Add(btnGestionarEmpleado);
@@ -112,5 +124,6 @@
         private Button btnGestionarEmpleado;
         private Button btnVolver;
         private Button btnPrecios;
+        private Button btnCaja;
     }
 }

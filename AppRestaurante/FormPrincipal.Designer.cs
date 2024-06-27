@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             btnPanelEncargado = new Button();
             btnSalon = new Button();
             btnCocina = new Button();
@@ -67,16 +68,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(267, 450);
             Controls.Add(btnCocina);
             Controls.Add(btnSalon);
             Controls.Add(btnPanelEncargado);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Restó App";
+            Text = "RESTAURANT UTN";
             Load += FormPrincipal_Load;
             ResumeLayout(false);
         }

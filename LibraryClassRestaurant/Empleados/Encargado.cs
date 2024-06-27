@@ -104,5 +104,14 @@ namespace LibraryClassRestaurant.Empleados
             listaBebidas = Serializador.Read<Bebida>("PedidoBebida");
             return listaBebidas;
         }
+
+        public void CobrarMesa(Mesa mesa, Caja caja)
+        {
+            string mensaje = Caja.Cuenta(mesa.Orden);
+            double monto = mesa.MontoTotalMesa();
+
+            caja.Dinero += monto;
+            Console.WriteLine(mensaje);
+        }
     }
 }

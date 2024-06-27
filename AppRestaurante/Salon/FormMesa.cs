@@ -103,12 +103,24 @@ namespace AppRestaurante.Salon
 
             if (result == DialogResult.Yes)
             {
-                listaMenu.Push((Menu)cbMenu.SelectedItem);                
+                listaMenu.Push((Menu)cbMenu.SelectedItem);
                 lblListaPedidos.Text += $"{ordenMesa.Nombre}\n* ";
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBebidas_Click(object sender, EventArgs e)
+        {
+            var bebida = (StockBebidas)cbBebidas.SelectedItem;
+            DialogResult result = MessageBox.Show($"¿Confirma {bebida.Producto}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                bebidaSolicitadas.Add(bebida);
+                lblBebida.Text += $"{bebida.Producto}\n* ";
+            }
+        }
+
+        private void btnDelPlato_Click(object sender, EventArgs e)
         {
             try
             {
@@ -124,21 +136,6 @@ namespace AppRestaurante.Salon
             catch (InvalidOperationException)
             {
                 MessageBox.Show("Ocurrió un error al intentar acceder a la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnCerrarMesa_Click(object sender, EventArgs e)
-        {
-            if (MesaCliente.Estado == Mesa.EstadoMesa.Abierta)
-            {
-                MessageBox.Show("Mandamos a hacer la cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                String ListaCuenta = Caja.Cuenta(MesaCliente.Orden);
-                MessageBox.Show(ListaCuenta, "Cuenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else 
-            {
-                MessageBox.Show("La Mesas esta cerrada querido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

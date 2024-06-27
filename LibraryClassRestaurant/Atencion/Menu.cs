@@ -60,6 +60,22 @@ namespace LibraryClassRestaurant.Atencion
             Serializador.Save<Menu>("Menu", nuevoPlatoenMenu);
         }
 
+        public void QuitarPlato(Menu menu)
+        {            
+            List<Menu> listaMenu = GetMenu();
+
+            foreach (var item in listaMenu)
+            {
+                if (item.Nombre == menu.Nombre)
+                {
+                    listaMenu.Remove(item);
+                    break;
+                }
+            }
+            int contador = listaMenu.Count;
+            Serializador.SaveJson<Menu>("Menu", listaMenu);
+        }
+
         public static List<Menu>CargarMenuDisponible()
         {
             List<Menu> listaMenu = Serializador.Read<Menu>("Menu");

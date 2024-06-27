@@ -11,6 +11,7 @@ namespace LibraryClassRestaurant.Interfaces
 {
     public interface IEncargado
     {
+        public string Nombre { get; set; }
         public void AgregarEmpleado(Empleado empleado);
         //public void EliminarEmpleado();
         //public void ModificarEmpleado();
@@ -23,5 +24,6 @@ namespace LibraryClassRestaurant.Interfaces
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu);
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu);
         public List<Bebida> GetBebidas();
+
     }
 }

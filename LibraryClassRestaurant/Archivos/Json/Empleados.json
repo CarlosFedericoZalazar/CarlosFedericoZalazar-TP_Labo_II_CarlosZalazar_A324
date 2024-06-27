@@ -70,5 +70,14 @@
     "Sueldo": 400000,
     "Profile": 2,
     "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "Juan Bautista",
+    "Apellido": "Zalazar",
+    "Direccion": "Alemania 3388, Temperley",
+    "Telefono": "1144076352",
+    "Sueldo": 500000,
+    "Profile": 3,
+    "EstadoEmpleado": 0
   }
 ]

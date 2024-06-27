@@ -35,6 +35,11 @@ namespace LibraryClassRestaurant.Empleados
             AvisoCocinero?.Invoke(mensaje);
         }
 
+        public void QuitarPlato(Menu menu)
+        {
+            this.GestorMenu.QuitarPlato(menu);
+        }
+
     }
 
 }

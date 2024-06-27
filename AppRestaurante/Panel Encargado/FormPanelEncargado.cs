@@ -1,4 +1,6 @@
-﻿using AppRestaurante.Panel_Encargado;
+﻿using AppRestaurante.Caja;
+using AppRestaurante.Panel_Encargado;
+using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -16,14 +18,16 @@ namespace AppRestoForm
     {
         public IEncargado Encargado { get; set; }
         public ICocinero Cocinero { get; set; }
+        public Caja Caja { get; set; }
 
         FormPrincipal formPrincipal;
-        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado, ICocinero cocinero)
+        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado, ICocinero cocinero, Caja caja)
         {
             InitializeComponent();
             this.formPrincipal = formPrincipal;
             Encargado = encargado;
             Cocinero = cocinero;
+            Caja = caja;
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -62,6 +66,12 @@ namespace AppRestoForm
         {
             FormPrecios formPrecios = new FormPrecios(this, Encargado, Cocinero);
             formPrecios.Show();
+        }
+
+        private void btnCaja_Click(object sender, EventArgs e)
+        {
+            FormCaja formCaja = new FormCaja();
+            formCaja.Show();
         }
     }
 }

@@ -38,7 +38,9 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\LibraryClassRestaurant.dll
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\LibraryClassRestaurant.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Caja.FormCaja.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormAltaPlato.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormBajaPlato.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormCocina.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestoForm.FormPrincipal.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormABMEmpleado.resources
@@ -51,6 +53,7 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPrecios.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormStock.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormMesa.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormPagarCuenta.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormSalon.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.csproj.GenerateResource.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.GeneratedMSBuildEditorConfig.editorconfig
