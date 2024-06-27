@@ -33,15 +33,18 @@
             btnAddPlato = new Button();
             btnCancelar = new Button();
             bindingSource1 = new BindingSource(components);
-            btnMenu = new Button();
-            comboBox1 = new ComboBox();
             button1 = new Button();
+            button2 = new Button();
+            groupBox1 = new GroupBox();
+            btnConsultaMenu = new Button();
+            bntMenuDisponible = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btnAddPlato
             // 
-            btnAddPlato.Location = new Point(62, 38);
+            btnAddPlato.Location = new Point(37, 59);
             btnAddPlato.Name = "btnAddPlato";
             btnAddPlato.Size = new Size(162, 56);
             btnAddPlato.TabIndex = 0;
@@ -51,7 +54,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(62, 348);
+            btnCancelar.Location = new Point(370, 259);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(162, 56);
             btnCancelar.TabIndex = 1;
@@ -59,27 +62,9 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // btnMenu
-            // 
-            btnMenu.Location = new Point(62, 249);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(162, 56);
-            btnMenu.TabIndex = 2;
-            btnMenu.Text = "VER MENU";
-            btnMenu.UseVisualStyleBackColor = true;
-            btnMenu.Click += btnMenu_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(365, 360);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(175, 25);
-            comboBox1.TabIndex = 3;
-            // 
             // button1
             // 
-            button1.Location = new Point(62, 117);
+            button1.Location = new Point(37, 138);
             button1.Name = "button1";
             button1.Size = new Size(162, 56);
             button1.TabIndex = 4;
@@ -87,25 +72,66 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(37, 220);
+            button2.Name = "button2";
+            button2.Size = new Size(165, 56);
+            button2.TabIndex = 5;
+            button2.Text = "MODIFICAR PLATO";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btnAddPlato);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(47, 39);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(238, 318);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "ABM PLATOS";
+            // 
+            // btnConsultaMenu
+            // 
+            btnConsultaMenu.Location = new Point(370, 98);
+            btnConsultaMenu.Name = "btnConsultaMenu";
+            btnConsultaMenu.Size = new Size(162, 56);
+            btnConsultaMenu.TabIndex = 7;
+            btnConsultaMenu.Text = "CONSULTAS MENU POR INGREDIENTE";
+            btnConsultaMenu.UseVisualStyleBackColor = true;
+            btnConsultaMenu.Click += btnConsultaMenu_Click;
+            // 
+            // bntMenuDisponible
+            // 
+            bntMenuDisponible.Location = new Point(370, 177);
+            bntMenuDisponible.Name = "bntMenuDisponible";
+            bntMenuDisponible.Size = new Size(162, 56);
+            bntMenuDisponible.TabIndex = 8;
+            bntMenuDisponible.Text = "MENU DISPONIBLE";
+            bntMenuDisponible.UseVisualStyleBackColor = true;
+            // 
             // FormCocina
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 541);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(btnMenu);
+            ClientSize = new Size(597, 377);
+            Controls.Add(bntMenuDisponible);
+            Controls.Add(btnConsultaMenu);
+            Controls.Add(groupBox1);
             Controls.Add(btnCancelar);
-            Controls.Add(btnAddPlato);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormCocina";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ADMINISTRADOR DE CARTA RESTAURANT";
-            Load += FormABMCartaRestaurant_Load;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -114,8 +140,10 @@
         private Button btnAddPlato;
         private Button btnCancelar;
         private BindingSource bindingSource1;
-        private Button btnMenu;
-        private ComboBox comboBox1;
         private Button button1;
+        private Button button2;
+        private GroupBox groupBox1;
+        private Button btnConsultaMenu;
+        private Button bntMenuDisponible;
     }
 }

@@ -37,21 +37,24 @@ namespace AppRestaurante.Cocina
             this.Hide();
         }
 
-        private void FormABMCartaRestaurant_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            comboBox1.DataSource = Cocinero.GetMenu();
-            comboBox1.DisplayMember = "Nombre";
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            FormBajaPlato formBajaPlato = new FormBajaPlato();
+            FormBajaPlato formBajaPlato = new FormBajaPlato(this);
             formBajaPlato.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormModificarPlato formModificarPlato = new FormModificarPlato();
+            formModificarPlato.Show();
+
+        }
+
+        private void btnConsultaMenu_Click(object sender, EventArgs e)
+        {
+            FormConsultaPlato formConsultaPlato = new FormConsultaPlato(Cocinero, this);
+            formConsultaPlato.Show();
+            this.Hide();
         }
     }
 }

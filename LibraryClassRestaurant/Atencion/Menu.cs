@@ -23,9 +23,7 @@ namespace LibraryClassRestaurant.Atencion
         public string Nombre { get; set; }
         public List<Plato> listaMenu = new List<Plato>();
         public StatusMenu Disponibilidad { get; set; }
-
         public string MensajeStatus { get; set; }
-
         public Plato Plato { get; set; }
         public double Precio { get; set; }
 
@@ -41,7 +39,6 @@ namespace LibraryClassRestaurant.Atencion
             MensajeStatus = mensajeStatus;
             Precio = 0;
         }
-
         public static Menu InstaciarMenu()
         {
             return new Menu();
@@ -55,8 +52,6 @@ namespace LibraryClassRestaurant.Atencion
         public void AgregarPlato(Plato plato)
         {
             Menu nuevoPlatoenMenu = CrearGestorMenu(plato, StatusMenu.Disponible);
-            //Menu registroActualizado = ActualizarEstadoMenu(nuevoPlatoenMenu, lista);
-            //Mensaje(registroActualizado.MensajeStatus);
             Serializador.Save<Menu>("Menu", nuevoPlatoenMenu);
         }
 
@@ -76,6 +71,10 @@ namespace LibraryClassRestaurant.Atencion
             Serializador.SaveJson<Menu>("Menu", listaMenu);
         }
 
+        public void ModificarPlato(List<Menu>listaMenu)
+        {
+            Serializador.SaveJson<Menu>("Menu", listaMenu); 
+        }
         public static List<Menu>CargarMenuDisponible()
         {
             List<Menu> listaMenu = Serializador.Read<Menu>("Menu");
@@ -94,52 +93,30 @@ namespace LibraryClassRestaurant.Atencion
         public List<Menu> GetMenu() 
         {
             return Serializador.Read<Menu>("Menu");
-        }
-        //public static Menu ActualizarEstadoMenu(Menu nuevoPlato, List<StockComestible> listaStock)
-        //{
-        //    StringBuilder informeProducto = new StringBuilder();
-        //    bool ingredienteDisponible = true;
-
-        //    foreach (var item in nuevoPlato.Plato.CantidadDeIngredientes)
-        //    {
-        //        ingredienteDisponible = false; // Asumimos que el ingrediente no está disponible hasta que se demuestre lo contrario
-
-        //        foreach (var stock in listaStock)
-        //        {
-        //            if (item.Key == stock.Producto)
-        //            {
-        //                ingredienteDisponible = true; // Ingrediente encontrado en stock
-
-        //                informeProducto.AppendLine($"Ingrediente {item.Key} OK");
-
-        //                if (item.Value < stock.Cantidad)
-        //                {
-        //                    nuevoPlato.Disponibilidad = StatusMenu.Disponible; // CORROBORAR SI ESTA BIEN
-        //                    informeProducto.AppendLine($"Cantidad de {item.Key} OK");
-        //                }
-        //                else
-        //                {
-        //                    informeProducto.AppendLine($"Cantidad de {item.Key} INSUFICIENTE");
-        //                }
-        //                break; // Salimos del loop de stock una vez que encontramos el ingrediente
-        //            }
-        //        }
-
-        //        if (!ingredienteDisponible)
-        //        {
-        //            informeProducto.AppendLine($"Ingrediente {item.Key} NO DISPONIBLE");
-        //        }
-        //    }
-
-        //    nuevoPlato.MensajeStatus = informeProducto.ToString();
-        //    nuevoPlato.Disponibilidad = StatusMenu.NoDisponible;
-
-        //    return nuevoPlato;
-        //}
+        }        
 
         public void Mensaje(string mensaje)
         {
             AvisoMenu?.Invoke(mensaje);
+        }
+
+        public List<Menu> BusquedaMenuPorIngrediente(string ingrediente) 
+        {
+            var listaMenu = GetMenu();
+            List<Menu> listaAuxiliar = new List<Menu>();
+
+            foreach (var item in listaMenu)
+            {
+                foreach (var itemPlato in item.Plato.CantidadDeIngredientes)
+                {
+                    if (itemPlato.Key == ingrediente)
+                    {
+                        listaAuxiliar.Add(item);
+                        break;
+                    }
+                }
+            }
+            return listaAuxiliar;
         }
     }
 }

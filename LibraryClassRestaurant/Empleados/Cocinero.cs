@@ -40,6 +40,15 @@ namespace LibraryClassRestaurant.Empleados
             this.GestorMenu.QuitarPlato(menu);
         }
 
+        public void ModificarPlato(List<Menu>listaMenu)
+        {
+            this.GestorMenu.ModificarPlato(listaMenu);
+        }
+
+        public List<Menu>BusquedaMenuPorIngrediente(string ingrediente)
+        {
+            return this.GestorMenu.BusquedaMenuPorIngrediente(ingrediente);
+        }
     }
 
 }

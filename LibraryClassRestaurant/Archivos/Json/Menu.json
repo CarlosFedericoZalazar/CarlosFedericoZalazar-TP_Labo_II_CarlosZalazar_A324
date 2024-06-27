@@ -6,11 +6,25 @@
     "Plato": {
       "Nombre": "MILANESA CON PURE",
       "CantidadDeIngredientes": {
-        "CARNE": 300,
+        "CARNE": 500,
         "PAPA": 250
       },
       "TiempoPreparacion": 10
     },
     "Precio": 5000
+  },
+  {
+    "Nombre": "FIDEOS CON SALSA",
+    "Disponibilidad": 1,
+    "MensajeStatus": "",
+    "Plato": {
+      "Nombre": "FIDEOS CON SALSA",
+      "CantidadDeIngredientes": {
+        "FIDEOS": 500,
+        "TOMATE": 200
+      },
+      "TiempoPreparacion": 10
+    },
+    "Precio": 0
   }
 ]
