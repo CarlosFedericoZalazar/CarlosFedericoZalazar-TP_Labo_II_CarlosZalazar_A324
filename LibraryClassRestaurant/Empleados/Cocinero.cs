@@ -49,6 +49,11 @@ namespace LibraryClassRestaurant.Empleados
         {
             return this.GestorMenu.BusquedaMenuPorIngrediente(ingrediente);
         }
+
+        public List<Menu>GetMenuDisponible()
+        {
+           return this.GestorMenu.GetMenuDisponible();
+        }
     }
 
 }

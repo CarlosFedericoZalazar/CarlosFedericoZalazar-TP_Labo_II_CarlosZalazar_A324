@@ -56,5 +56,12 @@ namespace AppRestaurante.Cocina
             formConsultaPlato.Show();
             this.Hide();
         }
+
+        private void bntMenuDisponible_Click(object sender, EventArgs e)
+        {
+            FormMenuDisponible formMenuDisponible = new FormMenuDisponible(this, Cocinero);
+            formMenuDisponible.Show();
+            this.Hide();
+        }
     }
 }

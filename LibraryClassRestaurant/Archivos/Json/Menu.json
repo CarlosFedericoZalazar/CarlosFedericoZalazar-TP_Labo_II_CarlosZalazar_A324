@@ -26,5 +26,19 @@
       "TiempoPreparacion": 10
     },
     "Precio": 0
+  },
+  {
+    "Nombre": "MILANESA CON PAPAS FRITAS",
+    "Disponibilidad": 1,
+    "MensajeStatus": "",
+    "Plato": {
+      "Nombre": "MILANESA CON PAPAS FRITAS",
+      "CantidadDeIngredientes": {
+        "CARNE": 300,
+        "PAPA": 500
+      },
+      "TiempoPreparacion": 10
+    },
+    "Precio": 0
   }
 ]

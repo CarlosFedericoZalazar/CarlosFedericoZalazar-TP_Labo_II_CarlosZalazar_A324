@@ -113,6 +113,7 @@
             bntMenuDisponible.TabIndex = 8;
             bntMenuDisponible.Text = "MENU DISPONIBLE";
             bntMenuDisponible.UseVisualStyleBackColor = true;
+            bntMenuDisponible.Click += bntMenuDisponible_Click;
             // 
             // FormCocina
             // 

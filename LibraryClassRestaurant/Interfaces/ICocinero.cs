@@ -12,7 +12,7 @@ namespace LibraryClassRestaurant.Interfaces
         public void AgregarPlato(Plato plato);
         public List<Menu> GetMenu();
         public void Mensaje(string mensaje);
-
+        public List<Menu> GetMenuDisponible();
         public List<Menu> BusquedaMenuPorIngrediente(string ingrediente);
     }
 }

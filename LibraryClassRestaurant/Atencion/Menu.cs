@@ -118,5 +118,22 @@ namespace LibraryClassRestaurant.Atencion
             }
             return listaAuxiliar;
         }
+
+        public List<Menu> GetMenuDisponible()
+        {
+            List<Menu> listaMenu = GetMenu();
+            List<Menu> listaMenuDisponible = new List<Menu>();
+
+            foreach (Menu item in listaMenu)
+            {
+                var itemActualizzado = Cocina.ActualizarEstadoMenu(item);
+                if (itemActualizzado.Disponibilidad == StatusMenu.Disponible)
+                {
+                    listaMenuDisponible.Add(item);
+                }
+            }
+            return listaMenuDisponible;
+
+        }
     }
 }
