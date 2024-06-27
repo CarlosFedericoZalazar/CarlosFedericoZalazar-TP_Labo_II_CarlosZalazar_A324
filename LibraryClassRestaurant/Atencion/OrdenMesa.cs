@@ -17,7 +17,7 @@ namespace LibraryClassRestaurant.Atencion
 
         public Stack<Menu>ListaPedidosMesa { get; set; }
         public List<StockBebidas>ListaPedidoBebidas { get; set; }
-        List<StockComestible> listaStock = StockComestible.GetStockComestibles();
+        
         public Cocinero Cocinero { get; set; }
         public OrdenMesa(Mesa mesa,Stack<Menu>listaMenu, List<StockBebidas> listaPedidoBebidas, Cocinero cocinero)
         {
@@ -35,7 +35,7 @@ namespace LibraryClassRestaurant.Atencion
             //Verificamos disponibilidad de productos
             foreach (var item in ListaPedidosMesa)
             {
-                registroActualizado = Cocina.ActualizarEstadoMenu(item, listaStock);
+                registroActualizado = Cocina.ActualizarEstadoMenu(item);
 
                 // Aca juntamos los platos que no estan disponibles
                 if (item.Disponibilidad == Menu.StatusMenu.NoDisponible)
@@ -47,9 +47,8 @@ namespace LibraryClassRestaurant.Atencion
             {
                 Console.WriteLine("ENVIAMOS A COCINAR!");//MANDAMOS A COCINAR ABRIENDO UN HILO!
                 
-                Thread cocinarThread = new Thread(CocinarPlatos);                
+                Thread cocinarThread = new Thread(EnvirOrdenACocina);                
                 cocinarThread.Start(); 
-
             }
             return menuNoDisponible;
         }
@@ -78,45 +77,12 @@ namespace LibraryClassRestaurant.Atencion
             return stringBuilder.ToString();
         }
 
-
-        private void CocinarPlatos(Object hola) // esta bien?
+        private void EnvirOrdenACocina()
         {
-            Thread.Sleep(3000);
-            var cadena = Cocina.Cocinar(listaStock, ListaPedidosMesa);
-            DescontarMercaderia();
-            Cocinero.Mensaje("Se hizo el decuento de la mercaderia");
-
-            Thread.Sleep(5000);
-            Cocinero.Mensaje($"Platos listos para servir, MESA: {MesaAtedida}");
-
+            Cocinero.Mensaje("Enviando orden a cocina");
+            Cocina.CocinarPlatos(ListaPedidosMesa,Cocinero);            
+            Cocinero.Mensaje($"Platos listos para servir, MESA: {MesaAtedida.NumeroMesa}");
         }
-
-        /*
-         MAÑANA VER EL TEMA DEL DESCUENTO DE MERCADERIA   
-        
-        - TENGO LISTA DE PLATOS Y LISTA DE STOCK
-        
-        SEGUIR CON EL DECUENTO DE MERCADERIA!
-         */
-
-        public void DescontarMercaderia()
-        {
-            foreach (var item in ListaPedidosMesa)
-            {
-                foreach (var ingrediente in item.Plato.CantidadDeIngredientes)
-                {
-                    foreach (var stock in listaStock)
-                    {
-                        if (ingrediente.Key == stock.Producto)
-                        {
-                            stock.Cantidad -= (ingrediente.Value)/1000;
-                        }
-                    }
-                }
-            }
-            StockComestible.ActualizarStock(listaStock);
-        }
-
 
         public Stack<Menu> QuitarMenuRechazado(List<Menu> pedidosRechazados)
         {
@@ -136,6 +102,17 @@ namespace LibraryClassRestaurant.Atencion
                 ListaPedidosMesa.Push(item);
             }
             return ListaPedidosMesa;
+        }
+
+        public string MostrarOrdenMenu()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Orden tomada Mesa {MesaAtedida.NumeroMesa}");
+            foreach (var item in ListaPedidosMesa)
+            {
+                sb.AppendLine($"* {item.Plato.Nombre}");
+            }
+            return sb.ToString();
         }
 
     }

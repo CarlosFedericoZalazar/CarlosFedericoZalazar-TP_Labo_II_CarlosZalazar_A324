@@ -2,6 +2,7 @@
 using AppRestaurante.Cocina;
 using AppRestaurante.Salon;
 using LibraryClassRestaurant.Archivos;
+using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Empleados;
 using LibraryClassRestaurant.Interfaces;
 using LibraryClassRestaurant.Mercaderia;
@@ -11,6 +12,8 @@ namespace AppRestoForm
     public partial class FormPrincipal : Form
     {
         Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
+        
+        List<Mesa> listaMesas = Mesa.GetMesas(10);
         public FormPrincipal()
         {
             InitializeComponent();
@@ -30,7 +33,7 @@ namespace AppRestoForm
         private void btnSalon_Click(object sender, EventArgs e)
         {
             // LOGICA PARA MOSTRAR EL FORMULARIO DE SALON
-            FormSalon formSalon = new FormSalon(this, 10, cocinero);
+            FormSalon formSalon = new FormSalon(this, listaMesas, cocinero);
             formSalon.Show();
             this.Hide();
         }

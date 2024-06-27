@@ -3,7 +3,7 @@
     "Bebida": {
       "Cantidad": 50,
       "Alcoholica": false,
-      "PrecioDeVenta": 500,
+      "PrecioDeVenta": 1000,
       "Nombre": "COCA COLA 1L",
       "Precio": 60000,
       "Proveedor": {
@@ -23,7 +23,7 @@
     "Bebida": {
       "Cantidad": 120,
       "Alcoholica": false,
-      "PrecioDeVenta": 600,
+      "PrecioDeVenta": 1600,
       "Nombre": "NARANJA 2L",
       "Precio": 252000,
       "Proveedor": {

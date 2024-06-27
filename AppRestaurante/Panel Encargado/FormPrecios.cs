@@ -67,8 +67,6 @@ namespace AppRestaurante.Panel_Encargado
                     }
                     else
                     {
-                        var lista = stockBebidas;
-                        int cantidad = stockBebidas.Count;
                         var item = (StockBebidas)dgMenu.CurrentRow.DataBoundItem;
                         stockBebidas = Encargado.ModificarPrecio(item, Convert.ToDouble(txtPrecio.Text), stockBebidas); // ERROR!
                         CargarDataGredBebidas();
@@ -112,21 +110,21 @@ namespace AppRestaurante.Panel_Encargado
             dgMenu.DataSource = null;
             dgMenu.DataSource = stockBebidas;
             dgMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgMenu.Columns["Producto"].DisplayIndex = 0;
+            dgMenu.Columns["Precio"].DisplayIndex = 1;
+
             if (dgMenu.Rows.Count > 0)
             {
                 dgMenu.CurrentCell = dgMenu.Rows[0].Cells[0];
                 dgMenu.Rows[0].Selected = true;
             }
+
             dgMenu.Columns["Alcoholica"].Visible = false;
             dgMenu.Columns["Proveedor"].Visible = false;
-
             dgMenu.Columns["Cantidad"].Visible = false;
 
-            dgMenu.Columns["Producto"].DisplayIndex = 0;
-            dgMenu.Columns["Precio"].DisplayIndex = 1;
-
         }
-
 
         void CargarDataGridPlatos()
         {

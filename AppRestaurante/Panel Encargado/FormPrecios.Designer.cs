@@ -42,6 +42,7 @@
             dgMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgMenu.Location = new Point(45, 74);
             dgMenu.Name = "dgMenu";
+            dgMenu.ReadOnly = true;
             dgMenu.RowHeadersVisible = false;
             dgMenu.RowTemplate.Height = 27;
             dgMenu.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -82,6 +83,7 @@
             // 
             // cbTipoProducto
             // 
+            cbTipoProducto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipoProducto.FormattingEnabled = true;
             cbTipoProducto.Location = new Point(45, 43);
             cbTipoProducto.Name = "cbTipoProducto";

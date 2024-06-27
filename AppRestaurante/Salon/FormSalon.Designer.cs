@@ -36,6 +36,7 @@
             lblCancelar = new Button();
             lblEncargado = new Label();
             lblStatus = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // cbMesas
@@ -43,7 +44,7 @@
             cbMesas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMesas.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             cbMesas.FormattingEnabled = true;
-            cbMesas.Location = new Point(78, 82);
+            cbMesas.Location = new Point(78, 111);
             cbMesas.Name = "cbMesas";
             cbMesas.Size = new Size(50, 33);
             cbMesas.TabIndex = 0;
@@ -52,7 +53,7 @@
             // lblMesa
             // 
             lblMesa.AutoSize = true;
-            lblMesa.Location = new Point(86, 58);
+            lblMesa.Location = new Point(86, 87);
             lblMesa.Name = "lblMesa";
             lblMesa.Size = new Size(42, 17);
             lblMesa.TabIndex = 1;
@@ -60,8 +61,9 @@
             // 
             // cbMeseros
             // 
+            cbMeseros.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMeseros.FormattingEnabled = true;
-            cbMeseros.Location = new Point(231, 82);
+            cbMeseros.Location = new Point(231, 111);
             cbMeseros.Name = "cbMeseros";
             cbMeseros.Size = new Size(165, 25);
             cbMeseros.TabIndex = 2;
@@ -69,7 +71,7 @@
             // lblMeseros
             // 
             lblMeseros.AutoSize = true;
-            lblMeseros.Location = new Point(274, 58);
+            lblMeseros.Location = new Point(274, 87);
             lblMeseros.Name = "lblMeseros";
             lblMeseros.Size = new Size(66, 17);
             lblMeseros.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             // btnPedido
             // 
-            btnPedido.Location = new Point(231, 153);
+            btnPedido.Location = new Point(231, 172);
             btnPedido.Name = "btnPedido";
             btnPedido.Size = new Size(165, 85);
             btnPedido.TabIndex = 4;
@@ -87,7 +89,7 @@
             // 
             // lblCancelar
             // 
-            lblCancelar.Location = new Point(43, 153);
+            lblCancelar.Location = new Point(43, 172);
             lblCancelar.Name = "lblCancelar";
             lblCancelar.Size = new Size(165, 85);
             lblCancelar.TabIndex = 5;
@@ -98,7 +100,7 @@
             // lblEncargado
             // 
             lblEncargado.AutoSize = true;
-            lblEncargado.Location = new Point(12, 19);
+            lblEncargado.Location = new Point(12, 9);
             lblEncargado.Name = "lblEncargado";
             lblEncargado.Size = new Size(140, 17);
             lblEncargado.TabIndex = 6;
@@ -109,17 +111,28 @@
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblStatus.ForeColor = Color.Green;
-            lblStatus.Location = new Point(134, 86);
+            lblStatus.Location = new Point(134, 115);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(16, 21);
             lblStatus.TabIndex = 7;
             lblStatus.Text = "-";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(231, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(157, 29);
+            button1.TabIndex = 8;
+            button1.Text = "cantidadPLatos";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FormSalon
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(440, 278);
+            Controls.Add(button1);
             Controls.Add(lblStatus);
             Controls.Add(lblEncargado);
             Controls.Add(lblCancelar);
@@ -148,5 +161,6 @@
         private Button lblCancelar;
         private Label lblEncargado;
         private Label lblStatus;
+        private Button button1;
     }
 }

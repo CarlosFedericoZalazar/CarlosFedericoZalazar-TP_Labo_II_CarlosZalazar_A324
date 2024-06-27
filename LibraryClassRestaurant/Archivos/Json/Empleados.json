@@ -61,5 +61,14 @@
     "Sueldo": 300000,
     "Profile": 2,
     "EstadoEmpleado": 0
+  },
+  {
+    "Nombre": "MARCELO",
+    "Apellido": "GALLARGO",
+    "Direccion": "HERMINIO DIAZ 345",
+    "Telefono": "112349920",
+    "Sueldo": 400000,
+    "Profile": 2,
+    "EstadoEmpleado": 0
   }
 ]

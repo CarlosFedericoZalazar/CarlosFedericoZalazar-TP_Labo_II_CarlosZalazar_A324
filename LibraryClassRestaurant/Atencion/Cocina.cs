@@ -11,13 +11,14 @@ namespace LibraryClassRestaurant.Atencion
 {
     public static class Cocina
     {
+        private static List<StockComestible> listaStock = StockComestible.GetStockComestibles();
         /// <summary>
         /// VERIFICA SI HAY STOCK DE LOS PRODUCTOS PARA EL PEDIDO
         /// </summary>
         /// <param name="nuevoPlato"></param>
         /// <param name="listaStock"></param>
         /// <returns name="nuevoPlato"></returns>
-        public static Menu ActualizarEstadoMenu(Menu nuevoPlato, List<StockComestible> listaStock)
+        public static Menu ActualizarEstadoMenu(Menu nuevoPlato)
         {
             StringBuilder informeProducto = new StringBuilder();
             bool ingredienteDisponible = true;
@@ -85,10 +86,40 @@ namespace LibraryClassRestaurant.Atencion
             return cantidadOk;
         }
 
-        public static string Cocinar(List<StockComestible> stockProductos, Stack<Menu>pedidoMesa)
+        public static void CocinarPlatos(Stack<Menu> ListaPedidosMesa, Cocinero cocinero) // esta bien?
         {
+            bool cocinarPlatoOk= false;
             Thread.Sleep(3000);
-            return "Cocinando platos...";
+            DescontarMercaderia(listaStock, ListaPedidosMesa);
+            cocinero.Mensaje("Se hizo el descuento de la mercaderia");
+            Thread.Sleep(5000);
+
         }
+
+        public static void DescontarMercaderia(List<StockComestible> listaStock, Stack<Menu> ListaPedidosMesa) // esta bien?
+        {
+            foreach (var item in ListaPedidosMesa)
+            {
+                foreach (var ingrediente in item.Plato.CantidadDeIngredientes)
+                {
+                    foreach (var stock in listaStock)
+                    {
+                        if (ingrediente.Key == stock.Producto)
+                        {
+                            stock.Cantidad -= (ingrediente.Value) / 1000;
+                        }
+                    }
+                }
+            }
+            StockComestible.ActualizarStock(listaStock);
+            
+        }
+
+
+        //public static string Cocinar(List<StockComestible> stockProductos, Stack<Menu>pedidoMesa)
+        //{
+        //    Thread.Sleep(3000);
+        //    return "Cocinando platos...";
+        //}
     }
 }
