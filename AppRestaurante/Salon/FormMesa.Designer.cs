@@ -195,7 +195,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMesa";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MOSO TOMANDO PEDIDO EN MESA: ";
+            Text = "TOMANDO PEDIDO EN MESA: ";
             Load += FormMesa_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

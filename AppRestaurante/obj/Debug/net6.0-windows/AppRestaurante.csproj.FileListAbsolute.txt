@@ -39,12 +39,15 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\LibraryClassRestaurant.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.csproj.AssemblyReference.cache
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Caja.FormCaja.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Caja.FormConsumos.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormAltaPlato.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormBajaPlato.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormCocina.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormConsultaPlato.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormMenuDisponible.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormModificarPlato.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.EntregasDelivery.FormDespachoPedido.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.EntregasDelivery.FormPedidoTelefonico.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.FormInicioTurno.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestoForm.FormPrincipal.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormABMEmpleado.resources

@@ -34,13 +34,14 @@
             btnPagos = new Button();
             btnTickets = new Button();
             btnPagoProveedores = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblDineroCaja
             // 
             lblDineroCaja.AutoSize = true;
             lblDineroCaja.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDineroCaja.Location = new Point(583, 31);
+            lblDineroCaja.Location = new Point(312, 31);
             lblDineroCaja.Name = "lblDineroCaja";
             lblDineroCaja.Size = new Size(137, 25);
             lblDineroCaja.TabIndex = 0;
@@ -49,7 +50,7 @@
             // txtDineroCaja
             // 
             txtDineroCaja.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDineroCaja.Location = new Point(583, 59);
+            txtDineroCaja.Location = new Point(312, 59);
             txtDineroCaja.Name = "txtDineroCaja";
             txtDineroCaja.ReadOnly = true;
             txtDineroCaja.Size = new Size(146, 33);
@@ -87,12 +88,23 @@
             btnPagoProveedores.UseVisualStyleBackColor = true;
             btnPagoProveedores.Click += btnPagoProveedores_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(32, 297);
+            button1.Name = "button1";
+            button1.Size = new Size(160, 64);
+            button1.TabIndex = 5;
+            button1.Text = "CONSUMOS";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // FormCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(569, 384);
+            Controls.Add(button1);
             Controls.Add(btnPagoProveedores);
             Controls.Add(btnTickets);
             Controls.Add(btnPagos);
@@ -116,5 +128,6 @@
         private Button btnPagos;
         private Button btnTickets;
         private Button btnPagoProveedores;
+        private Button button1;
     }
 }

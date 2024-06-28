@@ -60,7 +60,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
-    "Cobrado": false
+    "Cobrado": true
   },
   {
     "NroMesa": 1,
@@ -69,7 +69,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
-    "Cobrado": false
+    "Cobrado": true
   },
   {
     "NroMesa": 3,
@@ -78,6 +78,15 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
-    "Cobrado": false
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 0,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-06-28T17:05:06.3938423-03:00",
+    "Nombre": "MANUEL",
+    "Perfil": 3,
+    "Monto": 5000,
+    "Cobrado": true
   }
 ]

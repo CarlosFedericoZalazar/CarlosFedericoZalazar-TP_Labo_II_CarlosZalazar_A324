@@ -44,5 +44,12 @@ namespace AppRestaurante.Caja
         {
             Encargado.LiquidarProveedores();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormConsumos formConsumos = new FormConsumos(this);
+            formConsumos.Show();
+            this.Hide();
+        }
     }
 }

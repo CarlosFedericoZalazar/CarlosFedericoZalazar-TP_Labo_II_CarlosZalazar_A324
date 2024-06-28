@@ -26,10 +26,13 @@ namespace LibraryClassRestaurant.Interfaces
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu);
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu);
         public List<Bebida> GetBebidas();
+        public List<Delivery> GetDeliverys();
         public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor);
         public void LiquidarProveedores();
         public void PagarSueldo();
         public Caja Caja { get; set; }
+        public void GenerarComanda(Comanda comanda);
+        public double CalcularCuenta(List<Menu> listaMenu);
 
     }
 }

@@ -490,5 +490,35 @@
     "Fecha": "0001-01-01T00:00:00",
     "MedioPago": 0,
     "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 98613000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98113000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97813000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97313000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97193000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
   }
 ]

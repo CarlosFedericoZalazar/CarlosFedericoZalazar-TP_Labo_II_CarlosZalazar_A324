@@ -32,6 +32,7 @@
             btnPanelEncargado = new Button();
             btnSalon = new Button();
             btnCocina = new Button();
+            btnTelefono = new Button();
             SuspendLayout();
             // 
             // btnPanelEncargado
@@ -64,12 +65,23 @@
             btnCocina.UseVisualStyleBackColor = true;
             btnCocina.Click += btnCocina_Click;
             // 
+            // btnTelefono
+            // 
+            btnTelefono.Location = new Point(71, 319);
+            btnTelefono.Name = "btnTelefono";
+            btnTelefono.Size = new Size(123, 56);
+            btnTelefono.TabIndex = 3;
+            btnTelefono.Text = "PEDIDO TELEFONICO";
+            btnTelefono.UseVisualStyleBackColor = true;
+            btnTelefono.Click += btnTelefono_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(267, 450);
+            Controls.Add(btnTelefono);
             Controls.Add(btnCocina);
             Controls.Add(btnSalon);
             Controls.Add(btnPanelEncargado);
@@ -89,5 +101,6 @@
         private Button btnPanelEncargado;
         private Button btnSalon;
         private Button btnCocina;
+        private Button btnTelefono;
     }
 }

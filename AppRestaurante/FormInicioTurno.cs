@@ -17,7 +17,7 @@ namespace AppRestaurante
         List<Delivery> listaDeliveryTurno = new List<Delivery>();
         List<Cocinero> listaCocineroTurno = new List<Cocinero>();
 
-        List<Empleado>listaEmpleados = Encargado.ObtenerEmpleados();
+        List<Empleado> listaEmpleados = Encargado.ObtenerEmpleados();
 
         public FormInicioTurno()
         {
@@ -46,7 +46,7 @@ namespace AppRestaurante
             {
                 if (item.Profile == Empleado.Perfil.Delivery)
                 {
-                    var delivery = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono,0, item.Sueldo);
+                    var delivery = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0, item.Sueldo);
                     listaDeliveryTurno.Add((Delivery)delivery);
                 }
             }
@@ -58,7 +58,7 @@ namespace AppRestaurante
             {
                 if (item.Profile == Empleado.Perfil.Cocinero)
                 {
-                    var cocinero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0,item.Sueldo);
+                    var cocinero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0, item.Sueldo);
                     listaCocineroTurno.Add((Cocinero)cocinero);
                 }
             }
@@ -74,6 +74,11 @@ namespace AppRestaurante
 
             cbCocineros.DataSource = listaCocineroTurno;
             cbCocineros.DisplayMember = "Nombre";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -72,6 +72,11 @@ namespace LibraryClassRestaurant.Atencion
             Serializador.Save<Cuenta>("Tickets", cuenta);
         }
 
+        public static List<Cuenta> GetTickets()
+        {
+            return Serializador.Read<Cuenta>("Tickets");
+        }
+
         public Proveedor Pagar(double montoAPagar, Proveedor proveedor) 
         {
             double dineroAuxiliar = this.Dinero;

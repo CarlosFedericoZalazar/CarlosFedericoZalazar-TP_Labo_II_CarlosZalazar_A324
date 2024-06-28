@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 using static LibraryClassRestaurant.Atencion.Menu;
 
+
 namespace LibraryClassRestaurant.Atencion
 {
     public static class Cocina
@@ -90,7 +91,6 @@ namespace LibraryClassRestaurant.Atencion
 
         public static void CocinarPlatos(Stack<Menu> ListaPedidosMesa, Cocinero cocinero) // esta bien?
         {
-            bool cocinarPlatoOk= false;
             Thread.Sleep(3000);
             DescontarMercaderia(listaStock, ListaPedidosMesa);
             cocinero.Mensaje("Se hizo el descuento de la mercaderia");

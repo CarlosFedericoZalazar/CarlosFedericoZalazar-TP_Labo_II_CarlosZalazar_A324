@@ -77,7 +77,6 @@ namespace LibraryClassRestaurant.Empleados
             GestorMercaderia.GestionarPedidos(producto);
         }
 
-
         public void GestionarPedidos(Bebida producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
@@ -90,7 +89,6 @@ namespace LibraryClassRestaurant.Empleados
             Serializador.Save<StockBebidas>("StockBebidas", stockBebidas);
 
         }
-
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu)
         {
             Menu auxiliar = new Menu();
@@ -179,6 +177,16 @@ namespace LibraryClassRestaurant.Empleados
             Caja.RegistrarTicket(cuenta);
         }
 
+        public static List<Cuenta> GetTickets()
+        {
+            return Caja.GetTickets();
+        }
+
+        public void GenerarComanda(Comanda comanda) 
+        {
+            Serializador.Save<Comanda>("Comanda", comanda);
+        }
+
         public void PagarSueldo()
         {
             var listaOrdenadaEmpleados = GenerandoPrioridadPago();
@@ -226,6 +234,12 @@ namespace LibraryClassRestaurant.Empleados
             return listaOrdenada;
         }
 
+        public List<Delivery> GetDeliverys()
+        {
+            var listaEmpleados = ObtenerEmpleados();
+            return CargarPerfilEmpleado<Delivery>(listaEmpleados, Empleado.Perfil.Delivery);
+
+        }
         private List<T> CargarPerfilEmpleado<T>(List<Empleado> listaEmpleados, Empleado.Perfil perfilEmpleado)
         {
             List<T> empleados = new List<T>();
@@ -246,6 +260,16 @@ namespace LibraryClassRestaurant.Empleados
         {
             Encargado encargado = new Encargado();
             encargado.Mensaje(mensaje);
+        }
+
+        public double CalcularCuenta(List<Menu> listaMenu) 
+        {
+            double montoTotal= 0;
+            foreach (var item in listaMenu)
+            {
+                montoTotal += item.Precio;
+            }
+            return montoTotal;
         }
 
 

@@ -35,6 +35,7 @@ namespace AppRestaurante.Salon
             Mesero = mesero;
             Cocinero = cocinero;
         }
+
         private void FormMesa_Load(object sender, EventArgs e)
         {
             this.Text += $" {MesaCliente.NumeroMesa}";
