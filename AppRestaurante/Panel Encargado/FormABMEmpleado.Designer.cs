@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormABMEmpleado));
             btnAltaEmpleado = new Button();
             btnBaja = new Button();
             btnVolver = new Button();
@@ -67,11 +68,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(321, 450);
             Controls.Add(btnVolver);
             Controls.Add(btnBaja);
             Controls.Add(btnAltaEmpleado);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FormABMEmpleado";
             StartPosition = FormStartPosition.CenterScreen;

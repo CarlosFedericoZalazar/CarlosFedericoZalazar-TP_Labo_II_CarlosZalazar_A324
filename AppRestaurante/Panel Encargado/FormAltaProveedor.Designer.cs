@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAltaProveedor));
             lblDiaEntrega = new Label();
             cbDiaEntrega = new ComboBox();
             label3 = new Label();
@@ -161,6 +162,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(496, 415);
             Controls.Add(btnCancelar);
             Controls.Add(cbTipoProducto);
@@ -175,11 +177,12 @@
             Controls.Add(txtNombre);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAltaProveedor";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormAltaProveedor";
+            Text = "ALTA DE PROVEEDOR";
             Load += FormAltaProveedor_Load;
             ResumeLayout(false);
             PerformLayout();

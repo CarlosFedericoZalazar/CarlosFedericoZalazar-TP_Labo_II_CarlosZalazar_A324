@@ -39,5 +39,10 @@ namespace AppRestaurante.Caja
             Encargado.Caja.Dinero += Encargado.Caja.DineroTickets();
             txtDineroCaja.Text = Encargado.Caja.Dinero.ToString();
         }
+
+        private void btnPagoProveedores_Click(object sender, EventArgs e)
+        {
+            Encargado.LiquidarProveedores();
+        }
     }
 }

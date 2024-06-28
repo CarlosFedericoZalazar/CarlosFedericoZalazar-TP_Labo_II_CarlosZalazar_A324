@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormABMProveedor));
             btnAltaProveedor = new Button();
             btnBajaProveedor = new Button();
             btnVolver = new Button();
@@ -67,11 +68,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(253, 450);
             Controls.Add(btnVolver);
             Controls.Add(btnBajaProveedor);
             Controls.Add(btnAltaProveedor);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormABMProveedor";

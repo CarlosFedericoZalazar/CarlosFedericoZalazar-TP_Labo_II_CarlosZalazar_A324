@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrecios));
             dgMenu = new DataGridView();
             btnModificarPrecio = new Button();
             txtPrecio = new TextBox();
@@ -104,6 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(472, 401);
             Controls.Add(label1);
             Controls.Add(cbTipoProducto);
@@ -112,6 +114,7 @@
             Controls.Add(btnModificarPrecio);
             Controls.Add(dgMenu);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormPrecios";

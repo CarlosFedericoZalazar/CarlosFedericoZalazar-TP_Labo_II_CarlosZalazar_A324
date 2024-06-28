@@ -78,6 +78,7 @@ namespace LibraryClassRestaurant.Atencion
 
             if (dineroAuxiliar - montoAPagar >= 0)
             {
+                Log.Enter($"PAGO A PROVEEDOR: {proveedor.Nombre}, MONTO PAGADO: ${montoAPagar}");
                 this.Dinero -= montoAPagar;
             }
             else
@@ -92,15 +93,26 @@ namespace LibraryClassRestaurant.Atencion
             return proveedor;
         }
 
+        // VER LA LOGICA DE QUIN VENDIO MAS AQUI...
         public double DineroTickets()
         {
             var listaTickets = Serializador.Read<Cuenta>("Tickets");
             double total = 0;
-            foreach (var item in listaTickets)
+            foreach (Cuenta item in listaTickets)
             {
-                total += item.Monto;
+                if (!item.Cobrado)
+                { 
+                    total += item.Monto;
+                    item.Cobrado = true;                    
+                }
             }
+            ActualizarTickets(listaTickets);
             return total;
+        }
+
+        private void ActualizarTickets(List<Cuenta> listaTickets)
+        {
+            Serializador.SaveJson<Cuenta>("Tickets", listaTickets);
         }
 
         public bool PagarSueldoEmpleado(double sueldo)

@@ -53,7 +53,7 @@ namespace AppRestoForm
             cocinero.AvisoCocinero += Mensaje_Evento;
             cocinero.GestorMenu.AvisoMenu += Mensaje_Evento;
             encargado.AvisoEncargado += Mensaje_Evento;
-            caja.Dinero = 100000000;
+            //caja.Dinero = 100000000;
             encargado.Caja = caja;
         }
 

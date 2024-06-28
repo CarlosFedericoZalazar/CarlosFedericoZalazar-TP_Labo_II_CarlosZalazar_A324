@@ -81,6 +81,14 @@ namespace LibraryClassRestaurant.Empleados
         public void GestionarPedidos(Bebida producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
+            StockBebidas stockBebidas = new StockBebidas();
+            stockBebidas.Producto = producto.Nombre;
+            stockBebidas.Cantidad = producto.Cantidad;
+            stockBebidas.Precio = producto.PrecioDeVenta;
+            stockBebidas.Alcoholica = producto.Alcoholica;
+            stockBebidas.Proveedor = proveedor;
+            Serializador.Save<StockBebidas>("StockBebidas", stockBebidas);
+
         }
 
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu)
@@ -135,10 +143,36 @@ namespace LibraryClassRestaurant.Empleados
             var proveedorActualizado = this.Caja.Pagar(montoPagar, proveedor);
             if (proveedorActualizado.DineroACobrar > 0)
             {
+                this.Mensaje("No se ha podido pagar a proveedor por falta de dinero");
+                Log.Enter($"DINERO INSUFICIENTE PARA EL PAGO A PROVEEDOR {proveedorActualizado.Nombre}, MONTO: ${proveedorActualizado.DineroACobrar}");
                 proveedorActualizado.Estado = Proveedor.EstadoCuenta.Deuda;
             }
+            else 
+            {
+                proveedorActualizado.Estado = Proveedor.EstadoCuenta.AlDia;
+            }
             return proveedorActualizado;
-        } 
+        }
+
+        public void LiquidarProveedores() 
+        {
+            var listaProveedores = Proveedor.GetProveedores();
+            foreach (var item in listaProveedores)
+            {
+                if (item.Estado == Proveedor.EstadoCuenta.Deuda)
+                {
+                    PagarProveedor(item.DineroACobrar,item);
+                    Log.Enter($"PROVEEDOR {item.Nombre} SE LE DEBE {item.DineroACobrar}, SE CURSA ORDEN DE PAGO");
+                }
+            }
+            ActualizarProveedores(listaProveedores);
+        }
+
+        private void ActualizarProveedores(List<Proveedor> listaProveedores)
+        {
+            Serializador.SaveJson<Proveedor>("Proveedor", listaProveedores);
+            Log.Enter("ACTUALIZACION DE PROVEEDORES");
+        }
 
         public static void RegistrarTicket(Cuenta cuenta)
         {

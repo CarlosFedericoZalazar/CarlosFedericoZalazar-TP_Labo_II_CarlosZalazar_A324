@@ -1,0 +1,82 @@
+[
+  {
+    "Cantidad": 899,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "COCA COLA 1L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
+  },
+  {
+    "Cantidad": 50,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "NARANJA 2L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
+  },
+  {
+    "Cantidad": 20,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "SEVEN UP 1L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
+  },
+  {
+    "Cantidad": 50,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "LECHE",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
+  },
+  {
+    "Cantidad": 20,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "AGUA 2L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
+  }
+]

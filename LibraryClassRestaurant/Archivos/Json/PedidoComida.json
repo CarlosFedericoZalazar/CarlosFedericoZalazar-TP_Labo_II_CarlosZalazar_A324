@@ -38,5 +38,25 @@
     },
     "FechaPedido": "2024-06-27T23:55:57.4490918-03:00",
     "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 200,
+      "Nombre": "POLLO",
+      "Precio": 400000,
+      "Proveedor": {
+        "Nombre": "CARNES CACHO",
+        "Cuit": "30-14214325",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 2,
+        "Estado": 0,
+        "DineroACobrar": 0
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-06-28T11:26:19.6446901-03:00",
+    "Estado": 2
   }
 ]

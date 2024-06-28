@@ -15,6 +15,7 @@ namespace LibraryClassRestaurant.Atencion
             Tarjeta
         }
 
+
         public int NroMesa { get; set; }
         public MedioPago MedioPagoCuenta { get; set; }
         public DateTime Fecha { get; set; }
@@ -23,6 +24,8 @@ namespace LibraryClassRestaurant.Atencion
         public Empleado.Perfil Perfil { get; set; }
 
         public double Monto { get; set; }
+
+        public bool Cobrado { get; set; }
         public Cuenta() { }
         public Cuenta(int nroMesa, MedioPago medioPago, Empleado.Perfil perfil, string nombre, double monto)
         {
@@ -32,6 +35,7 @@ namespace LibraryClassRestaurant.Atencion
             Perfil = perfil;
             Monto = monto;
             Fecha = DateTime.Now;
+            Cobrado = false;
         }
 
         //public static string Cobrar(Mesa mesa, MedioPago medioPago)

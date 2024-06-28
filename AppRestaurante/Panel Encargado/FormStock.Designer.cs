@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStock));
             lblStockComida = new Label();
             lblStockBebidas = new Label();
             dgStock = new DataGridView();
@@ -124,6 +125,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(545, 450);
             Controls.Add(lblCantidad);
             Controls.Add(lblProducto);
@@ -133,6 +135,7 @@
             Controls.Add(lblStockBebidas);
             Controls.Add(lblStockComida);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormStock";

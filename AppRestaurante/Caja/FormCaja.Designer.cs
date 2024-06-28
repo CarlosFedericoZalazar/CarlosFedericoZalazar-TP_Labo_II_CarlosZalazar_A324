@@ -33,6 +33,7 @@
             txtDineroCaja = new TextBox();
             btnPagos = new Button();
             btnTickets = new Button();
+            btnPagoProveedores = new Button();
             SuspendLayout();
             // 
             // lblDineroCaja
@@ -68,7 +69,7 @@
             // 
             // btnTickets
             // 
-            btnTickets.Location = new Point(32, 149);
+            btnTickets.Location = new Point(32, 212);
             btnTickets.Name = "btnTickets";
             btnTickets.Size = new Size(160, 64);
             btnTickets.TabIndex = 3;
@@ -76,12 +77,23 @@
             btnTickets.UseVisualStyleBackColor = true;
             btnTickets.Click += btnTickets_Click;
             // 
+            // btnPagoProveedores
+            // 
+            btnPagoProveedores.Location = new Point(32, 128);
+            btnPagoProveedores.Name = "btnPagoProveedores";
+            btnPagoProveedores.Size = new Size(160, 64);
+            btnPagoProveedores.TabIndex = 4;
+            btnPagoProveedores.Text = "PAGO PROVEEDORES";
+            btnPagoProveedores.UseVisualStyleBackColor = true;
+            btnPagoProveedores.Click += btnPagoProveedores_Click;
+            // 
             // FormCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnPagoProveedores);
             Controls.Add(btnTickets);
             Controls.Add(btnPagos);
             Controls.Add(txtDineroCaja);
@@ -103,5 +115,6 @@
         private TextBox txtDineroCaja;
         private Button btnPagos;
         private Button btnTickets;
+        private Button btnPagoProveedores;
     }
 }

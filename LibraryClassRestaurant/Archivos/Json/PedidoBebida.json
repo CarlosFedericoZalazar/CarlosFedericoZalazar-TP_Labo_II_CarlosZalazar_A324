@@ -1,11 +1,11 @@
 [
   {
     "Bebida": {
-      "Cantidad": 120,
+      "Cantidad": 999,
       "Alcoholica": false,
-      "PrecioDeVenta": 3200,
-      "Nombre": "COCA COLA 1,5L",
-      "Precio": 192000,
+      "PrecioDeVenta": 0,
+      "Nombre": "COCA COLA 1L",
+      "Precio": 1200000,
       "Proveedor": {
         "Nombre": "COCA COLA",
         "Cuit": "30-63768213",
@@ -18,7 +18,95 @@
       },
       "Tipo": 0
     },
-    "FechaPedido": "2024-06-27T21:49:33.4879162-03:00",
+    "FechaPedido": "2024-06-28T12:42:53.602808-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 50,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "NARANJA 2L",
+      "Precio": 600000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 0,
+        "DineroACobrar": 0
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T12:45:57.443987-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 20,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "SEVEN UP 1L",
+      "Precio": 240000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 0,
+        "DineroACobrar": 0
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T12:48:05.2445483-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 50,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "LECHE",
+      "Precio": 60000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 0,
+        "DineroACobrar": 0
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T13:52:39.4471327-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 20,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "AGUA 2L",
+      "Precio": 7000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 0,
+        "DineroACobrar": 0
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T13:57:34.2212271-03:00",
     "Estado": 1
   }
 ]

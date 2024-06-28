@@ -60,6 +60,13 @@ namespace AppRestaurante.Salon
 
             Cocinero.Mensaje(ordenMesa.MostrarOrden(listaMenu));
             //Enviando orden a cocina
+
+            var BebidasSinStock = Mesero.BuscarBebidas(bebidaSolicitadas);
+            if (BebidasSinStock.Count > 0)
+            {
+                MostrarMensaje("Se han quitado las bebidas que no estan disponibles, agruegue u envie los los restantes");
+                return;
+            }
             var pedidosRechazados = Mesero.EnviarOrdenACocina(ordenMesa);
             if (pedidosRechazados.Count > 0)
             {

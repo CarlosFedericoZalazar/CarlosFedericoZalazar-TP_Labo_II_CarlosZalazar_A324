@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPanelPedidos));
             btnProveedores = new Button();
             btnPedidos = new Button();
             btnVolver = new Button();
@@ -68,11 +69,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(273, 450);
             Controls.Add(btnVolver);
             Controls.Add(btnPedidos);
             Controls.Add(btnProveedores);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormPanelPedidos";

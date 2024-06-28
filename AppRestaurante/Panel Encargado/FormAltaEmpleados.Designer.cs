@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAltaEmpleados));
             cbPerfilEmpleado = new ComboBox();
             button1 = new Button();
             lblNombre = new Label();
@@ -167,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(504, 332);
             Controls.Add(btnCancelar);
             Controls.Add(txtSueldo);
@@ -183,6 +185,7 @@
             Controls.Add(button1);
             Controls.Add(cbPerfilEmpleado);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAltaEmpleados";

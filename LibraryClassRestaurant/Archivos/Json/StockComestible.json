@@ -26,5 +26,19 @@
       "Estado": 1,
       "DineroACobrar": 2000
     }
+  },
+  {
+    "Cantidad": 200,
+    "Producto": "POLLO",
+    "Proveedor": {
+      "Nombre": "CARNES CACHO",
+      "Cuit": "30-14214325",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Comida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 2,
+      "Estado": 0,
+      "DineroACobrar": 0
+    }
   }
 ]
