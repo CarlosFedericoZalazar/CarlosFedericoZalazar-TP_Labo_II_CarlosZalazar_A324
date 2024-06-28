@@ -11,8 +11,10 @@ using LibraryClassRestaurant.Mercaderia;
 
 namespace LibraryClassRestaurant.Empleados
 {
-    public class Encargado: Empleado, IEmpleado, IEncargado
+    public class Encargado : Empleado, IEmpleado, IEncargado
     {
+        public Caja Caja { get; set; }
+
         private GestorMercaderia _gestorMercaderia = InstanciarManejadorPedido();
         public GestorMercaderia GestorMercaderia { get => _gestorMercaderia; set => _gestorMercaderia = value; }
         const string PATH_EMPLEADOS = "Empleados";
@@ -27,10 +29,10 @@ namespace LibraryClassRestaurant.Empleados
         }
 
         public void AgregarProveedor(Proveedor proveedor)
-        {            
+        {
             Serializador.Save<Proveedor>("Proveedor", proveedor);
         }
-        public void AgregarEmpleado(Empleado empleado) 
+        public void AgregarEmpleado(Empleado empleado)
         {
             Serializador.Save<Empleado>("Empleados", empleado);
         }
@@ -42,7 +44,7 @@ namespace LibraryClassRestaurant.Empleados
             return empleados;
         }
 
-        public static List<T> ListarMeserosActivos<T>()where T:Empleado,IEmpleado
+        public static List<T> ListarMeserosActivos<T>() where T : Empleado, IEmpleado
         {
             List<Empleado> listaEmpleados = ObtenerEmpleados();
             List<T> listaEmpleadoActivo = new List<T>();
@@ -58,16 +60,17 @@ namespace LibraryClassRestaurant.Empleados
         }
 
         public void GestionarPedidos(ProductoComestible producto, Proveedor proveedor)
-        { 
+        {
             GestorMercaderia.GestionarPedidos(producto);
         }
+
 
         public void GestionarPedidos(Bebida producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
         }
 
-        public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu>listaMenu)
+        public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu)
         {
             Menu auxiliar = new Menu();
             foreach (var item in listaMenu)
@@ -98,7 +101,7 @@ namespace LibraryClassRestaurant.Empleados
             return StockBebidas.GetStockBebibles();
         }
 
-        public List<Bebida>GetBebidas()
+        public List<Bebida> GetBebidas()
         {
             List<Bebida> listaBebidas = new List<Bebida>();
             listaBebidas = Serializador.Read<Bebida>("PedidoBebida");
@@ -112,6 +115,21 @@ namespace LibraryClassRestaurant.Empleados
 
             caja.Dinero += monto;
             Console.WriteLine(mensaje);
+        }
+
+        public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor)
+        {
+            var proveedorActualizado = this.Caja.Pagar(montoPagar, proveedor);
+            if (proveedorActualizado.DineroACobrar > 0)
+            {
+                proveedorActualizado.Estado = Proveedor.EstadoCuenta.Deuda;
+            }
+            return proveedorActualizado;
+        } 
+
+        public static void RegistrarTicket(Cuenta cuenta)
+        {
+            Caja.RegistrarTicket(cuenta);
         }
     }
 }

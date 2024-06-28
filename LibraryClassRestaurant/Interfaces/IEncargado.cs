@@ -24,6 +24,8 @@ namespace LibraryClassRestaurant.Interfaces
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu);
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu);
         public List<Bebida> GetBebidas();
+        public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor);
+        public Caja Caja { get; set; }
 
     }
 }

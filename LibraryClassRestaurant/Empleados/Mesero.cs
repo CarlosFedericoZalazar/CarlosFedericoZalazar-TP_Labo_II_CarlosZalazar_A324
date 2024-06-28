@@ -20,12 +20,10 @@ namespace LibraryClassRestaurant.Empleados
             return PedidoRechazazdo;
         }
 
-        public void CerrarMesa(Mesa mesa, Cuenta.MedioPago medioPago, double monto)
+        public Cuenta CerrarMesa(Mesa mesa, Cuenta.MedioPago medioPago, double monto)
         {
-            Cuenta cuenta = new Cuenta(mesa.NumeroMesa, medioPago, this.Nombre, monto);
-            Caja.RegistrarTicket(cuenta);
-            Caja.IngresarDineroCaja(cuenta);
-            
+            Cuenta cuenta = new Cuenta(mesa.NumeroMesa, medioPago, this.Profile ,this.Nombre, monto);
+            return cuenta;
         }
 
     }

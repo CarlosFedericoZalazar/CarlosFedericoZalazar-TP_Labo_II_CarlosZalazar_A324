@@ -14,18 +14,23 @@ namespace LibraryClassRestaurant.Atencion
             Efectivo,
             Tarjeta
         }
+
+
         public int NroMesa { get; set; }
         public MedioPago MedioPagoCuenta { get; set; }
         public DateTime Fecha { get; set; }
-        public string Mesero { get; set; }
+        public string Nombre { get; set; }
+
+        public Empleado.Perfil Perfil { get; set; }
 
         public double Monto { get; set; }
         public Cuenta() { }
-        public Cuenta(int nroMesa, MedioPago medioPago, string mesero, double monto)
+        public Cuenta(int nroMesa, MedioPago medioPago, Empleado.Perfil perfil, string nombre, double monto)
         {
             NroMesa = nroMesa;
             MedioPagoCuenta = medioPago;
-            Mesero = mesero;
+            Nombre = nombre;
+            Perfil = perfil;
             Monto = monto;
             Fecha = DateTime.Now;
         }

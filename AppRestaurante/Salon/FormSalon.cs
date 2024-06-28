@@ -59,7 +59,7 @@ namespace AppRestaurante.Salon
                 DialogResult result = MessageBox.Show($"¿Desea pagar la cuenta? \n {mensaje}", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    FormPagarCuenta formPagarCuenta = new FormPagarCuenta(mesero, mesa);
+                    FormPagarCuenta formPagarCuenta = new FormPagarCuenta(EncargadoTurno, mesero, mesa);
                     formPagarCuenta.ShowDialog();
 
                     // AGREGAR AL ENCARGADO AL FORMULARIO

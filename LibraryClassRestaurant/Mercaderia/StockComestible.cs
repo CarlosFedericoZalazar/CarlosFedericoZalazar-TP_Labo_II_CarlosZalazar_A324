@@ -76,8 +76,8 @@ namespace LibraryClassRestaurant.Mercaderia
             List<StockComestible> stock = ComprobarPedidosEntregados();
             if (stock.Count != 0)
             {
-                ActualizarStock(stock);
                 stockExistente.AddRange(stock);
+                ActualizarStock(stockExistente);
             }
             
             return stockExistente;

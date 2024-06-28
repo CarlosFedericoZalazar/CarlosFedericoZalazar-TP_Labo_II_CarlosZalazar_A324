@@ -11,16 +11,20 @@ using System.Windows.Forms;
 namespace AppRestaurante.Caja
 {
     using LibraryClassRestaurant.Atencion;
+    using LibraryClassRestaurant.Interfaces;
+
     public partial class FormCaja : Form
     {
-        public FormCaja()
+        public IEncargado Encargado { get; set; }
+        public FormCaja(IEncargado encargado)
         {
             InitializeComponent();
+            Encargado = encargado;
         }
 
         private void FormCaja_Load(object sender, EventArgs e)
         {
-            var caja = Caja.ObtenerDineroCaja();
+            var caja = Encargado.Caja;
             txtDineroCaja.Text = caja.Dinero.ToString();
         }
 

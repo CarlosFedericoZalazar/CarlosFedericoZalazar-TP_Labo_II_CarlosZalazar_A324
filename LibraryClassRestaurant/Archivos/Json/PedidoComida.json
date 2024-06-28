@@ -1,74 +1,42 @@
 [
   {
     "Comida": {
-      "Cantidad": 1000,
+      "Cantidad": 60,
       "Nombre": "CARNE",
-      "Precio": 1800000,
+      "Precio": 60000,
       "Proveedor": {
         "Nombre": "CARNES CACHO",
-        "Cuit": "30-28141368",
+        "Cuit": "30-14214325",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Comida",
         "MedioDePago": 0,
-        "DiaDeEntrega": 1
+        "DiaDeEntrega": 2,
+        "Estado": 1,
+        "DineroACobrar": 50000
       },
       "Tipo": 1
     },
-    "FechaPedido": "2024-06-17T11:35:37.1296053-03:00",
-    "Estado": 2
-  },
-  {
-    "Comida": {
-      "Cantidad": 800,
-      "Nombre": "PAPA",
-      "Precio": 1200000,
-      "Proveedor": {
-        "Nombre": "LA KELI VERDURAS",
-        "Cuit": "30-26635648",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Comida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 2
-      },
-      "Tipo": 1
-    },
-    "FechaPedido": "2024-06-17T11:35:54.3096296-03:00",
-    "Estado": 2
-  },
-  {
-    "Comida": {
-      "Cantidad": 50,
-      "Nombre": "POLLO",
-      "Precio": 100000,
-      "Proveedor": {
-        "Nombre": "LA KELI VERDURAS",
-        "Cuit": "30-26635648",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Comida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 2
-      },
-      "Tipo": 1
-    },
-    "FechaPedido": "2024-06-17T11:36:36.9554982-03:00",
+    "FechaPedido": "2024-06-27T23:55:39.6261067-03:00",
     "Estado": 2
   },
   {
     "Comida": {
       "Cantidad": 40,
-      "Nombre": "TOMATE",
-      "Precio": 40000,
+      "Nombre": "PAPA",
+      "Precio": 12000,
       "Proveedor": {
-        "Nombre": "LA KELI VERDURAS",
-        "Cuit": "30-26635648",
+        "Nombre": "KELY VERDURAS",
+        "Cuit": "30-27034637",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Comida",
         "MedioDePago": 0,
-        "DiaDeEntrega": 2
+        "DiaDeEntrega": 1,
+        "Estado": 1,
+        "DineroACobrar": 2000
       },
       "Tipo": 1
     },
-    "FechaPedido": "2024-06-22T12:27:41.8948239-03:00",
+    "FechaPedido": "2024-06-27T23:55:57.4490918-03:00",
     "Estado": 2
   }
 ]

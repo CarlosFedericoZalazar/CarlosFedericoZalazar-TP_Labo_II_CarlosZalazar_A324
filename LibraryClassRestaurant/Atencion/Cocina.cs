@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using static LibraryClassRestaurant.Atencion.Menu;
 
 namespace LibraryClassRestaurant.Atencion
@@ -79,7 +80,8 @@ namespace LibraryClassRestaurant.Atencion
         private static bool CantidadDisponibleOk(double cantidad, double cantidadStock)
         {
             bool cantidadOk = false;
-            if (cantidad < cantidadStock)
+            double cantidadGramosAKilos = cantidad / 1000;
+            if (cantidadGramosAKilos < cantidadStock)
             {
                 cantidadOk = true;
             }

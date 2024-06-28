@@ -21,13 +21,12 @@ namespace AppRestoForm
         public Caja Caja { get; set; }
 
         FormPrincipal formPrincipal;
-        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado, ICocinero cocinero, Caja caja)
+        public FormPanelEncargado(FormPrincipal formPrincipal, IEncargado encargado, ICocinero cocinero)
         {
             InitializeComponent();
             this.formPrincipal = formPrincipal;
             Encargado = encargado;
             Cocinero = cocinero;
-            Caja = caja;
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -70,7 +69,7 @@ namespace AppRestoForm
 
         private void btnCaja_Click(object sender, EventArgs e)
         {
-            FormCaja formCaja = new FormCaja();
+            FormCaja formCaja = new FormCaja(Encargado);
             formCaja.Show();
         }
     }

@@ -10,19 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using LibraryClassRestaurant.Interfaces;
 
 namespace AppRestaurante.Salon
 {
     public partial class FormPagarCuenta : Form
     {
+        public IEncargado EncargadoTurno { get; set; }
         public Mesero Mesero { get; set; }
         public Mesa MesaCliente { get; set; }
 
         double montoTotal = 0;
 
-        public FormPagarCuenta(Mesero mesero, Mesa mesa)
+        public FormPagarCuenta(IEncargado encargado, Mesero mesero, Mesa mesa)
         {
             InitializeComponent();
+            EncargadoTurno = encargado;
             Mesero = mesero;
             MesaCliente = mesa;
         }
@@ -40,7 +43,9 @@ namespace AppRestaurante.Salon
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            Mesero.CerrarMesa(MesaCliente, (Cuenta.MedioPago)cbMedioPago.SelectedItem, montoTotal );
+            Cuenta cuenta = Mesero.CerrarMesa(MesaCliente, (Cuenta.MedioPago)cbMedioPago.SelectedItem, montoTotal );
+            Encargado.RegistrarTicket(cuenta);
+            EncargadoTurno.Caja.Cobrar(cuenta.Monto);
             this.Close();
         }
     }

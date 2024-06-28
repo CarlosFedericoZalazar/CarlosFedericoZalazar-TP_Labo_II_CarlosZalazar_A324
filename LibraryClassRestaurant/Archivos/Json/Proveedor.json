@@ -1,34 +1,32 @@
 [
   {
-    "Nombre": "COCA COLA",
-    "Cuit": "30-36263034",
-    "Direccion": "Avda. Siempre Viva 1064, Springfield",
-    "TipoProducto": "Bebida",
-    "MedioDePago": 0,
-    "DiaDeEntrega": 3
-  },
-  {
     "Nombre": "CARNES CACHO",
-    "Cuit": "30-28141368",
+    "Cuit": "30-14214325",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Comida",
     "MedioDePago": 0,
-    "DiaDeEntrega": 1
+    "DiaDeEntrega": 2,
+    "Estado": 0,
+    "DineroACobrar": 0
   },
   {
-    "Nombre": "LA KELI VERDURAS",
-    "Cuit": "30-26635648",
-    "Direccion": "Avda. Siempre Viva 1064, Springfield",
-    "TipoProducto": "Comida",
-    "MedioDePago": 0,
-    "DiaDeEntrega": 2
-  },
-  {
-    "Nombre": "CHICHINOTE VINOS",
-    "Cuit": "30-70122584",
+    "Nombre": "COCA COLA",
+    "Cuit": "30-63768213",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Bebida",
     "MedioDePago": 0,
-    "DiaDeEntrega": 1
+    "DiaDeEntrega": 1,
+    "Estado": 0,
+    "DineroACobrar": 0
+  },
+  {
+    "Nombre": "KELY VERDURAS",
+    "Cuit": "30-27034637",
+    "Direccion": "Avda. Siempre Viva 1064, Springfield",
+    "TipoProducto": "Comida",
+    "MedioDePago": 0,
+    "DiaDeEntrega": 1,
+    "Estado": 0,
+    "DineroACobrar": 0
   }
 ]

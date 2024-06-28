@@ -19,6 +19,9 @@
     <Compile Update="Cocina\FormModificarPlato.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormInicioTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

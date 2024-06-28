@@ -20,14 +20,16 @@ namespace AppRestaurante.Panel_Encargado
 {
     public partial class FormPedido : Form
     {
-        IEncargado _encargado;
-        FormPanelPedidos _formPanelPedidos;
+        public IEncargado Encargado { get; set; }
+
+        public FormPanelPedidos FormPanelPedidos { get; set; }
+
         Dictionary<string, List<Proveedor>> dictProveedores = new Dictionary<string, List<Proveedor>>();
         public FormPedido(FormPanelPedidos formPanelPedidos, IEncargado encargado)
         {
             InitializeComponent();
-            _formPanelPedidos = formPanelPedidos;
-            _encargado = encargado;
+            FormPanelPedidos = formPanelPedidos;
+            Encargado = encargado;
         }
 
         private void FormPedido_Load(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace AppRestaurante.Panel_Encargado
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            _formPanelPedidos.Show();
+            FormPanelPedidos.Show();
             this.Close();
         }
 
@@ -98,9 +100,11 @@ namespace AppRestaurante.Panel_Encargado
                 return;
             }
            
-            CrearProducto();
-            
+            CrearProducto();            
         }
+
+        // LA LOGICA DEL PAGO DE PROVEEDOR LA VAMOS A SACAR DE ACA
+
 
         private void CrearProducto() 
         {
@@ -126,15 +130,17 @@ namespace AppRestaurante.Panel_Encargado
             {
                 Producto.TipoProducto type = (Producto.TipoProducto)cbTipo.SelectedItem;
 
+                Proveedor proveedorPagado = Encargado.PagarProveedor(precioPedido, proveedorSeleccionado);
+                
                 if (type == TipoProducto.Bebida)
                 {
-                    productoBebida = new Bebida(txtProducto.Text, type, cantidad, alcohol, precioPedido, proveedorSeleccionado);
-                    _encargado.GestionarPedidos(productoBebida, proveedorSeleccionado);
+                    productoBebida = new Bebida(txtProducto.Text, type, cantidad, alcohol, precioPedido, proveedorPagado);
+                    Encargado.GestionarPedidos(productoBebida, proveedorSeleccionado);
                 }
                 else
                 {
-                    productoComida = new ProductoComestible(txtProducto.Text, type, cantidadGramos, precioPedido, proveedorSeleccionado);
-                    _encargado.GestionarPedidos(productoComida, proveedorSeleccionado);
+                    productoComida = new ProductoComestible(txtProducto.Text, type, cantidadGramos, precioPedido, proveedorPagado);
+                    Encargado.GestionarPedidos(productoComida, proveedorSeleccionado);
                 }
             }
             if (proveedorSeleccionado != null)
@@ -142,6 +148,8 @@ namespace AppRestaurante.Panel_Encargado
                 MessageBox.Show("PEDIDO INGRESADO LPM!");
             }            
         } 
+
+
 
 
     }

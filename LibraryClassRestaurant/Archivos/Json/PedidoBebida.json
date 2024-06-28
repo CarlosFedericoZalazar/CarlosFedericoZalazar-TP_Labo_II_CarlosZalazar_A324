@@ -1,42 +1,24 @@
 [
   {
     "Bebida": {
-      "Cantidad": 50,
-      "Alcoholica": false,
-      "PrecioDeVenta": 1000,
-      "Nombre": "COCA COLA 1L",
-      "Precio": 60000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-36263034",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 3
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-25T17:53:50.3002558-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
       "Cantidad": 120,
       "Alcoholica": false,
-      "PrecioDeVenta": 1600,
-      "Nombre": "NARANJA 2L",
-      "Precio": 252000,
+      "PrecioDeVenta": 0,
+      "Nombre": "COCA COLA 1,5L",
+      "Precio": 192000,
       "Proveedor": {
         "Nombre": "COCA COLA",
-        "Cuit": "30-36263034",
+        "Cuit": "30-63768213",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Bebida",
         "MedioDePago": 0,
-        "DiaDeEntrega": 3
+        "DiaDeEntrega": 1,
+        "Estado": 0,
+        "DineroACobrar": 0
       },
       "Tipo": 0
     },
-    "FechaPedido": "2024-06-25T19:32:19.0457209-03:00",
+    "FechaPedido": "2024-06-27T21:49:33.4879162-03:00",
     "Estado": 1
   }
 ]

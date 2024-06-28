@@ -26,12 +26,20 @@ namespace LibraryClassRestaurant.Mercaderia
             Viernes
         }
 
+        public enum EstadoCuenta
+        {
+            AlDia,
+            Deuda
+        }          
+
         public string Nombre { get; set; }
         public string Cuit { get; set; }
         public string Direccion { get; set; }
         public string TipoProducto { get; set; }
         public MedioPago MedioDePago { get; set; }
         public DiaEntrega DiaDeEntrega { get; set; }
+        public EstadoCuenta Estado { get; set; }
+        public double DineroACobrar { get; set; }
 
         public Proveedor() { }
         public Proveedor(string nombre, string cuit, string tipoProducto, MedioPago medioPago, DiaEntrega diaEntrega)
@@ -42,6 +50,7 @@ namespace LibraryClassRestaurant.Mercaderia
             MedioDePago = medioPago;
             Direccion = "Avda. Siempre Viva 1064, Springfield";
             DiaDeEntrega = diaEntrega;
+            Estado = EstadoCuenta.AlDia;
         }
 
         public static string CuitGenerate()
