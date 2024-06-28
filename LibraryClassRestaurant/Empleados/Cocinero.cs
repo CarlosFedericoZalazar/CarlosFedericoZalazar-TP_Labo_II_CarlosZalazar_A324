@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibraryClassRestaurant.Atencion;
 using LibraryClassRestaurant.Interfaces;
+using LibraryClassRestaurant.Mercaderia;
 
 namespace LibraryClassRestaurant.Empleados
 {
@@ -13,9 +14,10 @@ namespace LibraryClassRestaurant.Empleados
         public delegate void Notificador(string mensaje);
         public event Notificador ?AvisoCocinero;
 
+        public StockComestible StockComestible = new StockComestible();
         public Menu GestorMenu { get; set; }
         public Cocinero() { }
-        public Cocinero(string nombre, string apellido, string direccion, string telefono, double sueldo, Perfil perfil) : base(nombre, apellido, direccion, telefono, sueldo, perfil)
+        public Cocinero(string nombre, string apellido, string direccion, string telefono, double sueldoBolsillo ,double sueldo, Perfil perfil) : base(nombre, apellido, direccion, telefono, sueldoBolsillo,sueldo, perfil)
         {
             GestorMenu = Menu.InstaciarMenu();
         }

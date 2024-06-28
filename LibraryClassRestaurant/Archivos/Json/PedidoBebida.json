@@ -3,7 +3,7 @@
     "Bebida": {
       "Cantidad": 120,
       "Alcoholica": false,
-      "PrecioDeVenta": 0,
+      "PrecioDeVenta": 3200,
       "Nombre": "COCA COLA 1,5L",
       "Precio": 192000,
       "Proveedor": {

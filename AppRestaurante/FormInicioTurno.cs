@@ -34,7 +34,7 @@ namespace AppRestaurante
             {
                 if (item.Profile == Empleado.Perfil.Mesero)
                 {
-                    var mesero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.Sueldo);
+                    var mesero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.SueldoBolsillo, item.Sueldo);
                     listaMesetosTurno.Add((Mesero)mesero);
                 }
             }
@@ -46,7 +46,7 @@ namespace AppRestaurante
             {
                 if (item.Profile == Empleado.Perfil.Delivery)
                 {
-                    var delivery = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.Sueldo);
+                    var delivery = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono,0, item.Sueldo);
                     listaDeliveryTurno.Add((Delivery)delivery);
                 }
             }
@@ -58,7 +58,7 @@ namespace AppRestaurante
             {
                 if (item.Profile == Empleado.Perfil.Cocinero)
                 {
-                    var cocinero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.Sueldo);
+                    var cocinero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0,item.Sueldo);
                     listaCocineroTurno.Add((Cocinero)cocinero);
                 }
             }

@@ -13,8 +13,9 @@ namespace LibraryClassRestaurant.Atencion
     {
         public enum Concepto
         {
-            PagoProveedor,
-            PagoCliente
+            PagoAProveedor,
+            PagoDeCliente,
+            PagoAEmpleado,
         }
         public double Dinero { get; set; }
         public DateTime Fecha { get; set; }
@@ -55,7 +56,7 @@ namespace LibraryClassRestaurant.Atencion
             return new Caja(0);
         }
 
-        public void Cobrar(double dinero, Concepto concepto = Concepto.PagoCliente) 
+        public void Cobrar(double dinero, Concepto concepto = Concepto.PagoDeCliente) 
         {
             this.ConceptoOperacion = concepto;
             this.Dinero += dinero;
@@ -85,12 +86,35 @@ namespace LibraryClassRestaurant.Atencion
                 proveedor.DineroACobrar = dineroFaltante;
                 this.Dinero = 0;
             }
-            this.ConceptoOperacion = Concepto.PagoProveedor;
+            this.ConceptoOperacion = Concepto.PagoAProveedor;
             GuardarDineroCaja(this);
 
             return proveedor;
         }
 
+        public double DineroTickets()
+        {
+            var listaTickets = Serializador.Read<Cuenta>("Tickets");
+            double total = 0;
+            foreach (var item in listaTickets)
+            {
+                total += item.Monto;
+            }
+            return total;
+        }
+
+        public bool PagarSueldoEmpleado(double sueldo)
+        {
+            bool pagoOk= false;
+            if (this.Dinero - sueldo >= 0)
+            {
+                this.Dinero -= sueldo;
+                this.ConceptoOperacion = Concepto.PagoAEmpleado;
+                pagoOk = true;
+                GuardarDineroCaja(this);
+            }
+            return pagoOk;
+        }
 
     }
 }

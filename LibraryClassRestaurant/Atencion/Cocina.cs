@@ -95,7 +95,6 @@ namespace LibraryClassRestaurant.Atencion
             DescontarMercaderia(listaStock, ListaPedidosMesa);
             cocinero.Mensaje("Se hizo el descuento de la mercaderia");
             Thread.Sleep(5000);
-
         }
 
         public static void DescontarMercaderia(List<StockComestible> listaStock, Stack<Menu> ListaPedidosMesa) // esta bien?
@@ -113,15 +112,8 @@ namespace LibraryClassRestaurant.Atencion
                     }
                 }
             }
-            StockComestible.ActualizarStock(listaStock);
-            
+            StockComestible.ActualizarStock(listaStock);            
         }
 
-
-        //public static string Cocinar(List<StockComestible> stockProductos, Stack<Menu>pedidoMesa)
-        //{
-        //    Thread.Sleep(3000);
-        //    return "Cocinando platos...";
-        //}
     }
 }

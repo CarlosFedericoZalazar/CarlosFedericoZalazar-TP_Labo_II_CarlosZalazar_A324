@@ -25,8 +25,19 @@ namespace AppRestaurante.Caja
         private void FormCaja_Load(object sender, EventArgs e)
         {
             var caja = Encargado.Caja;
-            txtDineroCaja.Text = caja.Dinero.ToString();
+            txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
         }
 
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            Encargado.PagarSueldo();
+            txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
+        }
+
+        private void btnTickets_Click(object sender, EventArgs e)
+        {
+            Encargado.Caja.Dinero += Encargado.Caja.DineroTickets();
+            txtDineroCaja.Text = Encargado.Caja.Dinero.ToString();
+        }
     }
 }

@@ -13,6 +13,8 @@ namespace LibraryClassRestaurant.Interfaces
     {
         public string Nombre { get; set; }
         public void AgregarEmpleado(Empleado empleado);
+
+        public List<Empleado> ListarEmpleados();
         //public void EliminarEmpleado();
         //public void ModificarEmpleado();
         //public void MostrarEmpleados();
@@ -25,6 +27,7 @@ namespace LibraryClassRestaurant.Interfaces
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu);
         public List<Bebida> GetBebidas();
         public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor);
+        public void PagarSueldo();
         public Caja Caja { get; set; }
 
     }

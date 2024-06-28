@@ -1,0 +1,458 @@
+[
+  {
+    "Dinero": 500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97580000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96780000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96280000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96160000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 95660000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 95160000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94860000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94360000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94240000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 93740000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 93240000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 92940000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 92440000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 92320000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99500000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 99000000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98700000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98200000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 98080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97580000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 97080000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96780000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96280000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 96160000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 95660000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 95160000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94860000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94360000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  },
+  {
+    "Dinero": 94240000,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 2
+  }
+]

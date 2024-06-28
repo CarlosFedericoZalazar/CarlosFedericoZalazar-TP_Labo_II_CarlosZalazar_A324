@@ -12,27 +12,28 @@ namespace AppRestoForm
     public partial class FormPrincipal : Form
     {
         //Buscamos dinero de la caja
-        
 
-        Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
-        
-        Encargado encargado = new Encargado("Alberto","Mellino","Roca 33","", 230000, Empleado.Perfil.Encargado);
+
+        Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "",0, 230000, Empleado.Perfil.Cocinero);
+
+        Encargado encargado = new Encargado("Alberto", "Mellino", "Roca 33", "",0, 230000, Empleado.Perfil.Encargado);
         Caja caja = Caja.ObtenerDineroCaja();
-        
-        
 
-        
+
+
+
         List<Mesa> listaMesas = Mesa.GetMesas(10);
         public FormPrincipal()
         {
             InitializeComponent();
+            Log.Enter("INICIO DEL PROGRAMA");
         }
 
         private void btnPanelEncargado_Click(object sender, EventArgs e)
         {
             Delivery delivery = new Delivery();
 
-            FormPanelEncargado formPanelEncargado = new FormPanelEncargado(this, encargado ,cocinero);
+            FormPanelEncargado formPanelEncargado = new FormPanelEncargado(this, encargado, cocinero);
             formPanelEncargado.Show();
             this.Hide();
         }
@@ -40,7 +41,7 @@ namespace AppRestoForm
         private void btnSalon_Click(object sender, EventArgs e)
         {
             // LOGICA PARA MOSTRAR EL FORMULARIO DE SALON
-            FormSalon formSalon = new FormSalon(this, listaMesas, encargado,cocinero);
+            FormSalon formSalon = new FormSalon(this, listaMesas, encargado, cocinero);
             formSalon.Show();
             this.Hide();
         }
@@ -49,9 +50,10 @@ namespace AppRestoForm
         {
             // Inicializa el cocinero y suscribe al evento
             //Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
-            cocinero.AvisoCocinero += Cocinero_MiEvento;
-            cocinero.GestorMenu.AvisoMenu += Cocinero_MiEvento;
-            caja.Dinero = 100000;
+            cocinero.AvisoCocinero += Mensaje_Evento;
+            cocinero.GestorMenu.AvisoMenu += Mensaje_Evento;
+            encargado.AvisoEncargado += Mensaje_Evento;
+            caja.Dinero = 100000000;
             encargado.Caja = caja;
         }
 
@@ -65,7 +67,7 @@ namespace AppRestoForm
             this.Hide();
         }
 
-        private void Cocinero_MiEvento(string mensaje)
+        private void Mensaje_Evento(string mensaje)
         {
             MessageBox.Show(mensaje);
         }

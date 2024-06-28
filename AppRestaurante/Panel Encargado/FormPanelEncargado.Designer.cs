@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPanelEncargado));
             btnPedidos = new Button();
             btnStock = new Button();
             btnGestionarEmpleado = new Button();
@@ -101,6 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(522, 450);
             Controls.Add(btnCaja);
             Controls.Add(btnPrecios);
@@ -109,6 +111,7 @@
             Controls.Add(btnStock);
             Controls.Add(btnPedidos);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormPanelEncargado";

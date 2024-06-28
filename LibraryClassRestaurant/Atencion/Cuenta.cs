@@ -15,7 +15,6 @@ namespace LibraryClassRestaurant.Atencion
             Tarjeta
         }
 
-
         public int NroMesa { get; set; }
         public MedioPago MedioPagoCuenta { get; set; }
         public DateTime Fecha { get; set; }

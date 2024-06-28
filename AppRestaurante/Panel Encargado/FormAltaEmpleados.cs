@@ -46,7 +46,7 @@ namespace AppRestaurante.Panel_Encargado
                 MessageBox.Show("El sueldo debe ser un número");
                 return;
             }
-            Empleado empleado = FabricaEmpleado.CrearEmpleado(perfilEmpleado, nombre, apellido, direccion, telefono, sueldo);
+            Empleado empleado = FabricaEmpleado.CrearEmpleado(perfilEmpleado, nombre, apellido, direccion, telefono,0, sueldo);
 
 
             bool TextsBoxOk = VerificarTextBoxesLlenos(this);

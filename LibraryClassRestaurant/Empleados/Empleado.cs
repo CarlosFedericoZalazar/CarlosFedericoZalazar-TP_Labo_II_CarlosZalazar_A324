@@ -4,49 +4,42 @@ using System.Text.Json.Serialization;
 
 namespace LibraryClassRestaurant.Empleados
 {
-    public class Empleado: IEmpleado
+    public class Empleado : IEmpleado
     {
         public enum Perfil
         {
-            Mesero,
+            Encargado,
             Cocinero,
-            Delivery,
-            Encargado
+            Mesero,
+            Delivery
         }
-
         public enum Estado
         {
             Activo,
             Inactivo
         }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public double Sueldo { get; set; }
+        public Perfil Profile { get; set; }
+        public Estado EstadoEmpleado { get; set; }
+        public double SueldoBolsillo { get; set; }
+        public string NombreCompleto { get => $"{Nombre} {Apellido}"; }
 
-        string _nombre;
-        string _apellido;
-        string _direccion;
-        string _telefono;
-        double _sueldo;
-        Perfil _profile;
-        Estado _estadoEmpleado;
-
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Apellido { get => _apellido; set => _apellido=value; }
-        public string Direccion { get => _direccion; set => _direccion = value; }
-        public string Telefono { get => _telefono; set=>_telefono=value; }
-        public double Sueldo { get => _sueldo; set => _sueldo = value; }
-        public Perfil Profile { get => _profile; set => _profile = value; }
-        public Estado EstadoEmpleado { get=> _estadoEmpleado; set=> _estadoEmpleado=value; }
         public Empleado() { }
-        public Empleado(string nombre, string apellido, string direccion, string telefono, double sueldo, Perfil profile)
+        public Empleado(string nombre, string apellido, string direccion, string telefono, double sueldoBolsillo, double sueldo, Perfil profile)
         {
-            Nombre = nombre;
-            Apellido = apellido;
-            Direccion = direccion;
+            Nombre = nombre.ToUpper();
+            Apellido = apellido.ToUpper();
+            Direccion = direccion.ToUpper();
             Telefono = telefono;
+            SueldoBolsillo = sueldoBolsillo;
             Sueldo = sueldo;
             Profile = profile;
             EstadoEmpleado = Estado.Activo;
-        }        
-
-        //public abstract void MostrarInformacion();
+        }
     }
+
 }

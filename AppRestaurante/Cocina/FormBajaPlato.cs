@@ -14,7 +14,7 @@ namespace AppRestaurante.Cocina
 {
     public partial class FormBajaPlato : Form
     {
-        Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "", 230000, Empleado.Perfil.Cocinero);
+        Cocinero cocinero = new Cocinero("Carlos", "Gonzalez", "Roca 33", "",0, 230000, Empleado.Perfil.Cocinero);
 
         private BindingList<Menu> bindingList;
 

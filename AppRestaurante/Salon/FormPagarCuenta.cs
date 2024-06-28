@@ -43,9 +43,9 @@ namespace AppRestaurante.Salon
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            Cuenta cuenta = Mesero.CerrarMesa(MesaCliente, (Cuenta.MedioPago)cbMedioPago.SelectedItem, montoTotal );
-            Encargado.RegistrarTicket(cuenta);
-            EncargadoTurno.Caja.Cobrar(cuenta.Monto);
+            Mesero.CerrarMesa(MesaCliente, (Cuenta.MedioPago)cbMedioPago.SelectedItem, montoTotal );
+            
+            //EncargadoTurno.Caja.Cobrar(cuenta.Monto);
             this.Close();
         }
     }

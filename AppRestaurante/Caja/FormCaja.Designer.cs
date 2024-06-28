@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCaja));
             lblDineroCaja = new Label();
             txtDineroCaja = new TextBox();
+            btnPagos = new Button();
+            btnTickets = new Button();
             SuspendLayout();
             // 
             // lblDineroCaja
@@ -53,14 +56,38 @@
             txtDineroCaja.Text = "0";
             txtDineroCaja.TextAlign = HorizontalAlignment.Center;
             // 
+            // btnPagos
+            // 
+            btnPagos.Location = new Point(32, 44);
+            btnPagos.Name = "btnPagos";
+            btnPagos.Size = new Size(160, 64);
+            btnPagos.TabIndex = 2;
+            btnPagos.Text = "PAGOS";
+            btnPagos.UseVisualStyleBackColor = true;
+            btnPagos.Click += btnPagos_Click;
+            // 
+            // btnTickets
+            // 
+            btnTickets.Location = new Point(32, 149);
+            btnTickets.Name = "btnTickets";
+            btnTickets.Size = new Size(160, 64);
+            btnTickets.TabIndex = 3;
+            btnTickets.Text = "DINERO TICKETS";
+            btnTickets.UseVisualStyleBackColor = true;
+            btnTickets.Click += btnTickets_Click;
+            // 
             // FormCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnTickets);
+            Controls.Add(btnPagos);
             Controls.Add(txtDineroCaja);
             Controls.Add(lblDineroCaja);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormCaja";
@@ -74,5 +101,7 @@
 
         private Label lblDineroCaja;
         private TextBox txtDineroCaja;
+        private Button btnPagos;
+        private Button btnTickets;
     }
 }
