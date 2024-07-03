@@ -39,6 +39,9 @@
             btnAgregar = new Button();
             btnConfirmar = new Button();
             btnCancelar = new Button();
+            cbMedioPago = new ComboBox();
+            label3 = new Label();
+            btnPrueba = new Button();
             SuspendLayout();
             // 
             // cbMenu
@@ -48,7 +51,7 @@
             cbMenu.FormattingEnabled = true;
             cbMenu.Location = new Point(308, 47);
             cbMenu.Name = "cbMenu";
-            cbMenu.Size = new Size(227, 29);
+            cbMenu.Size = new Size(254, 29);
             cbMenu.TabIndex = 0;
             // 
             // txtNombre
@@ -130,7 +133,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(287, 280);
+            btnConfirmar.Location = new Point(323, 304);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(113, 49);
             btnConfirmar.TabIndex = 9;
@@ -140,7 +143,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(114, 280);
+            btnCancelar.Location = new Point(150, 304);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(113, 49);
             btnCancelar.TabIndex = 10;
@@ -148,13 +151,46 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // cbMedioPago
+            // 
+            cbMedioPago.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbMedioPago.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbMedioPago.FormattingEnabled = true;
+            cbMedioPago.Location = new Point(35, 253);
+            cbMedioPago.Name = "cbMedioPago";
+            cbMedioPago.Size = new Size(136, 29);
+            cbMedioPago.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(35, 229);
+            label3.Name = "label3";
+            label3.Size = new Size(127, 21);
+            label3.TabIndex = 12;
+            label3.Text = "MEDIO DE PAGO";
+            // 
+            // btnPrueba
+            // 
+            btnPrueba.Location = new Point(497, 340);
+            btnPrueba.Name = "btnPrueba";
+            btnPrueba.Size = new Size(75, 23);
+            btnPrueba.TabIndex = 13;
+            btnPrueba.Text = "PRUEBA";
+            btnPrueba.UseVisualStyleBackColor = true;
+            btnPrueba.Click += btnPrueba_Click;
+            // 
             // FormPedidoTelefonico
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(574, 356);
+            ClientSize = new Size(574, 366);
             ControlBox = false;
+            Controls.Add(btnPrueba);
+            Controls.Add(label3);
+            Controls.Add(cbMedioPago);
             Controls.Add(btnCancelar);
             Controls.Add(btnConfirmar);
             Controls.Add(btnAgregar);
@@ -187,5 +223,8 @@
         private Button btnAgregar;
         private Button btnConfirmar;
         private Button btnCancelar;
+        private ComboBox cbMedioPago;
+        private Label label3;
+        private Button btnPrueba;
     }
 }

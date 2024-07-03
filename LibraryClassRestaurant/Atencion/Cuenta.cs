@@ -13,6 +13,7 @@ namespace LibraryClassRestaurant.Atencion
         {
             Efectivo,
             Tarjeta,
+            MercadoPago,
             NoPago
         }
 

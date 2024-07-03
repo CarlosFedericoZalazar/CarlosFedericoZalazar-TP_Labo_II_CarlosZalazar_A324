@@ -34,6 +34,7 @@
             btnLlevar = new Button();
             label1 = new Label();
             txtCosto = new TextBox();
+            btnNoPagado = new Button();
             SuspendLayout();
             // 
             // cbDelivery
@@ -56,11 +57,11 @@
             // 
             // btnLlevar
             // 
-            btnLlevar.Location = new Point(151, 125);
+            btnLlevar.Location = new Point(228, 125);
             btnLlevar.Name = "btnLlevar";
             btnLlevar.Size = new Size(126, 57);
             btnLlevar.TabIndex = 2;
-            btnLlevar.Text = "LLEVAR AL DOMICILIO";
+            btnLlevar.Text = "PEDIDO LLEVADO";
             btnLlevar.UseVisualStyleBackColor = true;
             btnLlevar.Click += btnLlevar_Click;
             // 
@@ -80,7 +81,17 @@
             txtCosto.Name = "txtCosto";
             txtCosto.ReadOnly = true;
             txtCosto.Size = new Size(147, 35);
-            txtCosto.TabIndex = 4;
+            txtCosto.TabIndex = 1;
+            // 
+            // btnNoPagado
+            // 
+            btnNoPagado.Location = new Point(74, 125);
+            btnNoPagado.Name = "btnNoPagado";
+            btnNoPagado.Size = new Size(126, 54);
+            btnNoPagado.TabIndex = 3;
+            btnNoPagado.Text = "PEDIDO NO PAGADO";
+            btnNoPagado.UseVisualStyleBackColor = true;
+            btnNoPagado.Click += btnNoPagado_Click;
             // 
             // FormDespachoPedido
             // 
@@ -88,6 +99,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(452, 194);
+            Controls.Add(btnNoPagado);
             Controls.Add(txtCosto);
             Controls.Add(label1);
             Controls.Add(btnLlevar);
@@ -108,5 +120,6 @@
         private Button btnLlevar;
         private Label label1;
         private TextBox txtCosto;
+        private Button btnNoPagado;
     }
 }

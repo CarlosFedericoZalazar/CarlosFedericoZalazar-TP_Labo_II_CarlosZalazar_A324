@@ -23,13 +23,16 @@ namespace AppRestaurante.EntregasDelivery
         public List<Menu> ListaADespachar { get; set; }
         double montoTotal = 0;
         public Comanda Comanda { get; set; }
-        public FormDespachoPedido(FormPrincipal formularioPrincipal, IEncargado encargado, List<Menu> listaMenu, Comanda comanda)
+
+        public Cuenta.MedioPago MedioPagoPedido { get; set; }
+        public FormDespachoPedido(FormPrincipal formularioPrincipal, IEncargado encargado, List<Menu> listaMenu, Comanda comanda, Cuenta.MedioPago medioPagoPedido)
         {
             InitializeComponent();
             FormularioPrincipal = formularioPrincipal;
             Encargado = encargado;
             ListaADespachar = listaMenu;
             Comanda = comanda;
+            MedioPagoPedido = medioPagoPedido;
         }
 
         private void FormDespachoPedido_Load(object sender, EventArgs e)
@@ -41,13 +44,31 @@ namespace AppRestaurante.EntregasDelivery
             CultureInfo culturaAR = new CultureInfo("es-AR");
             string formatoMonedaAR = montoTotal.ToString("C", culturaAR);
             txtCosto.Text += $" {formatoMonedaAR}";
+            if (MedioPagoPedido != Cuenta.MedioPago.Efectivo)
+            {
+                btnNoPagado.Visible = false;
+                btnLlevar.Location = new System.Drawing.Point(156, 125);
+            }
         }
 
         private void btnLlevar_Click(object sender, EventArgs e)
         {
+            RegistrarPedido(montoTotal, MedioPagoPedido);
+        }
+
+        private void btnNoPagado_Click(object sender, EventArgs e)
+        {
+            RegistrarPedido(montoTotal * (-1), Cuenta.MedioPago.NoPago);
+        }
+
+        private void RegistrarPedido(double monto, Cuenta.MedioPago medioPago) 
+        {
             var delivery = (Delivery)cbDelivery.SelectedItem;
 
-            delivery.LlevarPedido(montoTotal,Comanda);
+            delivery.RegistrarPedido(monto, Comanda, medioPago);
+
+            FormularioPrincipal.Show();
+            this.Close();
         }
     }
 }

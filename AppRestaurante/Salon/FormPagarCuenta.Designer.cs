@@ -44,6 +44,7 @@
             cbMedioPago.Name = "cbMedioPago";
             cbMedioPago.Size = new Size(121, 38);
             cbMedioPago.TabIndex = 0;
+            cbMedioPago.SelectedValueChanged += cbMedioPago_SelectedValueChanged;
             // 
             // lblMonto
             // 

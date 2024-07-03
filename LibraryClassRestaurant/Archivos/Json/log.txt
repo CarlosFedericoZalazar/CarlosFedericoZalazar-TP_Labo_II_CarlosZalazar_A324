@@ -302,3 +302,62 @@
 03/07/2024 18:34:37 - INICIO DEL PROGRAMA
 03/07/2024 18:39:01 - INICIO DEL PROGRAMA
 03/07/2024 18:41:11 - INICIO DEL PROGRAMA
+03/07/2024 19:02:14 - INICIO DEL PROGRAMA
+03/07/2024 19:03:07 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:03:11 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:03:11 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:04:09 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:06:10 - INICIO DEL PROGRAMA
+03/07/2024 19:06:23 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:06:27 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:07:06 - Mesa 1 cerrada por FELIPE con un monto de -5000
+03/07/2024 19:08:51 - INICIO DEL PROGRAMA
+03/07/2024 19:08:58 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 19:08:58 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:39:49 - INICIO DEL PROGRAMA
+03/07/2024 19:39:52 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 19:39:52 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:44:26 - INICIO DEL PROGRAMA
+03/07/2024 19:44:38 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 19:44:38 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:45:12 - ENCARGADO: ALBERTO SE GENERA COMANDA: CLIENTE Ricardo, DIRECCION: System.Windows.Forms.TextBox, Text: Alemania 456, Banfield
+03/07/2024 19:45:15 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:52:16 - INICIO DEL PROGRAMA
+03/07/2024 19:52:19 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 19:52:19 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:54:11 - INICIO DEL PROGRAMA
+03/07/2024 19:54:12 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 19:54:12 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:54:36 - ENCARGADO: ALBERTO SE GENERA COMANDA: CLIENTE Alejandro, DIRECCION: System.Windows.Forms.TextBox, Text: Alemania
+03/07/2024 19:54:39 - Aviso: El valor es menor al límite establecido.
+03/07/2024 19:55:17 - PEDIDO LLEVADO AL DOMICILIO A: ALEMANIA por MANUEL con un monto de 5000
+03/07/2024 20:00:32 - INICIO DEL PROGRAMA
+03/07/2024 20:00:34 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 20:00:34 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:00:59 - ENCARGADO: ALBERTO SE GENERA COMANDA: CLIENTE Alejandro, DIRECCION: System.Windows.Forms.TextBox, Text: Fonrouge
+03/07/2024 20:01:02 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:01:36 - PEDIDO LLEVADO AL DOMICILIO A: FONROUGE por MARCELO con un monto de 5000
+03/07/2024 20:14:37 - INICIO DEL PROGRAMA
+03/07/2024 20:14:39 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 20:14:39 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:15:36 - INICIO DEL PROGRAMA
+03/07/2024 20:15:37 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 20:15:37 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:17:26 - INICIO DEL PROGRAMA
+03/07/2024 20:17:29 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 20:17:29 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:18:02 - ENCARGADO: ALBERTO SE GENERA COMANDA: CLIENTE JUAN PEREZ, DIRECCION: System.Windows.Forms.TextBox, Text: AV. RIVADAVIA 1234, CABA
+03/07/2024 20:18:05 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:18:16 - PEDIDO LLEVADO AL DOMICILIO A: AV. RIVADAVIA 1234, CABA por MANUEL con un monto de -2000
+03/07/2024 20:18:41 - INICIO DEL PROGRAMA
+03/07/2024 20:18:43 - ALBERTO MELLINO: TOMANDO PEDIDO TELELFONICO
+03/07/2024 20:18:43 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:01 - ENCARGADO: ALBERTO SE GENERA COMANDA: CLIENTE JUAN PEREZ, DIRECCION: System.Windows.Forms.TextBox, Text: AV. RIVADAVIA 1234, CABA
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:04 - Aviso: El valor es menor al límite establecido.
+03/07/2024 20:19:05 - PEDIDO LLEVADO AL DOMICILIO A: AV. RIVADAVIA 1234, CABA por MARCELO con un monto de 12000
+03/07/2024 20:20:36 - INICIO DEL PROGRAMA

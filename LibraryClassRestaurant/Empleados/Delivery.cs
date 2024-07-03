@@ -17,9 +17,9 @@ namespace LibraryClassRestaurant.Empleados
         }
         public Delivery() { }
 
-        public void LlevarPedido(double monto, Comanda comanda)
+        public void RegistrarPedido(double monto, Comanda comanda, Cuenta.MedioPago medioPago)
         {
-                Cuenta cuenta = new Cuenta(0, Cuenta.MedioPago.Efectivo, this.Profile, this.Nombre, monto);
+                Cuenta cuenta = new Cuenta(0, medioPago, this.Profile, this.Nombre, monto);
                 Caja.RegistrarTicket(cuenta);
                 Log.Enter($"PEDIDO LLEVADO AL DOMICILIO A: {comanda.DireccionCliente.ToUpper()} por {this.Nombre} con un monto de {monto}");
 

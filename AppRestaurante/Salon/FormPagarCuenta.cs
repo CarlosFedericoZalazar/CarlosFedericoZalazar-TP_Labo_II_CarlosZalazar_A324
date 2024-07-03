@@ -43,10 +43,45 @@ namespace AppRestaurante.Salon
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            Mesero.CerrarMesa(MesaCliente, (Cuenta.MedioPago)cbMedioPago.SelectedItem, montoTotal );
-            
+            var seleccionPago = (Cuenta.MedioPago)cbMedioPago.SelectedItem;
+
+            if (seleccionPago == Cuenta.MedioPago.NoPago)
+            {
+                var result = MessageBox.Show("¿Está seguro de que desea confirmar el NO PAGO de la cuenta?", "Confirmar NO PAGO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                {
+                    cbMedioPago.Focus();
+                    return;
+                }
+            }
+
+            Mesero.CerrarMesa(MesaCliente, seleccionPago, montoTotal);
+
             //EncargadoTurno.Caja.Cobrar(cuenta.Monto);
             this.Close();
+        }
+
+        private void cbMedioPago_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var Seleccion = (Cuenta.MedioPago)cbMedioPago.SelectedItem;
+
+            if (Seleccion == Cuenta.MedioPago.NoPago)
+            {
+                if(montoTotal > 0)
+                {
+                    montoTotal *= -1;
+                    btnPagar.Text = "CONFIRMAR";
+                }                
+            }
+            else
+            {
+                if (montoTotal < 0)
+                {
+                    montoTotal *= -1;
+                    btnPagar.Text = "PAGAR";
+                }
+            }
         }
     }
 }

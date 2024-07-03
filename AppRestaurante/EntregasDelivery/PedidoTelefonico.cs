@@ -39,11 +39,21 @@ namespace AppRestaurante.EntregasDelivery
             cbMenu.DataSource = lista;
             cbMenu.DisplayMember = "Nombre";
 
+            cbMedioPago.Items.Add(Cuenta.MedioPago.Efectivo);
+            cbMedioPago.Items.Add(Cuenta.MedioPago.Tarjeta);
+            cbMedioPago.Items.Add(Cuenta.MedioPago.MercadoPago);
+            cbMedioPago.SelectedIndex = 0;
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Comanda comanda = new Comanda();
             DialogResult result = MessageBox.Show("¿Confirma el pedido?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var medioPago = (Cuenta.MedioPago)cbMedioPago.SelectedItem;
+
+            if (medioPago != Cuenta.MedioPago.Efectivo)
+            {
+                MessageBox.Show("Recuerde solicitar la confirmacion del pago antes de enviar el pedido", "Recoratorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
             if (result == DialogResult.Yes)
             {
@@ -60,7 +70,7 @@ namespace AppRestaurante.EntregasDelivery
                     Log.Enter($"ENCARGADO: {Encargado.Nombre} SE GENERA COMANDA: CLIENTE {txtNombre.Text}, DIRECCION: {txtDireccion}");
                     Cocinero.PepararComanda(menuSeleccionado);
 
-                    FormDespachoPedido formDespachoPedido = new FormDespachoPedido(FormularioPrincipal, Encargado, menuSeleccionado, comanda);
+                    FormDespachoPedido formDespachoPedido = new FormDespachoPedido(FormularioPrincipal, Encargado, menuSeleccionado, comanda, medioPago);
                     formDespachoPedido.Show();
                     this.Close();
 
@@ -100,6 +110,13 @@ namespace AppRestaurante.EntregasDelivery
         {
             FormularioPrincipal.Show();
             this.Close();
+        }
+
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "JUAN PEREZ";
+            txtDireccion.Text = "AV. RIVADAVIA 1234, CABA";
+            txtTelefono.Text = "11-1234-5678";
         }
     }
 }
