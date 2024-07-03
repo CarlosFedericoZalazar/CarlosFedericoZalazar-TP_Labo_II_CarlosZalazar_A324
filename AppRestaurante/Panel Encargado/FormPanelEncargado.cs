@@ -37,14 +37,9 @@ namespace AppRestoForm
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGestionarEmpleado_Click(object sender, EventArgs e)
         {
-            FormABMEmpleado formABMEmpleado = new FormABMEmpleado(this);
+            FormABMEmpleado formABMEmpleado = new FormABMEmpleado(this, Encargado);
             formABMEmpleado.Show();
             this.Hide();
         }

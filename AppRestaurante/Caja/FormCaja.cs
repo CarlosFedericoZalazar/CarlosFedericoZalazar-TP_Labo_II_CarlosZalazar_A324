@@ -35,9 +35,15 @@ namespace AppRestaurante.Caja
         }
 
         private void btnTickets_Click(object sender, EventArgs e)
-        {
-            Encargado.Caja.Dinero += Encargado.Caja.DineroTickets();
-            txtDineroCaja.Text = Encargado.Caja.Dinero.ToString();
+        { 
+            var dineroLevantado = Encargado.Caja.DineroTickets();
+            if(dineroLevantado == 0)
+            {
+                MessageBox.Show("No se registran nuevos tickets a regitrar");
+                return;
+            }
+            Encargado.Caja.Dinero += dineroLevantado;
+            txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
         }
 
         private void btnPagoProveedores_Click(object sender, EventArgs e)
@@ -47,9 +53,16 @@ namespace AppRestaurante.Caja
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormConsumos formConsumos = new FormConsumos(this);
+            FormConsumos formConsumos = new FormConsumos(this, Encargado);
             formConsumos.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double.TryParse(textBox1.Text, out double plata);            
+            Encargado.Caja.Cobrar(plata);
+            txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
         }
     }
 }

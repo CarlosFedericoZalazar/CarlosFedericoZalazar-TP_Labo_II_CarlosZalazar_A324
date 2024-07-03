@@ -7,7 +7,7 @@
     "Sueldo": 500000,
     "Profile": 0,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 5500000,
+    "SueldoBolsillo": 0,
     "NombreCompleto": "ANDREA ORZUZA"
   },
   {
@@ -18,7 +18,7 @@
     "Sueldo": 500000,
     "Profile": 0,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 5500000,
+    "SueldoBolsillo": 0,
     "NombreCompleto": "JAZMIN ALVAREZ"
   },
   {
@@ -29,19 +29,8 @@
     "Sueldo": 300000,
     "Profile": 1,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 3300000,
+    "SueldoBolsillo": 0,
     "NombreCompleto": "CARLOS  ZALAZAR"
-  },
-  {
-    "Nombre": "OCTAVIO",
-    "Apellido": "CAVILIA",
-    "Direccion": "ROCA 33, SAN MIGUEL",
-    "Telefono": "1144076380",
-    "Sueldo": 500000,
-    "Profile": 2,
-    "EstadoEmpleado": 0,
-    "SueldoBolsillo": 5500000,
-    "NombreCompleto": "OCTAVIO CAVILIA"
   },
   {
     "Nombre": "MANUEL",
@@ -51,7 +40,62 @@
     "Sueldo": 120000,
     "Profile": 3,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 1320000,
+    "SueldoBolsillo": 0,
     "NombreCompleto": "MANUEL ADORNI"
+  },
+  {
+    "Nombre": "FELIPE",
+    "Apellido": "GODOY",
+    "Direccion": "ALEMANIA 3344, CABA",
+    "Telefono": "1122991921",
+    "Sueldo": 340000,
+    "Profile": 2,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "FELIPE GODOY"
+  },
+  {
+    "Nombre": "DAMIAN",
+    "Apellido": "GUIZARRI",
+    "Direccion": "EUCALIPTUS 2464, POLVORINES",
+    "Telefono": "1122993301",
+    "Sueldo": 400000,
+    "Profile": 2,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "DAMIAN GUIZARRI"
+  },
+  {
+    "Nombre": "ALEJANDRO",
+    "Apellido": "GALEANO",
+    "Direccion": "SUIZA 150, VILLA DE MAYO",
+    "Telefono": "1133403920",
+    "Sueldo": 500000,
+    "Profile": 2,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "ALEJANDRO GALEANO"
+  },
+  {
+    "Nombre": "MARCELO",
+    "Apellido": "AGUIRRE",
+    "Direccion": "DEVELOPER 666, CABA",
+    "Telefono": "1199230022",
+    "Sueldo": 350000,
+    "Profile": 3,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "MARCELO AGUIRRE"
+  },
+  {
+    "Nombre": "MICAELA",
+    "Apellido": "BUSTOS",
+    "Direccion": "ZAPALA 982, S. MUGUEL",
+    "Telefono": "1188290022",
+    "Sueldo": 420000,
+    "Profile": 3,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "MICAELA BUSTOS"
   }
 ]

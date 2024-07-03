@@ -15,7 +15,7 @@ namespace LibraryClassRestaurant.Interfaces
         public void AgregarEmpleado(Empleado empleado);
 
         public List<Empleado> ListarEmpleados();
-        //public void EliminarEmpleado();
+        public void EliminarEmpleado(Empleado empleado);
         //public void ModificarEmpleado();
         //public void MostrarEmpleados();
 

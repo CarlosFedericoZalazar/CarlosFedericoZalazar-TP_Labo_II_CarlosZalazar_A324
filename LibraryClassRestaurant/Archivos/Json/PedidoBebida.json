@@ -3,7 +3,7 @@
     "Bebida": {
       "Cantidad": 999,
       "Alcoholica": false,
-      "PrecioDeVenta": 0,
+      "PrecioDeVenta": 2000,
       "Nombre": "COCA COLA 1L",
       "Precio": 1200000,
       "Proveedor": {
@@ -107,6 +107,50 @@
       "Tipo": 0
     },
     "FechaPedido": "2024-06-28T13:57:34.2212271-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 50,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "LIMONADA 1L",
+      "Precio": 60000,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 1,
+        "DineroACobrar": 55000
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T22:12:27.7325343-03:00",
+    "Estado": 1
+  },
+  {
+    "Bebida": {
+      "Cantidad": 2,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "LIMONADA 1L",
+      "Precio": 2400,
+      "Proveedor": {
+        "Nombre": "COCA COLA",
+        "Cuit": "30-63768213",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 1,
+        "Estado": 1,
+        "DineroACobrar": 2400
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-06-28T22:13:14.6550326-03:00",
     "Estado": 1
   }
 ]

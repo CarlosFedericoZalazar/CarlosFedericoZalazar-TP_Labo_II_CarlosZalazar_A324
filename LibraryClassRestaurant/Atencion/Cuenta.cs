@@ -12,7 +12,8 @@ namespace LibraryClassRestaurant.Atencion
         public enum MedioPago
         {
             Efectivo,
-            Tarjeta
+            Tarjeta,
+            NoPago
         }
 
 
@@ -25,6 +26,7 @@ namespace LibraryClassRestaurant.Atencion
 
         public double Monto { get; set; }
 
+        public bool Levantado { get; set; }
         public bool Cobrado { get; set; }
         public Cuenta() { }
         public Cuenta(int nroMesa, MedioPago medioPago, Empleado.Perfil perfil, string nombre, double monto)
@@ -35,6 +37,7 @@ namespace LibraryClassRestaurant.Atencion
             Perfil = perfil;
             Monto = monto;
             Fecha = DateTime.Now;
+            Levantado= false;
             Cobrado = false;
         }
 
@@ -48,5 +51,7 @@ namespace LibraryClassRestaurant.Atencion
         //    string mensaje = $"El total a pagar es: {total}";
         //    return mensaje;
         //}
+
+
     }
 }

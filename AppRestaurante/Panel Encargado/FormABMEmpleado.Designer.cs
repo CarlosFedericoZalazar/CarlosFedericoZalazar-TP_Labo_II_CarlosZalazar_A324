@@ -52,11 +52,12 @@
             btnBaja.TabIndex = 1;
             btnBaja.Text = "BAJA EMPLEADO";
             btnBaja.UseVisualStyleBackColor = true;
+            btnBaja.Click += btnBaja_Click;
             // 
             // btnVolver
             // 
             btnVolver.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVolver.Location = new Point(246, 428);
+            btnVolver.Location = new Point(234, 415);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(75, 23);
             btnVolver.TabIndex = 3;

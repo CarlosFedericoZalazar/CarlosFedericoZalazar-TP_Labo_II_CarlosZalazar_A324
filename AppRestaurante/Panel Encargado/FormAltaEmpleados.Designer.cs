@@ -47,6 +47,7 @@
             // 
             // cbPerfilEmpleado
             // 
+            cbPerfilEmpleado.DropDownStyle = ComboBoxStyle.DropDownList;
             cbPerfilEmpleado.FormattingEnabled = true;
             cbPerfilEmpleado.Location = new Point(56, 33);
             cbPerfilEmpleado.Name = "cbPerfilEmpleado";

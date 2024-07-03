@@ -1,6 +1,6 @@
 [
   {
-    "Cantidad": 20.4,
+    "Cantidad": 18.099999999999998,
     "Producto": "CARNE",
     "Proveedor": {
       "Nombre": "CARNES CACHO",
@@ -14,7 +14,7 @@
     }
   },
   {
-    "Cantidad": 33.75,
+    "Cantidad": 32.25,
     "Producto": "PAPA",
     "Proveedor": {
       "Nombre": "KELY VERDURAS",

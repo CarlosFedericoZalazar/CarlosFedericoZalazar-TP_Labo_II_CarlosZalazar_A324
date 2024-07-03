@@ -55,6 +55,22 @@ namespace AppRestaurante.Panel_Encargado
                 encargado.AgregarEmpleado(empleado);
                 MessageBox.Show("Empleado creado");
             }
+
+            DialogResult result = MessageBox.Show("¿Deseas cargar otro empleado?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                txtNombre.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtDireccion.Clear();
+                txtTelefono.Clear();
+                txtSueldo.Clear();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -64,7 +80,7 @@ namespace AppRestaurante.Panel_Encargado
             {
                 this.Close();
             }
-    }
+        }
 
-}
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using LibraryClassRestaurant.Archivos;
 using LibraryClassRestaurant.Mercaderia;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -105,10 +106,10 @@ namespace LibraryClassRestaurant.Atencion
             double total = 0;
             foreach (Cuenta item in listaTickets)
             {
-                if (!item.Cobrado)
+                if (!item.Levantado)
                 { 
                     total += item.Monto;
-                    item.Cobrado = true;                    
+                    item.Levantado = true;                    
                 }
             }
             ActualizarTickets(listaTickets);
@@ -133,5 +134,30 @@ namespace LibraryClassRestaurant.Atencion
             return pagoOk;
         }
 
+        public List<Cuenta> ConsumoPorEmpleados(List<Cuenta> listaTickets, string empleado)
+        {
+            List<Cuenta> ticketsEmpleado = new List<Cuenta>();
+            foreach (var item in listaTickets)
+            {
+                if (item.Perfil.ToString() == empleado)
+                {
+                    ticketsEmpleado.Add(item);
+                }
+            }
+            return ticketsEmpleado;
+        }
+
+        public List<Cuenta> ConsumoPorMedioPago(List<Cuenta> listaTickets, string medioPago)
+        {
+            List<Cuenta> ticketsEmpleado = new List<Cuenta>();
+            foreach (var item in listaTickets)
+            {
+                if (item.MedioPagoCuenta.ToString() == medioPago)
+                {
+                    ticketsEmpleado.Add(item);
+                }
+            }
+            return ticketsEmpleado;
+        }
     }
 }

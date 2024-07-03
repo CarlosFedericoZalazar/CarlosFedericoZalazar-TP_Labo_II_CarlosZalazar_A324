@@ -148,9 +148,5 @@ namespace AppRestaurante.Panel_Encargado
                 MessageBox.Show("PEDIDO INGRESADO LPM!");
             }            
         } 
-
-
-
-
     }
 }

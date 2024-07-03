@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPedido));
             cbProveedor = new ComboBox();
             lblTipo = new Label();
             lblProveedor = new Label();
@@ -196,6 +197,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(537, 321);
             Controls.Add(txtPrecio);
             Controls.Add(label1);
@@ -212,6 +214,7 @@
             Controls.Add(lblProveedor);
             Controls.Add(cbTipo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormPedido";

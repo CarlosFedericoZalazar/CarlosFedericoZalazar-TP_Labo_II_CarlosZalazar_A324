@@ -13,73 +13,55 @@ namespace AppRestaurante
 {
     public partial class FormInicioTurno : Form
     {
+        List<Mesero> listaMeseros = new List<Mesero>();
+        List<Delivery> listaDelivery = new List<Delivery>();
+        List<Cocinero> listaCocineros = new List<Cocinero>();
+        List<Encargado> listaEncargados = new List<Encargado>();
+        List<Empleado> listaEmpleados = Encargado.ObtenerEmpleados();
+
         List<Mesero> listaMesetosTurno = new List<Mesero>();
         List<Delivery> listaDeliveryTurno = new List<Delivery>();
-        List<Cocinero> listaCocineroTurno = new List<Cocinero>();
-
-        List<Empleado> listaEmpleados = Encargado.ObtenerEmpleados();
+        List<Cocinero> listaCocinerosTurno = new List<Cocinero>();
+        Encargado EncargadoTurno = new Encargado();
 
         public FormInicioTurno()
         {
             InitializeComponent();
-            CargarMeseros();
-            CargarDelivery();
-            CargarCocinero();
-            CargarComboBoxes();
+            CargarListas();
+            cargarComboBoxes();
         }
 
-        void CargarMeseros()
+        private void CargarListas()
         {
-            foreach (var item in listaEmpleados)
-            {
-                if (item.Profile == Empleado.Perfil.Mesero)
-                {
-                    var mesero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.SueldoBolsillo, item.Sueldo);
-                    listaMesetosTurno.Add((Mesero)mesero);
-                }
-            }
+            listaMeseros = Empleado.CargarEmpleados<Mesero>(Empleado.Perfil.Mesero);
+            listaDelivery = Empleado.CargarEmpleados<Delivery>(Empleado.Perfil.Delivery);
+            listaCocineros = Empleado.CargarEmpleados<Cocinero>(Empleado.Perfil.Cocinero);
+            listaEncargados = Empleado.CargarEmpleados<Encargado>(Empleado.Perfil.Encargado);
         }
-
-        void CargarDelivery()
+        private void cargarComboBoxes()
         {
-            foreach (var item in listaEmpleados)
-            {
-                if (item.Profile == Empleado.Perfil.Delivery)
-                {
-                    var delivery = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0, item.Sueldo);
-                    listaDeliveryTurno.Add((Delivery)delivery);
-                }
-            }
-        }
+            cbEncargado.DataSource = listaEncargados;
+            cbEncargado.DisplayMember = "Nombre";
+            cbEncargado.SelectedIndex = 0;
 
-        void CargarCocinero()
-        {
-            foreach (var item in listaEmpleados)
-            {
-                if (item.Profile == Empleado.Perfil.Cocinero)
-                {
-                    var cocinero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, 0, item.Sueldo);
-                    listaCocineroTurno.Add((Cocinero)cocinero);
-                }
-            }
-        }
-
-        void CargarComboBoxes()
-        {
-            cbMeseros.DataSource = listaMesetosTurno;
-            cbMeseros.DisplayMember = "Nombre";
-
-            cbDeliverys.DataSource = listaDeliveryTurno;
-            cbDeliverys.DisplayMember = "Nombre";
-
-            cbCocineros.DataSource = listaCocineroTurno;
+            cbCocineros.DataSource = listaCocineros;
             cbCocineros.DisplayMember = "Nombre";
+            cbCocineros.SelectedIndex = 0;
 
+            cbMeseros.DataSource = listaMeseros;
+            cbMeseros.DisplayMember = "Nombre";
+            cbMeseros.SelectedIndex = 0;
+
+            cbDeliverys.DataSource = listaDelivery;
+            cbDeliverys.DisplayMember = "Nombre";
+            cbDeliverys.SelectedIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            var encargado = (Encargado)cbEncargado.SelectedItem;
+            EncargadoTurno = encargado;
+            lbEnc.Text = encargado.Nombre;
         }
     }
 }

@@ -49,6 +49,9 @@
     <Compile Update="Panel Encargado\FormAltaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Panel Encargado\FormBajaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Panel Encargado\FormPanelEncargado.cs">
       <SubType>Form</SubType>
     </Compile>

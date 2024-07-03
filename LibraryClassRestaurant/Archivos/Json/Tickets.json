@@ -1,11 +1,12 @@
 [
   {
     "NroMesa": 1,
-    "MedioPagoCuenta": 0,
+    "MedioPagoCuenta": 1,
     "Fecha": "2024-06-28T01:31:26.8411625-03:00",
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -15,6 +16,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -24,6 +26,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 15000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -33,6 +36,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 15000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -42,6 +46,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -51,15 +56,17 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
     "NroMesa": 1,
-    "MedioPagoCuenta": 0,
+    "MedioPagoCuenta": 1,
     "Fecha": "2024-06-28T13:46:07.3538439-03:00",
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -69,6 +76,7 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
@@ -78,15 +86,57 @@
     "Nombre": "OCTAVIO",
     "Perfil": 2,
     "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   },
   {
     "NroMesa": 0,
-    "MedioPagoCuenta": 0,
+    "MedioPagoCuenta": 1,
     "Fecha": "2024-06-28T17:05:06.3938423-03:00",
     "Nombre": "MANUEL",
     "Perfil": 3,
     "Monto": 5000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-06-28T19:19:27.3466289-03:00",
+    "Nombre": "OCTAVIO",
+    "Perfil": 2,
+    "Monto": 5000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-06-28T19:21:46.6162905-03:00",
+    "Nombre": "OCTAVIO",
+    "Perfil": 2,
+    "Monto": 2000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-06-28T19:25:26.2905622-03:00",
+    "Nombre": "OCTAVIO",
+    "Perfil": 2,
+    "Monto": 5000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-06-28T22:07:31.3267057-03:00",
+    "Nombre": "FELIPE",
+    "Perfil": 2,
+    "Monto": 5000,
+    "Levantado": true,
     "Cobrado": true
   }
 ]

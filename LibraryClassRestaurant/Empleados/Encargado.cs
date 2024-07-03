@@ -35,7 +35,6 @@ namespace LibraryClassRestaurant.Empleados
         {
             return GestorMercaderia.InstanciarGestorMercaderia();
         }
-
         public void AgregarProveedor(Proveedor proveedor)
         {
             Serializador.Save<Proveedor>("Proveedor", proveedor);
@@ -106,18 +105,18 @@ namespace LibraryClassRestaurant.Empleados
 
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu)
         {
-            List<PedidoBebida> listaBebidas = PedidoBebida.GetPedidosBebidas();
+            var listaBebidas = StockBebidas.GetStockBebibles();
 
             foreach (var item in listaBebidas)
             {
-                if (item.Bebida.Nombre == bebida.Producto)
+                if (item.Producto == bebida.Producto)
                 {
-                    item.Bebida.PrecioDeVenta = precio;
+                    item.Precio = precio;
                     break;
                 }
             }
-            Serializador.SaveJson<PedidoBebida>("PedidoBebida", listaBebidas);
-            return StockBebidas.GetStockBebibles();
+            Serializador.SaveJson<StockBebidas>("PedidoBebida", listaBebidas);
+            return listaBebidas;
         }
 
         public List<Bebida> GetBebidas()
@@ -220,6 +219,7 @@ namespace LibraryClassRestaurant.Empleados
         {
             var listaEmpleados = ObtenerEmpleados();
             List<Empleado>listaOrdenada = new List<Empleado>();
+            Log.Enter("ORDEN DE PAGO A EMPLEADOS");
             foreach(Empleado.Perfil item in Enum.GetValues(typeof(Empleado.Perfil)))
             {
                 string cadena = "";
@@ -272,7 +272,27 @@ namespace LibraryClassRestaurant.Empleados
             return montoTotal;
         }
 
+        public void EliminarEmpleado(Empleado empleado) 
+        {
+            var listaActualizada = BuscarEliminar(empleado);
+            Serializador.SaveJson<Empleado>("Empleados", listaActualizada);
+            Log.Enter($"ELIMINACION DE EMPLEADO {empleado.Nombre} ({empleado.Profile.ToString()})");
+        }
 
+        private List<Empleado> BuscarEliminar(Empleado empleado) 
+        {
+            var listaEmpleados = ObtenerEmpleados();
+
+            foreach (var item in listaEmpleados)
+            {
+                if (item.NombreCompleto == empleado.NombreCompleto)
+                {
+                    listaEmpleados.Remove(item);
+                    break;
+                }
+            }
+            return listaEmpleados;
+        }
 
     }
 }

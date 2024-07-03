@@ -40,6 +40,23 @@ namespace LibraryClassRestaurant.Empleados
             Profile = profile;
             EstadoEmpleado = Estado.Activo;
         }
+
+        public static List<T> CargarEmpleados<T>(Empleado.Perfil perfil) where T : Empleado
+        {
+            var listaEmpleados = Encargado.ObtenerEmpleados();
+            List<T> listaEmpleadosFiltrados = new List<T>();
+
+            foreach (var item in listaEmpleados)
+            {
+                if (item.Profile == perfil)
+                {
+                    var empleado = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.SueldoBolsillo, item.Sueldo);
+                    listaEmpleadosFiltrados.Add((T)empleado);
+                }
+            }
+
+            return listaEmpleadosFiltrados;
+        }
     }
 
 }

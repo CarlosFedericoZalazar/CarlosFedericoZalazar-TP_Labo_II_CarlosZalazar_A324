@@ -138,6 +138,11 @@ namespace AppRestaurante.Salon
                 if (result == DialogResult.Yes)
                 {
                     listaMenu.Pop();
+                    lblListaPedidos.Text = "* ";
+                    foreach (var item in listaMenu)
+                    {
+                        lblListaPedidos.Text += $"{item.Nombre}\n* ";
+                    }
                     MessageBox.Show("Registro eiminado.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

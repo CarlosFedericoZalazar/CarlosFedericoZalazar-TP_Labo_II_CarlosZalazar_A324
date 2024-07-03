@@ -62,7 +62,7 @@ namespace AppRestaurante.Panel_Encargado
                     if (tipoProducto == Producto.TipoProducto.Comida)
                     {
                         Menu menu = (Menu)dgMenu.CurrentRow.DataBoundItem;
-                        listaMenu = Encargado.ModificarPrecio(menu, Convert.ToDouble(txtPrecio.Text), listaMenu); // HACER LA ECEPCION!
+                        listaMenu = Encargado.ModificarPrecio(menu, Convert.ToDouble(txtPrecio.Text), listaMenu); // HACER LA EXCEPCION!
                         CargarDataGridPlatos();
                     }
                     else

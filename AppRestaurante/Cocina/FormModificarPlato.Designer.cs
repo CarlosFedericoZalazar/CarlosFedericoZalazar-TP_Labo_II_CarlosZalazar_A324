@@ -51,47 +51,53 @@
             // cbIngredientes
             // 
             cbIngredientes.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbIngredientes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbIngredientes.FormattingEnabled = true;
             cbIngredientes.Location = new Point(379, 36);
             cbIngredientes.Name = "cbIngredientes";
-            cbIngredientes.Size = new Size(121, 25);
+            cbIngredientes.Size = new Size(121, 29);
             cbIngredientes.TabIndex = 1;
             cbIngredientes.SelectedValueChanged += cbIngredientes_SelectedValueChanged;
             // 
             // txtIngrediente
             // 
-            txtIngrediente.Location = new Point(359, 121);
+            txtIngrediente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIngrediente.Location = new Point(359, 123);
             txtIngrediente.Name = "txtIngrediente";
-            txtIngrediente.Size = new Size(155, 25);
+            txtIngrediente.Size = new Size(155, 29);
             txtIngrediente.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(357, 99);
             label1.Name = "label1";
-            label1.Size = new Size(82, 17);
+            label1.Size = new Size(106, 21);
             label1.TabIndex = 3;
-            label1.Text = "Ingredientge";
+            label1.Text = "INGREDIENTE";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(359, 177);
             label2.Name = "label2";
-            label2.Size = new Size(60, 17);
+            label2.Size = new Size(86, 21);
             label2.TabIndex = 4;
-            label2.Text = "Cantidad";
+            label2.Text = "CANTIDAD";
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(359, 197);
+            txtCantidad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCantidad.Location = new Point(359, 201);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(91, 25);
+            txtCantidad.Size = new Size(91, 29);
             txtCantidad.TabIndex = 5;
             // 
             // btnModificar
             // 
+            btnModificar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnModificar.Location = new Point(359, 268);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(132, 44);
@@ -105,7 +111,7 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(581, 450);
+            ClientSize = new Size(550, 343);
             Controls.Add(btnModificar);
             Controls.Add(txtCantidad);
             Controls.Add(label2);

@@ -46,7 +46,7 @@
             cbMenu.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMenu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbMenu.FormattingEnabled = true;
-            cbMenu.Location = new Point(397, 33);
+            cbMenu.Location = new Point(308, 47);
             cbMenu.Name = "cbMenu";
             cbMenu.Size = new Size(227, 29);
             cbMenu.TabIndex = 0;
@@ -95,7 +95,7 @@
             txtTelefono.Location = new Point(34, 188);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "celular";
-            txtTelefono.Size = new Size(100, 29);
+            txtTelefono.Size = new Size(137, 29);
             txtTelefono.TabIndex = 5;
             // 
             // label1
@@ -112,7 +112,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(397, 9);
+            label2.Location = new Point(308, 23);
             label2.Name = "label2";
             label2.Size = new Size(145, 21);
             label2.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(438, 68);
+            btnAgregar.Location = new Point(349, 82);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(145, 32);
             btnAgregar.TabIndex = 8;
@@ -130,7 +130,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(397, 262);
+            btnConfirmar.Location = new Point(287, 280);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(113, 49);
             btnConfirmar.TabIndex = 9;
@@ -140,19 +140,20 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(135, 262);
+            btnCancelar.Location = new Point(114, 280);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(113, 49);
             btnCancelar.TabIndex = 10;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // FormPedidoTelefonico
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(699, 476);
+            ClientSize = new Size(574, 356);
             ControlBox = false;
             Controls.Add(btnCancelar);
             Controls.Add(btnConfirmar);

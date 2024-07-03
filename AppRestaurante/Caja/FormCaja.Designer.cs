@@ -35,6 +35,10 @@
             btnTickets = new Button();
             btnPagoProveedores = new Button();
             button1 = new Button();
+            groupBox1 = new GroupBox();
+            textBox1 = new TextBox();
+            button2 = new Button();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // lblDineroCaja
@@ -98,12 +102,41 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Location = new Point(331, 251);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 100);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "PRUEBA";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(38, 33);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(139, 25);
+            textBox1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(73, 67);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 1;
+            button2.Text = "INGRESAR";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // FormCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(569, 384);
+            Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(btnPagoProveedores);
             Controls.Add(btnTickets);
@@ -117,6 +150,8 @@
             Name = "FormCaja";
             Text = "CAJA";
             Load += FormCaja_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,5 +164,8 @@
         private Button btnTickets;
         private Button btnPagoProveedores;
         private Button button1;
+        private GroupBox groupBox1;
+        private Button button2;
+        private TextBox textBox1;
     }
 }

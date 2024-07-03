@@ -54,6 +54,7 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormABMProveedor.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormAltaEmpleados.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormAltaProveedor.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormBajaEmpleado.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestoForm.FormPanelEncargado.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPanelPedidos.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPedido.resources

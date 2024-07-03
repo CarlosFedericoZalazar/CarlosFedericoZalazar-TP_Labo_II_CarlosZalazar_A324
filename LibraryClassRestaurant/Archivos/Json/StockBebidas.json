@@ -1,6 +1,6 @@
 [
   {
-    "Cantidad": 899,
+    "Cantidad": 897,
     "Alcoholica": false,
     "Precio": 0,
     "Producto": "COCA COLA 1L",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "Cantidad": 50,
+    "Cantidad": 48,
     "Alcoholica": false,
     "Precio": 0,
     "Producto": "NARANJA 2L",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "Cantidad": 50,
+    "Cantidad": 49,
     "Alcoholica": false,
     "Precio": 0,
     "Producto": "LECHE",
@@ -77,6 +77,38 @@
       "DiaDeEntrega": 1,
       "Estado": 0,
       "DineroACobrar": 0
+    }
+  },
+  {
+    "Cantidad": 50,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "LIMONADA 1L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 1,
+      "DineroACobrar": 55000
+    }
+  },
+  {
+    "Cantidad": 2,
+    "Alcoholica": false,
+    "Precio": 0,
+    "Producto": "LIMONADA 1L",
+    "Proveedor": {
+      "Nombre": "COCA COLA",
+      "Cuit": "30-63768213",
+      "Direccion": "Avda. Siempre Viva 1064, Springfield",
+      "TipoProducto": "Bebida",
+      "MedioDePago": 0,
+      "DiaDeEntrega": 1,
+      "Estado": 1,
+      "DineroACobrar": 2400
     }
   }
 ]

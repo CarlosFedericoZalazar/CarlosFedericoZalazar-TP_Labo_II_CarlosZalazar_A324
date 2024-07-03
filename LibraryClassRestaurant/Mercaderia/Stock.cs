@@ -8,8 +8,6 @@ namespace LibraryClassRestaurant.Mercaderia
 {
     public abstract class Stock
     {
-
-  
         public string Producto { get; set; }
         public Proveedor Proveedor { get; set; }
 
@@ -19,7 +17,5 @@ namespace LibraryClassRestaurant.Mercaderia
             Producto = producto;
             Proveedor = proveedor;
         }
-
-
     }
 }

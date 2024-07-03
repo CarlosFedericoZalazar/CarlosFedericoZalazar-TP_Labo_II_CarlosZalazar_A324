@@ -1,4 +1,5 @@
 ﻿using AppRestoForm;
+using LibraryClassRestaurant.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,13 @@ namespace AppRestaurante.Panel_Encargado
 {
     public partial class FormABMEmpleado : Form
     {
-        FormPanelEncargado _formPanelEncargado;
-        public FormABMEmpleado(FormPanelEncargado formPanelEncargado)
+        IEncargado Encargado { get; set; }
+        public FormPanelEncargado FormPanelEncargado { get; set; }
+        public FormABMEmpleado(FormPanelEncargado formPanelEncargado, IEncargado encargado)
         {
             InitializeComponent();
-            _formPanelEncargado = formPanelEncargado;
+            FormPanelEncargado = formPanelEncargado;
+            Encargado = encargado;
         }
 
         private void btnAltaEmpleado_Click(object sender, EventArgs e)
@@ -28,8 +31,14 @@ namespace AppRestaurante.Panel_Encargado
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            _formPanelEncargado.Show();
+            FormPanelEncargado.Show();
             this.Close();
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            FormBajaEmpleado formBajaEmpleado = new FormBajaEmpleado(Encargado);
+            formBajaEmpleado.ShowDialog();
         }
     }
 }

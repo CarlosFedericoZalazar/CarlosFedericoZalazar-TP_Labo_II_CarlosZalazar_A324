@@ -45,5 +45,21 @@ namespace LibraryClassRestaurant.Empleados
             return bebidasSinStock;
         }
 
+        public static List<Mesero>CargarMeseros()
+        {   
+            var listaEmpleados = Encargado.ObtenerEmpleados();
+            List<Mesero> listaMesetosTurno = new List<Mesero>();
+
+            foreach (var item in listaEmpleados)
+            {
+                if (item.Profile == Empleado.Perfil.Mesero)
+                {
+                    var mesero = FabricaEmpleado.CrearEmpleado(item.Profile, item.Nombre, item.Apellido, item.Direccion, item.Telefono, item.SueldoBolsillo, item.Sueldo);
+                    listaMesetosTurno.Add((Mesero)mesero);
+                }
+            }
+            return listaMesetosTurno;
+        }
+
     }
 }

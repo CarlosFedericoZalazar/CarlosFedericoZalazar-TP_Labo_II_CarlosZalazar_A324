@@ -47,8 +47,8 @@ namespace AppRestaurante.EntregasDelivery
 
             if (result == DialogResult.Yes)
             {
-                bool txtBoxOk  = ValidateForms.Validate.VerificarTextBoxesLlenos(this);
-                if (txtBoxOk && menuSeleccionado.Count > 0) 
+                bool txtBoxOk = ValidateForms.Validate.VerificarTextBoxesLlenos(this);
+                if (txtBoxOk && menuSeleccionado.Count > 0)
                 {
                     comanda = GenerarComanda();
                     Encargado.GenerarComanda(comanda);
@@ -59,11 +59,11 @@ namespace AppRestaurante.EntregasDelivery
                     }
                     Log.Enter($"ENCARGADO: {Encargado.Nombre} SE GENERA COMANDA: CLIENTE {txtNombre.Text}, DIRECCION: {txtDireccion}");
                     Cocinero.PepararComanda(menuSeleccionado);
-                
+
                     FormDespachoPedido formDespachoPedido = new FormDespachoPedido(FormularioPrincipal, Encargado, menuSeleccionado, comanda);
                     formDespachoPedido.Show();
                     this.Close();
-                    
+
                 }
 
             }
@@ -74,11 +74,11 @@ namespace AppRestaurante.EntregasDelivery
         }
 
         private Comanda GenerarComanda()
-        { 
+        {
             string nombre = txtNombre.Text;
             string direccion = txtDireccion.Text;
             string telefono = txtTelefono.Text;
-            return new Comanda(nombre, direccion, telefono, menuSeleccionado);        
+            return new Comanda(nombre, direccion, telefono, menuSeleccionado);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -90,10 +90,16 @@ namespace AppRestaurante.EntregasDelivery
             {
                 menuSeleccionado.Add(menu);
             }
-            else 
+            else
             {
                 return;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FormularioPrincipal.Show();
+            this.Close();
         }
     }
 }
