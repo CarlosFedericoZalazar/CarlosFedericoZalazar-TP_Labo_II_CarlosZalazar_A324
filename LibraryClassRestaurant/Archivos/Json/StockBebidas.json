@@ -1,114 +1,18 @@
 [
   {
-    "Cantidad": 894,
-    "Alcoholica": false,
+    "Cantidad": 200,
+    "Alcoholica": true,
     "Precio": 0,
-    "Producto": "COCA COLA 1L",
+    "Producto": "CERVEZA 1L",
     "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 0,
-      "DineroACobrar": 0
-    }
-  },
-  {
-    "Cantidad": 48,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "NARANJA 2L",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 0,
-      "DineroACobrar": 0
-    }
-  },
-  {
-    "Cantidad": 20,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "SEVEN UP 1L",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 0,
-      "DineroACobrar": 0
-    }
-  },
-  {
-    "Cantidad": 49,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "LECHE",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 0,
-      "DineroACobrar": 0
-    }
-  },
-  {
-    "Cantidad": 20,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "AGUA 2L",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 0,
-      "DineroACobrar": 0
-    }
-  },
-  {
-    "Cantidad": 50,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "LIMONADA 1L",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
+      "Nombre": "QUILMES S.A",
+      "Cuit": "30-08103705",
       "Direccion": "Avda. Siempre Viva 1064, Springfield",
       "TipoProducto": "Bebida",
       "MedioDePago": 0,
       "DiaDeEntrega": 1,
       "Estado": 1,
-      "DineroACobrar": 55000
-    }
-  },
-  {
-    "Cantidad": 2,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "LIMONADA 1L",
-    "Proveedor": {
-      "Nombre": "COCA COLA",
-      "Cuit": "30-63768213",
-      "Direccion": "Avda. Siempre Viva 1064, Springfield",
-      "TipoProducto": "Bebida",
-      "MedioDePago": 0,
-      "DiaDeEntrega": 1,
-      "Estado": 1,
-      "DineroACobrar": 2400
+      "DineroACobrar": 240000
     }
   }
 ]

@@ -1,32 +1,32 @@
 [
   {
     "Nombre": "CARNES CACHO",
-    "Cuit": "30-14214325",
+    "Cuit": "30-68151407",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Comida",
     "MedioDePago": 0,
-    "DiaDeEntrega": 2,
-    "Estado": 0,
-    "DineroACobrar": 0
+    "DiaDeEntrega": 1,
+    "Estado": 1,
+    "DineroACobrar": 800000
   },
   {
-    "Nombre": "COCA COLA",
-    "Cuit": "30-63768213",
+    "Nombre": "QUILMES S.A",
+    "Cuit": "30-08103705",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Bebida",
     "MedioDePago": 0,
     "DiaDeEntrega": 1,
-    "Estado": 0,
-    "DineroACobrar": 0
+    "Estado": 1,
+    "DineroACobrar": 240000
   },
   {
-    "Nombre": "KELY VERDURAS",
-    "Cuit": "30-27034637",
+    "Nombre": "VERDURAS KELY",
+    "Cuit": "30-42573143",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Comida",
     "MedioDePago": 0,
-    "DiaDeEntrega": 1,
-    "Estado": 0,
-    "DineroACobrar": 0
+    "DiaDeEntrega": 0,
+    "Estado": 1,
+    "DineroACobrar": 960000
   }
 ]

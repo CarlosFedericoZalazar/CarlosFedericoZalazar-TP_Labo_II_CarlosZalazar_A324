@@ -1,62 +1,42 @@
 [
   {
     "Comida": {
-      "Cantidad": 60,
+      "Cantidad": 1000,
       "Nombre": "CARNE",
-      "Precio": 60000,
+      "Precio": 800000,
       "Proveedor": {
         "Nombre": "CARNES CACHO",
-        "Cuit": "30-14214325",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Comida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 2,
-        "Estado": 1,
-        "DineroACobrar": 50000
-      },
-      "Tipo": 1
-    },
-    "FechaPedido": "2024-06-27T23:55:39.6261067-03:00",
-    "Estado": 2
-  },
-  {
-    "Comida": {
-      "Cantidad": 40,
-      "Nombre": "PAPA",
-      "Precio": 12000,
-      "Proveedor": {
-        "Nombre": "KELY VERDURAS",
-        "Cuit": "30-27034637",
+        "Cuit": "30-68151407",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Comida",
         "MedioDePago": 0,
         "DiaDeEntrega": 1,
         "Estado": 1,
-        "DineroACobrar": 2000
+        "DineroACobrar": 800000
       },
       "Tipo": 1
     },
-    "FechaPedido": "2024-06-27T23:55:57.4490918-03:00",
-    "Estado": 2
+    "FechaPedido": "2024-07-04T10:04:43.625402-03:00",
+    "Estado": 1
   },
   {
     "Comida": {
-      "Cantidad": 200,
-      "Nombre": "POLLO",
-      "Precio": 400000,
+      "Cantidad": 800,
+      "Nombre": "PAPA",
+      "Precio": 960000,
       "Proveedor": {
-        "Nombre": "CARNES CACHO",
-        "Cuit": "30-14214325",
+        "Nombre": "VERDURAS KELY",
+        "Cuit": "30-42573143",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Comida",
         "MedioDePago": 0,
-        "DiaDeEntrega": 2,
-        "Estado": 0,
-        "DineroACobrar": 0
+        "DiaDeEntrega": 0,
+        "Estado": 1,
+        "DineroACobrar": 960000
       },
       "Tipo": 1
     },
-    "FechaPedido": "2024-06-28T11:26:19.6446901-03:00",
-    "Estado": 2
+    "FechaPedido": "2024-07-04T10:05:46.2778264-03:00",
+    "Estado": 1
   }
 ]

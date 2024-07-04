@@ -1,14 +1,44 @@
 [
   {
-    "Dinero": 100000,
+    "Dinero": 0,
     "Fecha": "0001-01-01T00:00:00",
     "MedioPago": 0,
-    "ConceptoOperacion": 1
+    "ConceptoOperacion": 0
   },
   {
-    "Dinero": 300000,
+    "Dinero": 0,
     "Fecha": "0001-01-01T00:00:00",
     "MedioPago": 0,
-    "ConceptoOperacion": 1
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
+  },
+  {
+    "Dinero": 0,
+    "Fecha": "0001-01-01T00:00:00",
+    "MedioPago": 0,
+    "ConceptoOperacion": 0
   }
 ]

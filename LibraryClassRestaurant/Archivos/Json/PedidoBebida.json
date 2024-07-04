@@ -1,156 +1,24 @@
 [
   {
     "Bebida": {
-      "Cantidad": 999,
-      "Alcoholica": false,
-      "PrecioDeVenta": 2000,
-      "Nombre": "COCA COLA 1L",
-      "Precio": 1200000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 0,
-        "DineroACobrar": 0
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T12:42:53.602808-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 50,
-      "Alcoholica": false,
+      "Cantidad": 200,
+      "Alcoholica": true,
       "PrecioDeVenta": 0,
-      "Nombre": "NARANJA 2L",
-      "Precio": 600000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 0,
-        "DineroACobrar": 0
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T12:45:57.443987-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 20,
-      "Alcoholica": false,
-      "PrecioDeVenta": 0,
-      "Nombre": "SEVEN UP 1L",
+      "Nombre": "CERVEZA 1L",
       "Precio": 240000,
       "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 0,
-        "DineroACobrar": 0
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T12:48:05.2445483-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 50,
-      "Alcoholica": false,
-      "PrecioDeVenta": 0,
-      "Nombre": "LECHE",
-      "Precio": 60000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 0,
-        "DineroACobrar": 0
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T13:52:39.4471327-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 20,
-      "Alcoholica": false,
-      "PrecioDeVenta": 0,
-      "Nombre": "AGUA 2L",
-      "Precio": 7000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 0,
-        "DineroACobrar": 0
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T13:57:34.2212271-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 50,
-      "Alcoholica": false,
-      "PrecioDeVenta": 0,
-      "Nombre": "LIMONADA 1L",
-      "Precio": 60000,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
+        "Nombre": "QUILMES S.A",
+        "Cuit": "30-08103705",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Bebida",
         "MedioDePago": 0,
         "DiaDeEntrega": 1,
         "Estado": 1,
-        "DineroACobrar": 55000
+        "DineroACobrar": 240000
       },
       "Tipo": 0
     },
-    "FechaPedido": "2024-06-28T22:12:27.7325343-03:00",
-    "Estado": 1
-  },
-  {
-    "Bebida": {
-      "Cantidad": 2,
-      "Alcoholica": false,
-      "PrecioDeVenta": 0,
-      "Nombre": "LIMONADA 1L",
-      "Precio": 2400,
-      "Proveedor": {
-        "Nombre": "COCA COLA",
-        "Cuit": "30-63768213",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Bebida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 1,
-        "DineroACobrar": 2400
-      },
-      "Tipo": 0
-    },
-    "FechaPedido": "2024-06-28T22:13:14.6550326-03:00",
+    "FechaPedido": "2024-07-04T10:04:28.0469971-03:00",
     "Estado": 1
   }
 ]

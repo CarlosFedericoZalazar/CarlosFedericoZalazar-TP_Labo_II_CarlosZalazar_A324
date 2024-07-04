@@ -143,28 +143,65 @@ namespace LibraryClassRestaurant.Empleados
                 this.Mensaje("No se ha podido pagar a proveedor por falta de dinero");
                 Log.Enter($"DINERO INSUFICIENTE PARA EL PAGO A PROVEEDOR {proveedorActualizado.Nombre}, MONTO: ${proveedorActualizado.DineroACobrar}");
                 proveedorActualizado.Estado = Proveedor.EstadoCuenta.Deuda;
+                //ACTUALIZAR DEUDA PROVEEDOR
+                ActualizarDeudaProveedor(proveedorActualizado);
             }
             else 
             {
                 proveedorActualizado.Estado = Proveedor.EstadoCuenta.AlDia;
+                Log.Enter($"SE HIZO EFECTIVO EL PAGO A PROVEEDOR {proveedorActualizado.Nombre}, QUEDANDO AL DIA");
             }
             return proveedorActualizado;
         }
 
         public void LiquidarProveedores() 
         {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("RESUMEN DE PAGO DE PROVEEDORES: \n");
             var listaProveedores = Proveedor.GetProveedores();
+            List<Proveedor> listaProveedoresActualizada = new List<Proveedor>();
             foreach (var item in listaProveedores)
             {
                 if (item.Estado == Proveedor.EstadoCuenta.Deuda)
                 {
-                    PagarProveedor(item.DineroACobrar,item);
-                    Log.Enter($"PROVEEDOR {item.Nombre} SE LE DEBE {item.DineroACobrar}, SE CURSA ORDEN DE PAGO");
+                    var itemActualizado = PagarProveedor(item.DineroACobrar,item);
+                    ArmadoDeMensaje(itemActualizado, sb);
+                    Log.Enter($"PROVEEDOR {itemActualizado.Nombre} SE LE DEBE {itemActualizado.DineroACobrar}, SE CURSA ORDEN DE PAGO");
+                }
+                listaProveedoresActualizada.Add(item);
+            }
+            Mensaje(sb.ToString());
+            ActualizarProveedores(listaProveedoresActualizada);
+        }
+
+        private StringBuilder ArmadoDeMensaje(Proveedor itemActualizado, StringBuilder sb)
+        {
+            if (itemActualizado.Estado == Proveedor.EstadoCuenta.AlDia)
+            {
+                sb.AppendLine($"PROVEEDOR {itemActualizado.Nombre} SE HA REGULARIZADO LA DEUDA");
+            }
+            else
+            { 
+                sb.AppendLine($"PROVEEDOR {itemActualizado.Nombre} SE LE DEBE {itemActualizado.DineroACobrar}, NO SE PUDO PAGAR");
+            }
+            return sb;
+        }
+
+        private void ActualizarDeudaProveedor(Proveedor proveedor) 
+        {
+            var listaProveedores = Proveedor.GetProveedores();
+            foreach (var item in listaProveedores)
+            {
+                if (item.Nombre == proveedor.Nombre)
+                {
+                    item.DineroACobrar += proveedor.DineroACobrar;
+                    item.Estado = proveedor.Estado;
+                    break;
                 }
             }
             ActualizarProveedores(listaProveedores);
         }
-
+        
         private void ActualizarProveedores(List<Proveedor> listaProveedores)
         {
             Serializador.SaveJson<Proveedor>("Proveedor", listaProveedores);
@@ -185,7 +222,6 @@ namespace LibraryClassRestaurant.Empleados
         {
             Serializador.Save<Comanda>("Comanda", comanda);
         }
-
         public void PagarSueldo()
         {
             var listaOrdenadaEmpleados = GenerandoPrioridadPago();
@@ -238,7 +274,6 @@ namespace LibraryClassRestaurant.Empleados
         {
             var listaEmpleados = ObtenerEmpleados();
             return CargarPerfilEmpleado<Delivery>(listaEmpleados, Empleado.Perfil.Delivery);
-
         }
         private List<T> CargarPerfilEmpleado<T>(List<Empleado> listaEmpleados, Empleado.Perfil perfilEmpleado)
         {
