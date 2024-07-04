@@ -36,14 +36,13 @@ namespace AppRestaurante.Panel_Encargado
         {
             CargarDiccionarioProveedores();
             cbTipo.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
-            cbTipo.SelectedIndex = 0;
+            cbTipo.SelectedIndex = 1;
             var type = cbTipo.SelectedItem.ToString();
             if (type != null)
             {
                 cbProveedor.DataSource = dictProveedores[type];
                 cbProveedor.DisplayMember = "Nombre";
             }
-            rbNo.Checked = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -63,14 +62,12 @@ namespace AppRestaurante.Panel_Encargado
             {
                 if (type == item)
                 {
-                    lblUnidKilos.Text = "Unidades";
-                    gbAlcohol.Enabled = true;
+                    lblPrecio.Text = "PRECIO (x Unidad)";
                     break;
                 }
                 else
                 {
-                    lblUnidKilos.Text = "Kilos";
-                    gbAlcohol.Enabled = false;
+                    lblPrecio.Text = "PRECIO (x Kilo)";
                     break;
                 }
             }
@@ -99,14 +96,11 @@ namespace AppRestaurante.Panel_Encargado
             {
                 return;
             }
-           
-            CrearProducto();            
+
+            CrearProducto();
         }
 
-        // LA LOGICA DEL PAGO DE PROVEEDOR LA VAMOS A SACAR DE ACA
-
-
-        private void CrearProducto() 
+        private void CrearProducto()
         {
             Bebida productoBebida = new Bebida();
             ProductoComestible productoComida = new ProductoComestible();
@@ -118,8 +112,9 @@ namespace AppRestaurante.Panel_Encargado
             bool intCantidadOk = int.TryParse(txtCantidad.Text, out int cantidad);
             bool intCantidadGramosOk = double.TryParse(txtCantidad.Text, out double cantidadGramos);
             bool doublePrecioOk = double.TryParse(txtPrecio.Text, out precio);
-            bool alcohol = rbSi.Checked == true ? true : false;
-            if ( (intCantidadOk || doublePrecioOk) || (intCantidadGramosOk || doublePrecioOk))
+            //bool alcohol = rbSi.Checked == true ? true : false;
+            bool alcohol = false;
+            if ((intCantidadOk || doublePrecioOk) || (intCantidadGramosOk || doublePrecioOk))
                 precioPedido = cantidad * precio;
             else
                 return;
@@ -129,24 +124,90 @@ namespace AppRestaurante.Panel_Encargado
             if (respuesta == DialogResult.Yes)
             {
                 Producto.TipoProducto type = (Producto.TipoProducto)cbTipo.SelectedItem;
-
+                var producto = cbProducto.SelectedItem as string;
                 Proveedor proveedorPagado = Encargado.PagarProveedor(precioPedido, proveedorSeleccionado);
-                
+                if (producto == null)
+                {
+                    MessageBox.Show("Seleccione un producto");
+                    return;
+                }
+
                 if (type == TipoProducto.Bebida)
                 {
-                    productoBebida = new Bebida(txtProducto.Text, type, cantidad, alcohol, precioPedido, proveedorPagado);
+                    productoBebida = new Bebida(producto, type, cantidad, alcohol, precioPedido, proveedorPagado);
                     Encargado.GestionarPedidos(productoBebida, proveedorSeleccionado);
                 }
                 else
                 {
-                    productoComida = new ProductoComestible(txtProducto.Text, type, cantidadGramos, precioPedido, proveedorPagado);
+                    productoComida = new ProductoComestible(producto, type, cantidadGramos, precioPedido, proveedorPagado);
                     Encargado.GestionarPedidos(productoComida, proveedorSeleccionado);
                 }
             }
             if (proveedorSeleccionado != null)
             {
                 MessageBox.Show("PEDIDO INGRESADO LPM!");
-            }            
-        } 
+            }
+        }
+
+        private void cbProveedor_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var proveedor = cbProveedor.SelectedItem as Proveedor;
+            if (proveedor != null)
+            {
+                var dictionarySelected = proveedor.ProductosOfrecidos;
+                CargarComboProductos(dictionarySelected);
+                cbProducto.SelectedIndex = 0;
+            }
+        }
+
+        private void CargarComboProductos(List<Dictionary<string, double>> listaProductos)
+        {
+            cbProducto.Items.Clear();
+            foreach (var producto in listaProductos)
+            {
+                foreach (var nombre in producto)
+                {
+                    cbProducto.Items.Add(nombre.Key);
+                }
+            }
+        }
+
+        private void cbProducto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var producto = cbProducto.SelectedItem as string;
+            if (producto != null)
+            {
+                var proveedor = cbProveedor.SelectedItem as Proveedor;
+                if (proveedor != null)
+                {
+                    var dictionarySelected = proveedor.ProductosOfrecidos;
+                    foreach (var productoDic in dictionarySelected)
+                    {
+                        foreach (var nombre in productoDic)
+                        {
+                            if (nombre.Key == producto)
+                            {
+                                txtPrecio.Text = nombre.Value.ToString();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtCantidad.Text, out int cantidad))
+            {
+                var precioFinal = cantidad * double.Parse(txtPrecio.Text);
+                txtAPagar.Text = precioFinal.ToString();
+            }
+            else
+            {
+                txtAPagar.Text = "0";
+            }
+
+        }
     }
 }

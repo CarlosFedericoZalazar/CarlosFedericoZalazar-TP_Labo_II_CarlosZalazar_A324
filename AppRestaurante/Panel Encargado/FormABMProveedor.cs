@@ -35,5 +35,12 @@ namespace AppRestaurante.Panel_Encargado
             _formPanelPedidos.Show();
             this.Close();
         }
+
+        private void btnGestorProducto_Click(object sender, EventArgs e)
+        {
+            FormProductos formProductos = new FormProductos(this);
+            formProductos.Show();
+            this.Hide();
+        }
     }
 }

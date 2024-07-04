@@ -85,6 +85,7 @@
             // 
             // cbTipoProducto
             // 
+            cbTipoProducto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipoProducto.FormattingEnabled = true;
             cbTipoProducto.Location = new Point(28, 29);
             cbTipoProducto.Name = "cbTipoProducto";

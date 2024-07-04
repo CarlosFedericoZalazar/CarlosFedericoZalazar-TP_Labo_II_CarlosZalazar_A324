@@ -30,15 +30,12 @@ namespace AppRestaurante.Panel_Encargado
         private void FormAltaProveedor_Load(object sender, EventArgs e)
         {
             cbMedioPago.DataSource = Enum.GetValues(typeof(Proveedor.MedioPago));
-            //cbMedioPago.Items.AddRange(Enum.GetNames(typeof(Proveedor.MedioPago)));
             cbMedioPago.SelectedIndex = 0;
 
             cbDiaEntrega.DataSource = Enum.GetValues(typeof(Proveedor.DiaEntrega));
-            //cbDiaEntrega.Items.AddRange(Enum.GetNames(typeof(Proveedor.DiaEntrega)));
             cbDiaEntrega.SelectedIndex = 0;
 
             cbTipoProducto.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
-            //cbTipoProducto.Items.AddRange(Enum.GetNames(typeof(Producto.TipoProducto)));
             cbTipoProducto.SelectedIndex = 0;
 
             txtCuit.Text = Proveedor.CuitGenerate();

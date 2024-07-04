@@ -40,6 +40,7 @@ namespace LibraryClassRestaurant.Mercaderia
         public DiaEntrega DiaDeEntrega { get; set; }
         public EstadoCuenta Estado { get; set; }
         public double DineroACobrar { get; set; }
+        public List<Dictionary<string, double>> ProductosOfrecidos { get; set; }
 
         public Proveedor() { }
         public Proveedor(string nombre, string cuit, string tipoProducto, MedioPago medioPago, DiaEntrega diaEntrega)
@@ -51,6 +52,7 @@ namespace LibraryClassRestaurant.Mercaderia
             Direccion = "Avda. Siempre Viva 1064, Springfield";
             DiaDeEntrega = diaEntrega;
             Estado = EstadoCuenta.AlDia;
+            ProductosOfrecidos = new List<Dictionary<string, double>>();
         }
 
         public static string CuitGenerate()
@@ -69,7 +71,19 @@ namespace LibraryClassRestaurant.Mercaderia
         }
         public static void Save(Proveedor proveedor) 
         {
-            //Serializador.Save<Proveedor>("Proveedores", proveedor);
+            var proveedores = GetProveedores();
+            foreach (var item in proveedores)
+            {
+                if (item.Cuit == proveedor.Cuit)
+                {
+                    var indice = proveedores.IndexOf(item);
+                    proveedores[indice] = proveedor;
+                    Log.Enter($"Se modificó el proveedor {proveedor.Nombre}");
+                    //Log.Enter($"Se modificó el proveedor, producto {proveedor.ProductosOfrecidos[-1].Keys}");
+                    break;    
+                }
+            }
+            Serializador.SaveJson<Proveedor>("Proveedor", proveedores);
         }
     }
 }

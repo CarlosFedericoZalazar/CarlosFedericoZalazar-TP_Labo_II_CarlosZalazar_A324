@@ -1,18 +1,26 @@
 [
   {
-    "Cantidad": 200,
-    "Alcoholica": true,
+    "Cantidad": 80,
+    "Alcoholica": false,
     "Precio": 0,
     "Producto": "CERVEZA 1L",
     "Proveedor": {
-      "Nombre": "QUILMES S.A",
-      "Cuit": "30-08103705",
+      "Nombre": "QUILMES",
+      "Cuit": "30-73161287",
       "Direccion": "Avda. Siempre Viva 1064, Springfield",
       "TipoProducto": "Bebida",
       "MedioDePago": 0,
-      "DiaDeEntrega": 1,
+      "DiaDeEntrega": 0,
       "Estado": 1,
-      "DineroACobrar": 240000
+      "DineroACobrar": 160000,
+      "ProductosOfrecidos": [
+        {
+          "CERVEZA 1L": 1800
+        },
+        {
+          "CERVEZA 1L": 2000
+        }
+      ]
     }
   }
 ]

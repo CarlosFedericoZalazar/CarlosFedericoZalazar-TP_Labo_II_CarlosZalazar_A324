@@ -32,6 +32,7 @@
             btnAltaProveedor = new Button();
             btnBajaProveedor = new Button();
             btnVolver = new Button();
+            btnGestorProducto = new Button();
             SuspendLayout();
             // 
             // btnAltaProveedor
@@ -46,7 +47,7 @@
             // 
             // btnBajaProveedor
             // 
-            btnBajaProveedor.Location = new Point(49, 227);
+            btnBajaProveedor.Location = new Point(49, 172);
             btnBajaProveedor.Name = "btnBajaProveedor";
             btnBajaProveedor.Size = new Size(149, 59);
             btnBajaProveedor.TabIndex = 1;
@@ -64,12 +65,23 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
+            // btnGestorProducto
+            // 
+            btnGestorProducto.Location = new Point(49, 277);
+            btnGestorProducto.Name = "btnGestorProducto";
+            btnGestorProducto.Size = new Size(149, 59);
+            btnGestorProducto.TabIndex = 3;
+            btnGestorProducto.Text = "GESTIO DE PRODUCTOS PROVEEDORES";
+            btnGestorProducto.UseVisualStyleBackColor = true;
+            btnGestorProducto.Click += btnGestorProducto_Click;
+            // 
             // FormABMProveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(253, 450);
+            Controls.Add(btnGestorProducto);
             Controls.Add(btnVolver);
             Controls.Add(btnBajaProveedor);
             Controls.Add(btnAltaProveedor);
@@ -88,5 +100,6 @@
         private Button btnAltaProveedor;
         private Button btnBajaProveedor;
         private Button btnVolver;
+        private Button btnGestorProducto;
     }
 }

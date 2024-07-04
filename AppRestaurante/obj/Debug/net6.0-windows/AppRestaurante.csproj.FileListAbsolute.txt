@@ -30,10 +30,11 @@ C:\Users\Usuario\Desktop\TP NINJA VERSION\AppRestaurante\obj\Debug\net6.0-window
 C:\Users\Usuario\Desktop\TP NINJA VERSION\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormMesa.resources
 C:\Users\Usuario\Desktop\TP NINJA VERSION\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormAltaPlato.resources
 C:\Users\Usuario\Desktop\TP NINJA VERSION\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Cocina.FormCocina.resources
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.dll
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.exe
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.deps.json
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.runtimeconfig.json
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.dll
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\LibraryClassRestaurant.dll
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\LibraryClassRestaurant.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.csproj.AssemblyReference.cache
@@ -59,6 +60,7 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPanelPedidos.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPedido.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormPrecios.resources
+C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormProductos.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Panel_Encargado.FormStock.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormMesa.resources
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.Salon.FormPagarCuenta.resources
@@ -74,5 +76,4 @@ C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-wind
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\refint\AppRestaurante.dll
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\AppRestaurante.genruntimeconfig.cache
-C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\bin\Debug\net6.0-windows\AppRestaurante.pdb
 C:\Users\Usuario\Desktop\SEGUNDA VERSION TP\AppRestaurante\obj\Debug\net6.0-windows\ref\AppRestaurante.dll

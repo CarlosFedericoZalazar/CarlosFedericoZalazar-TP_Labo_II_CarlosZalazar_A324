@@ -46,7 +46,7 @@
             // 
             // btnPedidos
             // 
-            btnPedidos.Location = new Point(57, 162);
+            btnPedidos.Location = new Point(57, 262);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Size = new Size(155, 52);
             btnPedidos.TabIndex = 1;

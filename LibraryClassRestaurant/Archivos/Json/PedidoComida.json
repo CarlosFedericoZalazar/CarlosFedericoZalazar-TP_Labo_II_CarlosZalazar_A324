@@ -1,42 +1,123 @@
 [
   {
     "Comida": {
-      "Cantidad": 1000,
+      "Cantidad": 50,
       "Nombre": "CARNE",
-      "Precio": 800000,
+      "Precio": 200000,
       "Proveedor": {
         "Nombre": "CARNES CACHO",
-        "Cuit": "30-68151407",
-        "Direccion": "Avda. Siempre Viva 1064, Springfield",
-        "TipoProducto": "Comida",
-        "MedioDePago": 0,
-        "DiaDeEntrega": 1,
-        "Estado": 1,
-        "DineroACobrar": 800000
-      },
-      "Tipo": 1
-    },
-    "FechaPedido": "2024-07-04T10:04:43.625402-03:00",
-    "Estado": 1
-  },
-  {
-    "Comida": {
-      "Cantidad": 800,
-      "Nombre": "PAPA",
-      "Precio": 960000,
-      "Proveedor": {
-        "Nombre": "VERDURAS KELY",
-        "Cuit": "30-42573143",
+        "Cuit": "30-37281888",
         "Direccion": "Avda. Siempre Viva 1064, Springfield",
         "TipoProducto": "Comida",
         "MedioDePago": 0,
         "DiaDeEntrega": 0,
         "Estado": 1,
-        "DineroACobrar": 960000
+        "DineroACobrar": 200000,
+        "ProductosOfrecidos": [
+          {
+            "POLLO": 2000
+          },
+          {
+            "MILANESA CERDO": 3500
+          },
+          {
+            "CARNE": 4000
+          }
+        ]
       },
       "Tipo": 1
     },
-    "FechaPedido": "2024-07-04T10:05:46.2778264-03:00",
+    "FechaPedido": "2024-07-04T15:28:19.6595317-03:00",
+    "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 50,
+      "Nombre": "POLLO",
+      "Precio": 100000,
+      "Proveedor": {
+        "Nombre": "CARNES CACHO",
+        "Cuit": "30-37281888",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 1,
+        "DineroACobrar": 100000,
+        "ProductosOfrecidos": [
+          {
+            "POLLO": 2000
+          },
+          {
+            "MILANESA CERDO": 3500
+          },
+          {
+            "CARNE": 4000
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-04T15:31:25.8760916-03:00",
+    "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 200,
+      "Nombre": "TOMATE",
+      "Precio": 140000,
+      "Proveedor": {
+        "Nombre": "VERDULERIA KELY",
+        "Cuit": "30-40547055",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 1,
+        "DineroACobrar": 140000,
+        "ProductosOfrecidos": [
+          {
+            "PAPA": 800
+          },
+          {
+            "TOMATE": 700
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-04T15:37:42.9756399-03:00",
+    "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 20,
+      "Nombre": "CARNE",
+      "Precio": 80000,
+      "Proveedor": {
+        "Nombre": "CARNES CACHO",
+        "Cuit": "30-37281888",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 1,
+        "DineroACobrar": 80000,
+        "ProductosOfrecidos": [
+          {
+            "POLLO": 2000
+          },
+          {
+            "MILANESA CERDO": 3500
+          },
+          {
+            "CARNE": 4000
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-04T15:46:41.6197006-03:00",
     "Estado": 1
   }
 ]

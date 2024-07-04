@@ -1,32 +1,59 @@
 [
   {
     "Nombre": "CARNES CACHO",
-    "Cuit": "30-68151407",
-    "Direccion": "Avda. Siempre Viva 1064, Springfield",
-    "TipoProducto": "Comida",
-    "MedioDePago": 0,
-    "DiaDeEntrega": 1,
-    "Estado": 1,
-    "DineroACobrar": 800000
-  },
-  {
-    "Nombre": "QUILMES S.A",
-    "Cuit": "30-08103705",
-    "Direccion": "Avda. Siempre Viva 1064, Springfield",
-    "TipoProducto": "Bebida",
-    "MedioDePago": 0,
-    "DiaDeEntrega": 1,
-    "Estado": 1,
-    "DineroACobrar": 240000
-  },
-  {
-    "Nombre": "VERDURAS KELY",
-    "Cuit": "30-42573143",
+    "Cuit": "30-37281888",
     "Direccion": "Avda. Siempre Viva 1064, Springfield",
     "TipoProducto": "Comida",
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
     "Estado": 1,
-    "DineroACobrar": 960000
+    "DineroACobrar": 380000,
+    "ProductosOfrecidos": [
+      {
+        "POLLO": 2000
+      },
+      {
+        "MILANESA CERDO": 3500
+      },
+      {
+        "CARNE": 4000
+      }
+    ]
+  },
+  {
+    "Nombre": "QUILMES",
+    "Cuit": "30-73161287",
+    "Direccion": "Avda. Siempre Viva 1064, Springfield",
+    "TipoProducto": "Bebida",
+    "MedioDePago": 0,
+    "DiaDeEntrega": 0,
+    "Estado": 1,
+    "DineroACobrar": 160000,
+    "ProductosOfrecidos": [
+      {
+        "CERVEZA 1L": 1800
+      },
+      {
+        "CERVEZA 1L": 2000
+      }
+    ]
+  },
+  {
+    "Nombre": "VERDULERIA KELY",
+    "Cuit": "30-40547055",
+    "Direccion": "Avda. Siempre Viva 1064, Springfield",
+    "TipoProducto": "Comida",
+    "MedioDePago": 0,
+    "DiaDeEntrega": 0,
+    "Estado": 1,
+    "DineroACobrar": 140000,
+    "ProductosOfrecidos": [
+      {
+        "PAPA": 800
+      },
+      {
+        "TOMATE": 700
+      }
+    ]
   }
 ]
