@@ -57,6 +57,19 @@ namespace LibraryClassRestaurant.Empleados
 
             return listaEmpleadosFiltrados;
         }
+
+        public static string GetPerfil(string name) 
+        {
+            var empleados = Encargado.ObtenerEmpleados();
+            foreach (var item in empleados)
+            {
+                if (item.NombreCompleto == name)
+                {
+                    return item.Profile.ToString();
+                }
+            }
+            return ""; 
+        }
     }
 
 }

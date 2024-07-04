@@ -21,8 +21,8 @@ namespace LibraryClassRestaurant.Atencion
         public double Dinero { get; set; }
         public DateTime Fecha { get; set; }
         public Cuenta.MedioPago MedioPago { get; set; }
-        public Caja() { }
         public Concepto ConceptoOperacion { get; set; }
+        public Caja() { }
 
         public Caja(double dineroCaja)
         {
@@ -159,5 +159,28 @@ namespace LibraryClassRestaurant.Atencion
             }
             return ticketsEmpleado;
         }
+
+        public Dictionary<string, int> TopVentasEmpleados(List<Cuenta>listaTickets) 
+        {
+            Dictionary<string, int> contadorEmpleados = new Dictionary<string, int>();
+
+            foreach (var item in listaTickets)
+            {
+                if(item.Cobrado == true && item.Levantado == true)
+                {
+                    if(contadorEmpleados.ContainsKey(item.Nombre))
+                    {
+                        contadorEmpleados[item.Nombre] += 1;
+                    }
+                    else
+                    {
+                        contadorEmpleados.Add(item.Nombre, 1);
+                    }
+                }
+            }
+            var empleadosOrdenados = contadorEmpleados.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value); ;
+            return empleadosOrdenados;            
+        }
+        
     }
 }

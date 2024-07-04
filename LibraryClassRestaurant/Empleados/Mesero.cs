@@ -24,9 +24,18 @@ namespace LibraryClassRestaurant.Empleados
 
         public void CerrarMesa(Mesa mesa, Cuenta.MedioPago medioPago, double monto)
         {
-            Cuenta cuenta = new Cuenta(mesa.NumeroMesa, medioPago, this.Profile ,this.Nombre, monto);
+            Cuenta cuenta = new Cuenta(mesa.NumeroMesa, medioPago, this.Profile ,this.NombreCompleto, monto);
+            if(medioPago == Cuenta.MedioPago.NoPago)
+            {
+                cuenta.Cobrado = false;
+                Log.Enter($"Mesa {mesa.NumeroMesa} cerrada por {this.Nombre} sin pago");
+            }
+            else
+            {
+                Log.Enter($"Mesa {mesa.NumeroMesa} cerrada por {this.Nombre} con un monto de {monto}");
+                cuenta.Cobrado = true;
+            }
             Caja.RegistrarTicket(cuenta); 
-            Log.Enter($"Mesa {mesa.NumeroMesa} cerrada por {this.Nombre} con un monto de {monto}");
         }
 
         public List<StockBebidas> BuscarBebidas(List<StockBebidas> listaBebidasSolicitadas)

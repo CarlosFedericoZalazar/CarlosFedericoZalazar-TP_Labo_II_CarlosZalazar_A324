@@ -19,9 +19,18 @@ namespace LibraryClassRestaurant.Empleados
 
         public void RegistrarPedido(double monto, Comanda comanda, Cuenta.MedioPago medioPago)
         {
-                Cuenta cuenta = new Cuenta(0, medioPago, this.Profile, this.Nombre, monto);
-                Caja.RegistrarTicket(cuenta);
+            Cuenta cuenta = new Cuenta(0, medioPago, this.Profile, this.NombreCompleto, monto);
+            if (medioPago == Cuenta.MedioPago.NoPago) 
+            {
+                Log.Enter($"PEDIDO NO PAGADO LLEVADO AL DOMICILIO A: {comanda.DireccionCliente.ToUpper()} por {this.Nombre}");
+                cuenta.Cobrado = false;
+            }
+            else
+            {
+                cuenta.Cobrado = true;
                 Log.Enter($"PEDIDO LLEVADO AL DOMICILIO A: {comanda.DireccionCliente.ToUpper()} por {this.Nombre} con un monto de {monto}");
+            }
+            Caja.RegistrarTicket(cuenta);
 
         }
 

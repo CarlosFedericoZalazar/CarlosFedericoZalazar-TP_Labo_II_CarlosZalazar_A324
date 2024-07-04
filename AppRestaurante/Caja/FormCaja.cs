@@ -35,9 +35,9 @@ namespace AppRestaurante.Caja
         }
 
         private void btnTickets_Click(object sender, EventArgs e)
-        { 
+        {
             var dineroLevantado = Encargado.Caja.DineroTickets();
-            if(dineroLevantado == 0)
+            if (dineroLevantado == 0)
             {
                 MessageBox.Show("No se registran nuevos tickets a regitrar");
                 return;
@@ -60,9 +60,16 @@ namespace AppRestaurante.Caja
 
         private void button2_Click(object sender, EventArgs e)
         {
-            double.TryParse(textBox1.Text, out double plata);            
+            double.TryParse(textBox1.Text, out double plata);
             Encargado.Caja.Cobrar(plata);
             txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormVentaEmpleados formVentaEmpleados = new FormVentaEmpleados(this, Encargado);
+            formVentaEmpleados.Show();
+            this.Hide();
         }
     }
 }

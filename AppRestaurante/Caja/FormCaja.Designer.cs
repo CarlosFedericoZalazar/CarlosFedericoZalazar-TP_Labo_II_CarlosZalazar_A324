@@ -36,8 +36,9 @@
             btnPagoProveedores = new Button();
             button1 = new Button();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
             button2 = new Button();
+            textBox1 = new TextBox();
+            button3 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             lblDineroCaja.AutoSize = true;
             lblDineroCaja.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDineroCaja.Location = new Point(312, 31);
+            lblDineroCaja.Location = new Point(404, 31);
             lblDineroCaja.Name = "lblDineroCaja";
             lblDineroCaja.Size = new Size(137, 25);
             lblDineroCaja.TabIndex = 0;
@@ -54,7 +55,7 @@
             // txtDineroCaja
             // 
             txtDineroCaja.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDineroCaja.Location = new Point(312, 59);
+            txtDineroCaja.Location = new Point(404, 59);
             txtDineroCaja.Name = "txtDineroCaja";
             txtDineroCaja.ReadOnly = true;
             txtDineroCaja.Size = new Size(146, 33);
@@ -113,13 +114,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "PRUEBA";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(38, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(139, 25);
-            textBox1.TabIndex = 0;
-            // 
             // button2
             // 
             button2.Location = new Point(73, 67);
@@ -130,12 +124,30 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(38, 33);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(139, 25);
+            textBox1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(211, 44);
+            button3.Name = "button3";
+            button3.Size = new Size(160, 64);
+            button3.TabIndex = 7;
+            button3.Text = "VENTAS EMPLEADOS";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // FormCaja
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(569, 384);
+            Controls.Add(button3);
             Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(btnPagoProveedores);
@@ -167,5 +179,6 @@
         private GroupBox groupBox1;
         private Button button2;
         private TextBox textBox1;
+        private Button button3;
     }
 }

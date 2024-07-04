@@ -55,7 +55,8 @@ namespace AppRestaurante.Caja
             foreach (DataGridViewColumn column in this.dgTickets.Columns)
             {
                 column.Resizable = DataGridViewTriState.False;
-                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; 
+                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
 
