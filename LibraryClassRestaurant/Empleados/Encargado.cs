@@ -70,7 +70,6 @@ namespace LibraryClassRestaurant.Empleados
             }
             return listaEmpleadoActivo;
         }
-
         public void GestionarPedidos(ProductoComestible producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
@@ -84,9 +83,7 @@ namespace LibraryClassRestaurant.Empleados
             stockBebidas.Cantidad = producto.Cantidad;
             stockBebidas.Precio = producto.PrecioDeVenta;
             stockBebidas.Alcoholica = producto.Alcoholica;
-            stockBebidas.Proveedor = proveedor;
             Serializador.Save<StockBebidas>("StockBebidas", stockBebidas);
-
         }
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu)
         {

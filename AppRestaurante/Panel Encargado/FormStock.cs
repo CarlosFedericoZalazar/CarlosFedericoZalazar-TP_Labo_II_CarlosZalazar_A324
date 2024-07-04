@@ -30,7 +30,6 @@ namespace AppRestaurante.Panel_Encargado
             lblStockComida.Text += stockComestibles.Count.ToString();
             dgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgStock.Columns["Alcoholica"].Visible = false;
-            dgStock.Columns["Proveedor"].Visible = false;
 
             dgStock.Columns["Precio"].Visible = false; // ver aca
             dgStock.Columns["Producto"].DisplayIndex = 0;

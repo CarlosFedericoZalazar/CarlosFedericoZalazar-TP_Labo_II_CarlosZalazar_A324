@@ -9,13 +9,11 @@ namespace LibraryClassRestaurant.Mercaderia
     public abstract class Stock
     {
         public string Producto { get; set; }
-        public Proveedor Proveedor { get; set; }
 
         public Stock() { }
-        public Stock(string producto, Proveedor proveedor)
+        public Stock(string producto)
         {
             Producto = producto;
-            Proveedor = proveedor;
         }
     }
 }

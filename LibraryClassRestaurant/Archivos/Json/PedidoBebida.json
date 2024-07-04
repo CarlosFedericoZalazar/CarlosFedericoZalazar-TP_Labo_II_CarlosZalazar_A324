@@ -1,11 +1,11 @@
 [
   {
     "Bebida": {
-      "Cantidad": 80,
+      "Cantidad": 45,
       "Alcoholica": false,
       "PrecioDeVenta": 0,
       "Nombre": "CERVEZA 1L",
-      "Precio": 160000,
+      "Precio": 90000,
       "Proveedor": {
         "Nombre": "QUILMES",
         "Cuit": "30-73161287",
@@ -14,7 +14,7 @@
         "MedioDePago": 0,
         "DiaDeEntrega": 0,
         "Estado": 1,
-        "DineroACobrar": 160000,
+        "DineroACobrar": 90000,
         "ProductosOfrecidos": [
           {
             "CERVEZA 1L": 1800
@@ -26,7 +26,7 @@
       },
       "Tipo": 0
     },
-    "FechaPedido": "2024-07-04T15:29:13.4923192-03:00",
+    "FechaPedido": "2024-07-04T19:45:11.9248904-03:00",
     "Estado": 1
   }
 ]

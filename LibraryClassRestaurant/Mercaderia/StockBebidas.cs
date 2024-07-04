@@ -15,7 +15,7 @@ namespace LibraryClassRestaurant.Mercaderia
         public bool Alcoholica { get; set; }
 
         public double Precio{ get; set; }
-        public StockBebidas(string producto, int cantidad,double precioVenta, bool alcoholica, Proveedor proveedor) : base(producto, proveedor) 
+        public StockBebidas(string producto, int cantidad,double precioVenta, bool alcoholica) : base(producto) 
         {
             Cantidad = cantidad;
             Alcoholica = alcoholica;

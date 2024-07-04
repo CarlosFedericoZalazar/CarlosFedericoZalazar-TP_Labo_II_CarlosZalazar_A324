@@ -32,29 +32,26 @@ namespace LibraryClassRestaurant.Mercaderia
             }
         }
         public StockComestible() { }
-        public StockComestible(string producto, double cantidad, Proveedor proveedor) : base(producto, proveedor)
+        public StockComestible(string producto, double cantidad):base(producto)
         {
             Cantidad = cantidad;
         }
-        public static List<StockComestible> ComprobarPedidosEntregados()
+
+        public static List<StockComestible> StockearUltimosPedidosRealizados()
         {
             bool actualizacionOk = false;
             List<StockComestible> stockComestibles = new List<StockComestible>();
 
             var listaPedidos = PedidoComida.GetPedidosComestibles();
-
-            //ESTE CODIGO ES UNA GENIALIDAD
-            //List<PedidoComida> pedidosEntregados = stockComestibles.Where(pedido => pedido.Estado == Pedido.EstadoPedido.Entregado).ToList();
-            //
+            
             foreach (PedidoComida pedido in listaPedidos)
             {
                 string nombreProducto = pedido.Comida.Nombre;
                 double cantidad = pedido.Comida.Cantidad;
-                Proveedor proveedor = pedido.Comida.Proveedor;
 
                 if (pedido.Estado == Pedido.EstadoPedido.Entregado)
                 {
-                    stockComestibles.Add(new StockComestible(nombreProducto, cantidad, proveedor));
+                    stockComestibles.Add(new StockComestible(nombreProducto, cantidad));
                     pedido.Estado = Pedido.EstadoPedido.finalizado;
                     actualizacionOk = true;
                 }
@@ -69,21 +66,52 @@ namespace LibraryClassRestaurant.Mercaderia
         public static List<StockComestible> GetStockComestibles()
         {
             List<StockComestible> stockExistente = Serializador.Read<StockComestible>("StockComestible");
-            List<StockComestible> stock = ComprobarPedidosEntregados();
-            if (stock.Count != 0)
-            {
-                stockExistente.AddRange(stock);
-                ActualizarStock(stockExistente);
-            }
+            List<StockComestible> stock = StockearUltimosPedidosRealizados();
+            List<StockComestible> stockAmpliado = new List<StockComestible>();
+            bool match;
 
-            return stockExistente;
+            if (stockExistente.Count == 0)
+            {
+                stockAmpliado.AddRange(stock);
+                ActualizarStock(stockAmpliado);
+                return stockAmpliado;
+            }
+            foreach (var itemNuevo in stock)
+            {
+                match = false;
+                foreach (var itemViejo in stockExistente)
+                {
+                    if(itemNuevo == itemViejo)
+                    {
+                        itemViejo.Cantidad += itemNuevo.Cantidad;
+                        stockAmpliado.Add(itemViejo);
+                        match = true;
+                        continue;
+                    }
+                    stockAmpliado.Add(itemViejo);
+                }
+                if (!match)
+                {
+                    stockAmpliado.Add(itemNuevo);                   
+                }
+            }            
+            ActualizarStock(stockAmpliado);
+            return stockAmpliado;            
+        }
+
+        //USAMOS SOBRECARGA DE OPERADORES PARA COMPARAR STOCKS
+        public static bool operator ==(StockComestible stock1, StockComestible stock2)
+        {
+            return stock1.Producto == stock2.Producto;
+        }
+        public static bool operator !=(StockComestible stock1, StockComestible stock2)
+        {
+            return !(stock1 == stock2);
         }
 
         public static void ActualizarStock(List<StockComestible> StockproductoComestibles)
         {
             Serializador.SaveJson<StockComestible>("StockComestible", StockproductoComestibles);
         }
-
-
     }
 }

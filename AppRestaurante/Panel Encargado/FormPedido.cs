@@ -143,10 +143,18 @@ namespace AppRestaurante.Panel_Encargado
                     Encargado.GestionarPedidos(productoComida, proveedorSeleccionado);
                 }
             }
-            if (proveedorSeleccionado != null)
+            respuesta = MessageBox.Show($"¿Cargar otro Producto?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == DialogResult.Yes)
             {
-                MessageBox.Show("PEDIDO INGRESADO LPM!");
+                txtCantidad.Clear();
+                txtAPagar.Text = "0";
+                cbTipo.Focus();
+                cbTipo.SelectedIndex = 1;
+                return;
             }
+            FormPanelPedidos.Show();
+            this.Close();
         }
 
         private void cbProveedor_SelectedValueChanged(object sender, EventArgs e)

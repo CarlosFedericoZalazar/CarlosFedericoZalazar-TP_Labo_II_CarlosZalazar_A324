@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryClassRestaurant")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19ff6005273539ebf584f1888bd8ccf4f69994c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryClassRestaurant")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryClassRestaurant")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
