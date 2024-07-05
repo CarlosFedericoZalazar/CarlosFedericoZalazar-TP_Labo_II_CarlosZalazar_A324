@@ -61,6 +61,7 @@ namespace LibraryClassRestaurant.Atencion
             {
                 sb.AppendLine($"Plato: {item.Plato.Nombre}");
             }
+            
             return sb.ToString();
         }
 

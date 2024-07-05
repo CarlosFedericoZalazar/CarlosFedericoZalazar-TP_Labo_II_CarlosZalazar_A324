@@ -59,13 +59,20 @@ namespace AppRestaurante.Salon
         {
             OrdenMesa ordenMesa = new OrdenMesa(MesaCliente, listaMenu, bebidaSolicitadas, Cocinero);
 
+            int cantidadBebidasInicial = bebidaSolicitadas.Count;
+
             Cocinero.Mensaje(ordenMesa.MostrarOrden(listaMenu));
             //Enviando orden a cocina
 
-            var BebidasSinStock = Mesero.BuscarBebidas(bebidaSolicitadas);
-            if (BebidasSinStock.Count > 0)
+            var bebidasActualizadas = Mesero.BuscarBebidas(bebidaSolicitadas);
+            if (bebidasActualizadas.Count > cantidadBebidasInicial)
             {
                 MostrarMensaje("Se han quitado las bebidas que no estan disponibles, agruegue u envie los los restantes");
+                foreach (var item in bebidasActualizadas)
+                {
+                    lblBebida.Text = "";
+                    lblBebida.Text += $"{item.Producto}\n* ";
+                }                
                 return;
             }
             var pedidosRechazados = Mesero.EnviarOrdenACocina(ordenMesa);
@@ -80,12 +87,10 @@ namespace AppRestaurante.Salon
             }
             else
             {
-                // CONFIRMAMOS LA APERTURA DE MESA
+                // ABRIMOS LA MESA
                 MesaCliente.Estado = Mesa.EstadoMesa.Abierta;
                 MesaCliente.Orden = ordenMesa;
 
-
-                // Disparar el evento cuando se realiza el pedido
                 PedidoRealizado?.Invoke(this, new MesaEventArgs { Mesa = MesaCliente });
 
                 this.Close();

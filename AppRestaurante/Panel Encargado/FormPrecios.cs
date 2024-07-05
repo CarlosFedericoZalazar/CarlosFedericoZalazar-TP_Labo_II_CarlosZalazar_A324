@@ -121,7 +121,7 @@ namespace AppRestaurante.Panel_Encargado
             }
 
             dgMenu.Columns["Alcoholica"].Visible = false;
-            dgMenu.Columns["Proveedor"].Visible = false;
+            //dgMenu.Columns["Proveedor"].Visible = false;
             dgMenu.Columns["Cantidad"].Visible = false;
 
         }

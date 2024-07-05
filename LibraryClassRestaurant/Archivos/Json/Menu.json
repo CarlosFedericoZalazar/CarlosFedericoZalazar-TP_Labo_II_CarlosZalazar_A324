@@ -25,7 +25,7 @@
       },
       "TiempoPreparacion": 10
     },
-    "Precio": 5000
+    "Precio": 2500
   },
   {
     "Nombre": "MILANESA CON PAPAS FRITAS",
@@ -39,6 +39,6 @@
       },
       "TiempoPreparacion": 10
     },
-    "Precio": 2000
+    "Precio": 1500
   }
 ]

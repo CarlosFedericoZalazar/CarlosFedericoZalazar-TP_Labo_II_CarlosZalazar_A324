@@ -25,16 +25,14 @@ namespace AppRestaurante.Panel_Encargado
         {
             // Configuración inicial del formulario y carga de datos
             cbTipoProducto.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
+            cbTipoProducto.SelectedIndex = 1;
             CargarDataGred();
             lblStockBebidas.Text += stockBebidas.Count.ToString();
             lblStockComida.Text += stockComestibles.Count.ToString();
             dgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgStock.Columns["Alcoholica"].Visible = false;
 
-            dgStock.Columns["Precio"].Visible = false; // ver aca
             dgStock.Columns["Producto"].DisplayIndex = 0;
-            dgStock.Columns["Cantidad"].DisplayIndex = 1;
-            
+            dgStock.Columns["Cantidad"].DisplayIndex = 1;            
         }
 
         private void CargarDataGred()

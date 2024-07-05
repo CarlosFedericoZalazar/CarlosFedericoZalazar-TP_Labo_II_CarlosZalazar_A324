@@ -39,14 +39,69 @@ namespace LibraryClassRestaurant.Mercaderia
                     if (stock.Producto == bebida.Producto && stock.Cantidad > 0)
                     {
                         stock.Cantidad -= 1;
-                        listaBebidasPedidas.Remove(bebida);
-                        Log.Enter($"SE RETIRO DEL STOCK BEBIBLBE: {bebida.Cantidad}, QUEDANDO: {stock.Cantidad}");
+                        //listaBebidasPedidas.Remove(bebida);
+                        Log.Enter($"SE RETIRO DEL STOCK BEBIBLE: {bebida.Cantidad}, QUEDANDO: {stock.Cantidad}");
                         break;
                     }
+                    if(stock.Cantidad == 0)
+                    {
+                        listaBebidasPedidas.Remove(bebida);
+                        Log.Enter($"NO HAY STOCK DE: {stock.Producto}");
+                    }
+                    
                 }
             }
             Serializador.SaveJson<StockBebidas>("StockBebidas", listaStock);            
             return listaBebidasPedidas;        
+        }
+        public static void GenerarStockBebidas(Bebida producto)
+        {
+            StockBebidas nuevoStock = new StockBebidas();
+            nuevoStock.Producto = producto.Nombre;
+            nuevoStock.Cantidad = producto.Cantidad;
+            nuevoStock.Precio = producto.PrecioDeVenta;
+            nuevoStock.Alcoholica = producto.Alcoholica;
+            ActualizarStockBebible(nuevoStock);
+        }
+        private static void ActualizarStockBebible(StockBebidas nuevoStock)
+        {
+            List<StockBebidas> bebidasStock = Serializador.Read<StockBebidas>("StockBebidas");
+
+            if (bebidasStock.Count == 0)
+            {
+                bebidasStock.Add(nuevoStock);
+            }
+            else
+            {
+                bool productoEncontrado = false;
+
+                for (int i = 0; i < bebidasStock.Count; i++)
+                {
+                    if (bebidasStock[i].Producto == nuevoStock.Producto)
+                    {
+                        bebidasStock[i].Cantidad += nuevoStock.Cantidad;
+                        productoEncontrado = true;
+                        break;
+                    }
+                }
+
+                if (!productoEncontrado)
+                {
+                    bebidasStock.Add(nuevoStock);
+                }
+            }
+
+            GuardarStockBebidas(bebidasStock);
+        }
+
+        public static void GuardarStockBebidas(StockBebidas nuevoStock)
+        {
+            Serializador.Save<StockBebidas>("StockBebidas", nuevoStock);
+        }
+
+        public static void GuardarStockBebidas(List<StockBebidas> listaStock)
+        {
+            Serializador.SaveJson<StockBebidas>("StockBebidas", listaStock);
         }
 
 

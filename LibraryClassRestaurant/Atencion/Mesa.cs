@@ -48,6 +48,11 @@ namespace LibraryClassRestaurant.Atencion
             {
                 MontoTotal += item.Precio;
             }
+
+            foreach(var item in Orden.ListaPedidoBebidas)
+            {
+                MontoTotal += item.Precio;
+            }
             return MontoTotal;
         }
 

@@ -40,18 +40,12 @@ namespace LibraryClassRestaurant.Empleados
 
         public List<StockBebidas> BuscarBebidas(List<StockBebidas> listaBebidasSolicitadas)
         {
-            var bebidasSinStock = StockBebidas.RetirarBebida(listaBebidasSolicitadas);
-            if(bebidasSinStock.Count > 0)
+            var bebidasRetiradas = StockBebidas.RetirarBebida(listaBebidasSolicitadas);
+            if(bebidasRetiradas.Count == 0)
             { 
-                string stringBebidaSinStock = "";
-                foreach (var bebida in bebidasSinStock)
-                { 
-                    stringBebidaSinStock += $"{bebida.Producto} ";
-                }
-
-                Log.Enter($"NO SE PUDIERON RETIRAR LA\\S BEBIDA\\S: {stringBebidaSinStock}");
+                Log.Enter($"NO SE PUDIERON RETIRAR LA\\S BEBIDA\\S POR FALTA DE STOCK");
             }
-            return bebidasSinStock;
+            return bebidasRetiradas;
         }
 
         public static List<Mesero>CargarMeseros()

@@ -1,0 +1,14 @@
+[
+  {
+    "Cantidad": 86,
+    "Alcoholica": false,
+    "Precio": 1200,
+    "Producto": "CERVEZA 1L"
+  },
+  {
+    "Cantidad": 37,
+    "Alcoholica": false,
+    "Precio": 1000,
+    "Producto": "FERNET 750"
+  }
+]

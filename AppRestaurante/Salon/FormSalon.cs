@@ -62,12 +62,6 @@ namespace AppRestaurante.Salon
                     FormPagarCuenta formPagarCuenta = new FormPagarCuenta(EncargadoTurno, mesero, mesa);
                     formPagarCuenta.ShowDialog();
 
-                    // AGREGAR AL ENCARGADO AL FORMULARIO
-                    
-                    // encargado.CobrarMesa(mesa,caja);
-                    
-                    // SIN FALRA MAÑANA!!!!!!!!!!!!!!!!!!!!!!!!!!!! <------------
-
                     InicializarMesa+= FormMesa_PedidoRealizado;
                     RestaurarMesa(mesa);
                     return;

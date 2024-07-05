@@ -78,13 +78,9 @@ namespace LibraryClassRestaurant.Empleados
         public void GestionarPedidos(Bebida producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
-            StockBebidas stockBebidas = new StockBebidas();
-            stockBebidas.Producto = producto.Nombre;
-            stockBebidas.Cantidad = producto.Cantidad;
-            stockBebidas.Precio = producto.PrecioDeVenta;
-            stockBebidas.Alcoholica = producto.Alcoholica;
-            Serializador.Save<StockBebidas>("StockBebidas", stockBebidas);
+            StockBebidas.GenerarStockBebidas(producto);
         }
+
         public List<Menu> ModificarPrecio(Menu menu, double precio, List<Menu> listaMenu)
         {
             Menu auxiliar = new Menu();
@@ -112,7 +108,7 @@ namespace LibraryClassRestaurant.Empleados
                     break;
                 }
             }
-            Serializador.SaveJson<StockBebidas>("PedidoBebida", listaBebidas);
+            Serializador.SaveJson<StockBebidas>("StockBebidas", listaBebidas);
             return listaBebidas;
         }
 
@@ -121,15 +117,6 @@ namespace LibraryClassRestaurant.Empleados
             List<Bebida> listaBebidas = new List<Bebida>();
             listaBebidas = Serializador.Read<Bebida>("PedidoBebida");
             return listaBebidas;
-        }
-
-        public void CobrarMesa(Mesa mesa, Caja caja)
-        {
-            string mensaje = Caja.Cuenta(mesa.Orden);
-            double monto = mesa.MontoTotalMesa();
-
-            caja.Dinero += monto;
-            Console.WriteLine(mensaje);
         }
 
         public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor)

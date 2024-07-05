@@ -7,7 +7,7 @@
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
     "Estado": 1,
-    "DineroACobrar": 9436500,
+    "DineroACobrar": 10436500,
     "ProductosOfrecidos": [
       {
         "POLLO": 2000
@@ -28,13 +28,13 @@
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
     "Estado": 1,
-    "DineroACobrar": 760000,
+    "DineroACobrar": 1624000,
     "ProductosOfrecidos": [
       {
         "CERVEZA 1L": 1800
       },
       {
-        "CERVEZA 1L": 2000
+        "FERNET 750": 3200
       }
     ]
   },
@@ -46,7 +46,7 @@
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
     "Estado": 1,
-    "DineroACobrar": 1488000,
+    "DineroACobrar": 1686000,
     "ProductosOfrecidos": [
       {
         "PAPA": 800

@@ -40,7 +40,11 @@ namespace LibraryClassRestaurant.Atencion
             foreach (var item in orden.ListaPedidosMesa)
             {
                 sb.AppendLine($"Producto: {item.Nombre} Precio: {item.Precio}");
-                Console.WriteLine(item.Precio);
+                sumaTotal += item.Precio;
+            }
+            foreach(var item in orden.ListaPedidoBebidas)
+            {
+                sb.AppendLine($"Producto: {item.Producto} Precio: {item.Precio}");
                 sumaTotal += item.Precio;
             }
             sb.AppendLine($"Total a pagar: {sumaTotal}");

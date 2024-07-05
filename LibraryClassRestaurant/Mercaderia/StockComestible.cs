@@ -62,41 +62,45 @@ namespace LibraryClassRestaurant.Mercaderia
             }
             return stockComestibles;
         }
-
         public static List<StockComestible> GetStockComestibles()
         {
             List<StockComestible> stockExistente = Serializador.Read<StockComestible>("StockComestible");
             List<StockComestible> stock = StockearUltimosPedidosRealizados();
             List<StockComestible> stockAmpliado = new List<StockComestible>();
-            bool match;
 
             if (stockExistente.Count == 0)
             {
                 stockAmpliado.AddRange(stock);
-                ActualizarStock(stockAmpliado);
-                return stockAmpliado;
             }
-            foreach (var itemNuevo in stock)
+            else
             {
-                match = false;
-                foreach (var itemViejo in stockExistente)
+                // Copiar el stock existente a stockAmpliado
+                stockAmpliado.AddRange(stockExistente);
+
+                // Actualizar el stockAmpliado con el nuevo stock
+                foreach (var itemNuevo in stock)
                 {
-                    if(itemNuevo == itemViejo)
+                    bool match = false;
+
+                    for (int i = 0; i < stockAmpliado.Count; i++)
                     {
-                        itemViejo.Cantidad += itemNuevo.Cantidad;
-                        stockAmpliado.Add(itemViejo);
-                        match = true;
-                        continue;
+                        if (stockAmpliado[i] == itemNuevo)
+                        {
+                            stockAmpliado[i].Cantidad += itemNuevo.Cantidad;
+                            match = true;
+                            break;
+                        }
                     }
-                    stockAmpliado.Add(itemViejo);
+
+                    if (!match)
+                    {
+                        stockAmpliado.Add(itemNuevo);
+                    }
                 }
-                if (!match)
-                {
-                    stockAmpliado.Add(itemNuevo);                   
-                }
-            }            
+            }
+
             ActualizarStock(stockAmpliado);
-            return stockAmpliado;            
+            return stockAmpliado;
         }
 
         //USAMOS SOBRECARGA DE OPERADORES PARA COMPARAR STOCKS

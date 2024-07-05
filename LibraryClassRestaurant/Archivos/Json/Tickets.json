@@ -1,0 +1,42 @@
+[
+  {
+    "NroMesa": 2,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T09:04:08.2158478-03:00",
+    "Nombre": "FELIPE GODOY",
+    "Perfil": 2,
+    "Monto": 7000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T09:45:28.4258941-03:00",
+    "Nombre": "FELIPE GODOY",
+    "Perfil": 2,
+    "Monto": 5000,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 1,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T09:51:46.4583313-03:00",
+    "Nombre": "FELIPE GODOY",
+    "Perfil": 2,
+    "Monto": 0,
+    "Levantado": true,
+    "Cobrado": true
+  },
+  {
+    "NroMesa": 2,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T10:41:22.1434816-03:00",
+    "Nombre": "FELIPE GODOY",
+    "Perfil": 2,
+    "Monto": 13700,
+    "Levantado": true,
+    "Cobrado": true
+  }
+]
