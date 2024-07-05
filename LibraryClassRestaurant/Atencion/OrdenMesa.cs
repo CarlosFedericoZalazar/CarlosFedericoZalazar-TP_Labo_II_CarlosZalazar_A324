@@ -1,4 +1,5 @@
-﻿using LibraryClassRestaurant.Empleados;
+﻿using LibraryClassRestaurant.Archivos;
+using LibraryClassRestaurant.Empleados;
 using LibraryClassRestaurant.Interfaces;
 using LibraryClassRestaurant.Mercaderia;
 using System;
@@ -52,7 +53,16 @@ namespace LibraryClassRestaurant.Atencion
             }
             return menuNoDisponible;
         }
-
+        public string MostrarBebidas()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Bebidas solicitadas para la mesa {MesaAtedida.NumeroMesa}");
+            foreach (var item in ListaPedidoBebidas)
+            {
+                sb.AppendLine($"* {item.Producto}");
+            }
+            return sb.ToString();
+        }
         public string MostrarOrden(Stack<Menu>listaMenu)
         {
             StringBuilder sb = new StringBuilder();
@@ -114,6 +124,19 @@ namespace LibraryClassRestaurant.Atencion
                 sb.AppendLine($"* {item.Plato.Nombre}");
             }
             return sb.ToString();
+        }
+
+        public static void ActualizarEstadoMenu() 
+        {
+            var menu = Serializador.Read<Menu>("Menu");
+            List<Menu> listaActualizada = new List<Menu>();
+            foreach (var item in menu)
+            {
+                var menuActualizado = Cocina.ActualizarEstadoMenu(item);
+                listaActualizada.Add(menuActualizado);
+            }
+            Serializador.SaveJson<Menu>("Menu", listaActualizada);
+            Log.Enter("Se actualizo el estado del menu por nuevos ingredientes");
         }
 
     }

@@ -1,18 +1,22 @@
 [
   {
-    "Cantidad": 100,
+    "Cantidad": 8,
     "Producto": "POLLO"
   },
   {
-    "Cantidad": 101.2,
+    "Cantidad": 100.7,
     "Producto": "CARNE"
   },
   {
-    "Cantidad": 100,
+    "Cantidad": 300,
     "Producto": "TOMATE"
   },
   {
-    "Cantidad": 100.25,
+    "Cantidad": 100,
     "Producto": "PAPA"
+  },
+  {
+    "Cantidad": 180,
+    "Producto": "FIDEOS"
   }
 ]

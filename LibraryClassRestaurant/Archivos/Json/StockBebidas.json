@@ -1,14 +1,14 @@
 [
   {
-    "Cantidad": 88,
     "Alcoholica": false,
     "Precio": 1200,
+    "Cantidad": 86,
     "Producto": "CERVEZA 1L"
   },
   {
-    "Cantidad": 37,
     "Alcoholica": false,
     "Precio": 1000,
+    "Cantidad": 37,
     "Producto": "FERNET 750"
   }
 ]

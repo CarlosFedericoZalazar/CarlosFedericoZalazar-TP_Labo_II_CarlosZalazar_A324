@@ -54,7 +54,7 @@ namespace LibraryClassRestaurant.Atencion
             var caja = Serializador.ReadJsonSimple<Caja>("DineroCaja");
             if (caja == null)
             {
-                caja = new Caja(10000);
+                caja = new Caja(0); // hacodear el valor de la caja
             }
             return caja;
         }

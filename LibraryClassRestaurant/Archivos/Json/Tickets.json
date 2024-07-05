@@ -48,5 +48,15 @@
     "Monto": 6200,
     "Levantado": true,
     "Cobrado": true
+  },
+  {
+    "NroMesa": 2,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T16:08:28.3247847-03:00",
+    "Nombre": "DAMIAN GUIZARRI",
+    "Perfil": 2,
+    "Monto": 6200,
+    "Levantado": true,
+    "Cobrado": true
   }
 ]

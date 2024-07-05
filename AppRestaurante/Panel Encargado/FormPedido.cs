@@ -1,6 +1,7 @@
 ﻿using LibraryClassRestaurant.Archivos;
 using LibraryClassRestaurant.Interfaces;
 using LibraryClassRestaurant.Mercaderia;
+using LibraryClassRestaurant.Atencion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -153,6 +154,7 @@ namespace AppRestaurante.Panel_Encargado
                 cbTipo.SelectedIndex = 1;
                 return;
             }
+
             FormPanelPedidos.Show();
             this.Close();
         }

@@ -7,7 +7,7 @@
     "Sueldo": 500000,
     "Profile": 0,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 3000000,
     "NombreCompleto": "ANDREA ORZUZA"
   },
   {
@@ -18,7 +18,7 @@
     "Sueldo": 500000,
     "Profile": 0,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 3000000,
     "NombreCompleto": "JAZMIN ALVAREZ"
   },
   {
@@ -29,7 +29,7 @@
     "Sueldo": 300000,
     "Profile": 1,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 1500000,
     "NombreCompleto": "CARLOS  ZALAZAR"
   },
   {
@@ -40,7 +40,7 @@
     "Sueldo": 340000,
     "Profile": 2,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 1700000,
     "NombreCompleto": "FELIPE GODOY"
   },
   {
@@ -51,7 +51,7 @@
     "Sueldo": 400000,
     "Profile": 2,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 2000000,
     "NombreCompleto": "DAMIAN GUIZARRI"
   },
   {
@@ -62,7 +62,7 @@
     "Sueldo": 500000,
     "Profile": 2,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 2500000,
     "NombreCompleto": "ALEJANDRO GALEANO"
   },
   {
@@ -73,7 +73,7 @@
     "Sueldo": 120000,
     "Profile": 3,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 600000,
     "NombreCompleto": "MANUEL ADORNI"
   },
   {
@@ -84,7 +84,7 @@
     "Sueldo": 350000,
     "Profile": 3,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 1750000,
     "NombreCompleto": "MARCELO AGUIRRE"
   },
   {
@@ -95,7 +95,7 @@
     "Sueldo": 420000,
     "Profile": 3,
     "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
+    "SueldoBolsillo": 2100000,
     "NombreCompleto": "MICAELA BUSTOS"
   }
 ]

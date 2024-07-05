@@ -17,6 +17,9 @@
       },
       {
         "CARNE": 4000
+      },
+      {
+        "FIDEOS": 1000
       }
     ]
   },
@@ -53,6 +56,21 @@
       },
       {
         "TOMATE": 700
+      }
+    ]
+  },
+  {
+    "Nombre": "PASTAS MABLE",
+    "Cuit": "30-28381755",
+    "Direccion": "Avda. Siempre Viva 1064, Springfield",
+    "TipoProducto": "Comida",
+    "MedioDePago": 0,
+    "DiaDeEntrega": 0,
+    "Estado": 0,
+    "DineroACobrar": 0,
+    "ProductosOfrecidos": [
+      {
+        "FIDEOS": 3600
       }
     ]
   }

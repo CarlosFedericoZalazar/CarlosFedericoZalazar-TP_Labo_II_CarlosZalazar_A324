@@ -1,4 +1,5 @@
-﻿using LibraryClassRestaurant.Mercaderia;
+﻿using LibraryClassRestaurant.Interfaces;
+using LibraryClassRestaurant.Mercaderia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,17 +17,20 @@ namespace AppRestaurante.Panel_Encargado
         List<StockBebidas> stockBebidas = StockBebidas.GetStockBebibles();
         List<StockComestible> stockComestibles = StockComestible.GetStockComestibles();
 
-        public FormStock()
+        public IEncargado Encargado { get; set; }
+        public FormStock(IEncargado encargado)
         {
             InitializeComponent();
+            Encargado = encargado;
         }
 
         private void FormStock_Load(object sender, EventArgs e)
         {
-            // Configuración inicial del formulario y carga de datos
             cbTipoProducto.DataSource = Enum.GetValues(typeof(Producto.TipoProducto));
             cbTipoProducto.SelectedIndex = 1;
             CargarDataGred();
+            Thread mensajeStockThread = new Thread(GenerarMensajesStock);
+            mensajeStockThread.Start();
             lblStockBebidas.Text += stockBebidas.Count.ToString();
             lblStockComida.Text += stockComestibles.Count.ToString();
             dgStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -34,10 +38,36 @@ namespace AppRestaurante.Panel_Encargado
             dgStock.Columns["Producto"].DisplayIndex = 0;
             dgStock.Columns["Cantidad"].DisplayIndex = 1;            
         }
-
         private void CargarDataGred()
         {            
             dgStock.AutoGenerateColumns = false;
+        }
+        private void GenerarMensajesStock()
+        {
+            bool stockBajo = false;
+            StringBuilder mensaje = new StringBuilder();
+            mensaje.Append("Stock bajo: ");
+            foreach (StockComestible stock in stockComestibles)
+            {
+                if (stock.Cantidad < 10)
+                {
+                    stockBajo = true;
+                    mensaje.Append($"Stock de {stock.Producto} bajo. Quedan {stock.Cantidad} unidades.");
+                }
+            }
+            foreach (StockBebidas stock in stockBebidas)
+            {
+                if (stock.Cantidad < 10)
+                {
+                    stockBajo = true;
+                    mensaje.Append($"Stock de {stock.Producto} bajo. Quedan {stock.Cantidad} unidades.");
+                }
+            }
+            if(stockBajo)
+            {
+                Thread.Sleep(3000);
+                MessageBox.Show(mensaje.ToString());
+            }
         }
 
         private void cbTipoStock_SelectedValueChanged(object sender, EventArgs e)

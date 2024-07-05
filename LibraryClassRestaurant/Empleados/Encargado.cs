@@ -74,7 +74,6 @@ namespace LibraryClassRestaurant.Empleados
         {
             GestorMercaderia.GestionarPedidos(producto);
         }
-
         public void GestionarPedidos(Bebida producto, Proveedor proveedor)
         {
             GestorMercaderia.GestionarPedidos(producto);
@@ -95,7 +94,6 @@ namespace LibraryClassRestaurant.Empleados
             Serializador.SaveJson<Menu>("Menu", listaMenu);
             return listaMenu;
         }
-
         public List<StockBebidas> ModificarPrecio(StockBebidas bebida, double precio, List<StockBebidas> listaMenu)
         {
             var listaBebidas = StockBebidas.GetStockBebibles();
@@ -118,7 +116,6 @@ namespace LibraryClassRestaurant.Empleados
             listaBebidas = Serializador.Read<Bebida>("PedidoBebida");
             return listaBebidas;
         }
-
         public Proveedor PagarProveedor(double montoPagar, Proveedor proveedor)
         {
             var proveedorActualizado = this.Caja.Pagar(montoPagar, proveedor);
@@ -137,7 +134,6 @@ namespace LibraryClassRestaurant.Empleados
             }
             return proveedorActualizado;
         }
-
         public void LiquidarProveedores() 
         {
             bool pagoOk = false;
@@ -158,13 +154,14 @@ namespace LibraryClassRestaurant.Empleados
             }
             if (!pagoOk)
             {
-                sb.AppendLine("NO HAY PROVEEDORES CON DEUDA");
+                sb.AppendLine("NO SE ENCONTRARON OPERACIONES A REALIZAR");
             }
-            else 
+            else
             {
-                Mensaje(sb.ToString());            
+                ActualizarProveedores(listaProveedoresActualizada);
+                sb.AppendLine("OPERACIONES REALIZADAS CON EXITO");
             }
-            ActualizarProveedores(listaProveedoresActualizada);
+            Mensaje(sb.ToString());
         }
 
         private StringBuilder ArmadoDeMensaje(Proveedor itemActualizado, StringBuilder sb)
@@ -220,26 +217,32 @@ namespace LibraryClassRestaurant.Empleados
             var listaOrdenadaEmpleados = GenerandoPrioridadPago();
             int pagosRealizados = 0;
             Log.Enter("PAGO A EMPLEADOS");
+            StringBuilder sb = new StringBuilder();
             foreach (var empleado in listaOrdenadaEmpleados)
             {
+
                 bool pagoOk = this.Caja.PagarSueldoEmpleado(empleado.Sueldo);
                 if (!pagoOk)
                 {
-                    Mensaje("No hay mas dinero en la caja para el pago a Emplpleados");
+                    sb.AppendLine($"- AVISO: PAGO NO REALIZADO {empleado.NombreCompleto}, {empleado.Profile} (${empleado.Sueldo})");
+                    Mensaje("No hay mas dinero en la caja para el pago a Empleados");
                     Log.Enter("DINERO INSUFICIENTE PARA EL PAGO A EMPLEADOS");
                     break;
                 }
-                else 
+                else
                 {
-                    empleado.SueldoBolsillo+=empleado.Sueldo;
+                    empleado.SueldoBolsillo += empleado.Sueldo;
+                    sb.AppendLine($"- PAGO A EMPLEADO {empleado.NombreCompleto}, {empleado.Profile}, REALIZADO (${empleado.Sueldo})");
                     pagosRealizados++;
                 }
+            }
+            Mensaje(sb.ToString());
                 if (pagosRealizados == listaOrdenadaEmpleados.Count)
                 {
-                    Mensaje("Se han pagado todos los sueldos de los empleados");
+                    Mensaje("SE PAGARON TODOS LOS SUELDOS DE LOS EMPLEADOS");
                     Log.Enter("PAGO A EMPLEADOS REALIZADO");
                 }
-            }
+            
             Log.Enter("ACTUALIZACION DE EMPLEADOS");
             Serializador.SaveJson<Empleado>("Empleados", listaOrdenadaEmpleados);
         }

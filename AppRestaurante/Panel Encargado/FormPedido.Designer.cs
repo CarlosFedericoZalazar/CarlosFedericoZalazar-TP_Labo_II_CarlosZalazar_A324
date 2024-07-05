@@ -89,7 +89,7 @@
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(75, 324);
+            btnAceptar.Location = new Point(66, 244);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(139, 48);
             btnAceptar.TabIndex = 20;
@@ -99,7 +99,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(271, 326);
+            btnCancelar.Location = new Point(262, 246);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(139, 46);
             btnCancelar.TabIndex = 21;
@@ -110,7 +110,7 @@
             // txtPrecio
             // 
             txtPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPrecio.Location = new Point(265, 102);
+            txtPrecio.Location = new Point(289, 98);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.ReadOnly = true;
             txtPrecio.Size = new Size(145, 29);
@@ -161,7 +161,7 @@
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPrecio.Location = new Point(265, 78);
+            lblPrecio.Location = new Point(289, 74);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(63, 21);
             lblPrecio.TabIndex = 32;
@@ -170,7 +170,7 @@
             // txtAPagar
             // 
             txtAPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtAPagar.Location = new Point(262, 166);
+            txtAPagar.Location = new Point(286, 162);
             txtAPagar.Name = "txtAPagar";
             txtAPagar.ReadOnly = true;
             txtAPagar.Size = new Size(148, 29);
@@ -182,7 +182,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(265, 143);
+            label1.Location = new Point(289, 139);
             label1.Name = "label1";
             label1.Size = new Size(86, 21);
             label1.TabIndex = 34;
@@ -193,7 +193,7 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(489, 426);
+            ClientSize = new Size(489, 344);
             Controls.Add(label1);
             Controls.Add(txtAPagar);
             Controls.Add(lblPrecio);

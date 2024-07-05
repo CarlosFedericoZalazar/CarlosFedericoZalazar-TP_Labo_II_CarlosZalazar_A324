@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAltaPlato));
             btnCancelar = new Button();
             lblIngrediente = new Label();
             txtIngrediente = new TextBox();
@@ -167,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(664, 360);
             Controls.Add(ncTiempoPreparacion);
             Controls.Add(label2);
@@ -180,6 +182,7 @@
             Controls.Add(txtIngrediente);
             Controls.Add(lblIngrediente);
             Controls.Add(btnCancelar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAltaPlato";

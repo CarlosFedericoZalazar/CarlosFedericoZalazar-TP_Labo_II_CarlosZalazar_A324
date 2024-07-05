@@ -10,27 +10,7 @@ namespace LibraryClassRestaurant.Mercaderia
 {
     public class StockComestible : Stock
     {
-        const double STOCK_MINIMO = 30;
-        private double _cantidad;
-        public double Cantidad
-        {
-            get { return _cantidad; }
-            set
-            {
-                if (value < STOCK_MINIMO) // Reemplaza 10 con el valor que desees
-                {
-                    Log.Enter("Aviso: El valor es menor al límite establecido.");
-                }
-                if (value % 10 == 1)
-                {
-                    _cantidad = Math.Round(value, 3);
-                }
-                else
-                {
-                    _cantidad = value;
-                }
-            }
-        }
+        public double Cantidad { get; set; }        
         public StockComestible() { }
         public StockComestible(string producto, double cantidad):base(producto)
         {

@@ -61,7 +61,7 @@ namespace AppRestaurante.Salon
 
             int cantidadBebidasInicial = bebidaSolicitadas.Count;
 
-            Cocinero.Mensaje(ordenMesa.MostrarOrden(listaMenu));
+            Cocinero.Mensaje($"{ordenMesa.MostrarOrden(listaMenu)}\n{ordenMesa.MostrarBebidas()}");
             //Enviando orden a cocina
 
             var bebidasActualizadas = Mesero.BuscarBebidas(bebidaSolicitadas);

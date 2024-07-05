@@ -118,6 +118,11 @@ namespace AppRestaurante.Panel_Encargado
                 txtNombreProducto.Clear();
                 txtPrecio.Clear();
             }
+            else
+            {
+                FormularioProveedor.Show();
+                this.Close();
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

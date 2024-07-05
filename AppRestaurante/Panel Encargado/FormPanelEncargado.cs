@@ -52,7 +52,7 @@ namespace AppRestoForm
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            FormStock formStock = new FormStock();
+            FormStock formStock = new FormStock(Encargado);
             formStock.Show();
         }
 

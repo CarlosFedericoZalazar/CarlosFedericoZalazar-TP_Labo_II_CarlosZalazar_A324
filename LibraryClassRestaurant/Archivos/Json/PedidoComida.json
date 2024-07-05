@@ -234,5 +234,83 @@
     },
     "FechaPedido": "2024-07-05T15:18:59.8269519-03:00",
     "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 30,
+      "Nombre": "FIDEOS",
+      "Precio": 108000,
+      "Proveedor": {
+        "Nombre": "PASTAS MABLE",
+        "Cuit": "30-28381755",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 0,
+        "DineroACobrar": 0,
+        "ProductosOfrecidos": [
+          {
+            "FIDEOS": 3600
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-05T17:08:44.1185992-03:00",
+    "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 200,
+      "Nombre": "TOMATE",
+      "Precio": 140000,
+      "Proveedor": {
+        "Nombre": "VERDULERIA KELY",
+        "Cuit": "30-40547055",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 0,
+        "DineroACobrar": 0,
+        "ProductosOfrecidos": [
+          {
+            "PAPA": 800
+          },
+          {
+            "TOMATE": 700
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-05T17:12:24.097057-03:00",
+    "Estado": 2
+  },
+  {
+    "Comida": {
+      "Cantidad": 150,
+      "Nombre": "FIDEOS",
+      "Precio": 540000,
+      "Proveedor": {
+        "Nombre": "PASTAS MABLE",
+        "Cuit": "30-28381755",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Comida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 0,
+        "DineroACobrar": 0,
+        "ProductosOfrecidos": [
+          {
+            "FIDEOS": 3600
+          }
+        ]
+      },
+      "Tipo": 1
+    },
+    "FechaPedido": "2024-07-05T17:12:42.9774569-03:00",
+    "Estado": 2
   }
 ]

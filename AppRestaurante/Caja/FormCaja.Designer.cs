@@ -69,7 +69,7 @@
             btnPagos.Name = "btnPagos";
             btnPagos.Size = new Size(160, 64);
             btnPagos.TabIndex = 2;
-            btnPagos.Text = "PAGOS";
+            btnPagos.Text = "PAGOS EMPLEADOS";
             btnPagos.UseVisualStyleBackColor = true;
             btnPagos.Click += btnPagos_Click;
             // 
