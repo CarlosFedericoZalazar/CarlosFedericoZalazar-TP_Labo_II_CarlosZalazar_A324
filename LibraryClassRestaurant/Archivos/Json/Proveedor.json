@@ -6,8 +6,8 @@
     "TipoProducto": "Comida",
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
-    "Estado": 1,
-    "DineroACobrar": 10436500,
+    "Estado": 0,
+    "DineroACobrar": 0,
     "ProductosOfrecidos": [
       {
         "POLLO": 2000
@@ -27,8 +27,8 @@
     "TipoProducto": "Bebida",
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
-    "Estado": 1,
-    "DineroACobrar": 1624000,
+    "Estado": 0,
+    "DineroACobrar": 0,
     "ProductosOfrecidos": [
       {
         "CERVEZA 1L": 1800
@@ -45,8 +45,8 @@
     "TipoProducto": "Comida",
     "MedioDePago": 0,
     "DiaDeEntrega": 0,
-    "Estado": 1,
-    "DineroACobrar": 1686000,
+    "Estado": 0,
+    "DineroACobrar": 0,
     "ProductosOfrecidos": [
       {
         "PAPA": 800

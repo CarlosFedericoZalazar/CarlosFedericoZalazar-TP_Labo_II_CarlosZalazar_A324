@@ -21,13 +21,11 @@ namespace LibraryClassRestaurant.Atencion
         public double Dinero { get; set; }
         public DateTime Fecha { get; set; }
         public Cuenta.MedioPago MedioPago { get; set; }
-        public Concepto ConceptoOperacion { get; set; }
         public Caja() { }
-
         public Caja(double dineroCaja)
         {
             DateTime Fecha = DateTime.Now;
-            double Dinero = dineroCaja;
+            Dinero = dineroCaja;
         }
         public Caja(double dineroCaja, Cuenta.MedioPago medioPago) : this(dineroCaja)
         {
@@ -53,24 +51,23 @@ namespace LibraryClassRestaurant.Atencion
 
         public static Caja ObtenerDineroCaja()
         {
-            var listaCaja = Serializador.Read<Caja>("DineroCaja");
-            if (listaCaja.Count > 0)
+            var caja = Serializador.ReadJsonSimple<Caja>("DineroCaja");
+            if (caja == null)
             {
-                return listaCaja[listaCaja.Count - 1];
+                caja = new Caja(10000);
             }
-            return new Caja(0);
+            return caja;
         }
 
-        public void Cobrar(double dinero, Concepto concepto = Concepto.PagoDeCliente) 
+        public void Cobrar(double dinero) 
         {
-            this.ConceptoOperacion = concepto;
             this.Dinero += dinero;
             GuardarDineroCaja(this);
         }
 
         private static void GuardarDineroCaja(Caja caja)
         {
-            Serializador.Save<Caja>("DineroCaja", caja);
+            Serializador.SaveJsonSimple<Caja>("DineroCaja", caja);
         }
         public static void RegistrarTicket(Cuenta cuenta)
         {
@@ -90,6 +87,7 @@ namespace LibraryClassRestaurant.Atencion
             {
                 Log.Enter($"PAGO A PROVEEDOR: {proveedor.Nombre}, MONTO PAGADO: ${montoAPagar}");
                 this.Dinero -= montoAPagar;
+                proveedor.DineroACobrar = 0;
             }
             else
             { 
@@ -97,7 +95,6 @@ namespace LibraryClassRestaurant.Atencion
                 proveedor.DineroACobrar = dineroFaltante;
                 this.Dinero = 0;
             }
-            this.ConceptoOperacion = Concepto.PagoAProveedor;
             GuardarDineroCaja(this);
 
             return proveedor;
@@ -131,7 +128,6 @@ namespace LibraryClassRestaurant.Atencion
             if (this.Dinero - sueldo >= 0)
             {
                 this.Dinero -= sueldo;
-                this.ConceptoOperacion = Concepto.PagoAEmpleado;
                 pagoOk = true;
                 GuardarDineroCaja(this);
             }

@@ -140,6 +140,7 @@ namespace LibraryClassRestaurant.Empleados
 
         public void LiquidarProveedores() 
         {
+            bool pagoOk = false;
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("RESUMEN DE PAGO DE PROVEEDORES: \n");
             var listaProveedores = Proveedor.GetProveedores();
@@ -148,13 +149,21 @@ namespace LibraryClassRestaurant.Empleados
             {
                 if (item.Estado == Proveedor.EstadoCuenta.Deuda)
                 {
+                    pagoOk = true;
                     var itemActualizado = PagarProveedor(item.DineroACobrar,item);
                     ArmadoDeMensaje(itemActualizado, sb);
                     Log.Enter($"PROVEEDOR {itemActualizado.Nombre} SE LE DEBE {itemActualizado.DineroACobrar}, SE CURSA ORDEN DE PAGO");
                 }
                 listaProveedoresActualizada.Add(item);
             }
-            Mensaje(sb.ToString());
+            if (!pagoOk)
+            {
+                sb.AppendLine("NO HAY PROVEEDORES CON DEUDA");
+            }
+            else 
+            {
+                Mensaje(sb.ToString());            
+            }
             ActualizarProveedores(listaProveedoresActualizada);
         }
 
@@ -178,7 +187,7 @@ namespace LibraryClassRestaurant.Empleados
             {
                 if (item.Nombre == proveedor.Nombre)
                 {
-                    item.DineroACobrar += proveedor.DineroACobrar;
+                    item.DineroACobrar = proveedor.DineroACobrar;
                     item.Estado = proveedor.Estado;
                     break;
                 }

@@ -33,17 +33,6 @@
     "NombreCompleto": "CARLOS  ZALAZAR"
   },
   {
-    "Nombre": "MANUEL",
-    "Apellido": "ADORNI",
-    "Direccion": "CASA ROSADA 452, CABA",
-    "Telefono": "123123123",
-    "Sueldo": 120000,
-    "Profile": 3,
-    "EstadoEmpleado": 0,
-    "SueldoBolsillo": 0,
-    "NombreCompleto": "MANUEL ADORNI"
-  },
-  {
     "Nombre": "FELIPE",
     "Apellido": "GODOY",
     "Direccion": "ALEMANIA 3344, CABA",
@@ -75,6 +64,17 @@
     "EstadoEmpleado": 0,
     "SueldoBolsillo": 0,
     "NombreCompleto": "ALEJANDRO GALEANO"
+  },
+  {
+    "Nombre": "MANUEL",
+    "Apellido": "ADORNI",
+    "Direccion": "CASA ROSADA 452, CABA",
+    "Telefono": "123123123",
+    "Sueldo": 120000,
+    "Profile": 3,
+    "EstadoEmpleado": 0,
+    "SueldoBolsillo": 0,
+    "NombreCompleto": "MANUEL ADORNI"
   },
   {
     "Nombre": "MARCELO",

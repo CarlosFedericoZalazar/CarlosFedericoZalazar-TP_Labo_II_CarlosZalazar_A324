@@ -14,13 +14,27 @@ namespace LibraryClassRestaurant.Archivos
     {        
         public static void SaveJson<T>(string path, List<T> lista) 
         {             
-            path = GetJsonFilePath(path)+".json"; // Ver donde guardamos los archivos
+            path = GetJsonFilePath(path)+".json"; 
             using (var writer = new StreamWriter(path)) 
             {
                 var option = new JsonSerializerOptions();
                 option.WriteIndented = true;
 
                 var json = JsonSerializer.Serialize(lista, option);
+                writer.Write(json);
+            }
+        }
+        public static void SaveJsonSimple<T>(string path, T objeto)
+        {
+            path = GetJsonFilePath(path) + ".json";
+            using (var writer = new StreamWriter(path))
+            {
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                var json = JsonSerializer.Serialize(objeto, options);
                 writer.Write(json);
             }
         }
@@ -48,6 +62,22 @@ namespace LibraryClassRestaurant.Archivos
             }
             return lista;
         }
+
+        public static T ReadJsonSimple<T>(string path)
+        {
+            path = GetJsonFilePath(path) + ".json";
+            if (File.Exists(path))
+            {
+                using (var reader = new StreamReader(path))
+                {
+                    var json = reader.ReadToEnd();
+                    var objeto = JsonSerializer.Deserialize<T>(json);
+                    return objeto;
+                }
+            }
+            return default(T); 
+        }
+
 
         public static List<T> Read<T>(string path) 
         {

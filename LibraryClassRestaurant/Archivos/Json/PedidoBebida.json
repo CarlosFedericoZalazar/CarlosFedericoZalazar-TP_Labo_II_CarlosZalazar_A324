@@ -1,14 +1,42 @@
 [
   {
-    "Cantidad": 99,
-    "Alcoholica": false,
-    "Precio": 1200,
-    "Producto": "CERVEZA 1L"
+    "Bebida": null,
+    "FechaPedido": "0001-01-01T00:00:00",
+    "Estado": 0
   },
   {
-    "Cantidad": 40,
-    "Alcoholica": false,
-    "Precio": 0,
-    "Producto": "FERNET 750"
+    "Bebida": null,
+    "FechaPedido": "0001-01-01T00:00:00",
+    "Estado": 0
+  },
+  {
+    "Bebida": {
+      "Cantidad": 4,
+      "Alcoholica": false,
+      "PrecioDeVenta": 0,
+      "Nombre": "CERVEZA 1L",
+      "Precio": 7200,
+      "Proveedor": {
+        "Nombre": "QUILMES",
+        "Cuit": "30-73161287",
+        "Direccion": "Avda. Siempre Viva 1064, Springfield",
+        "TipoProducto": "Bebida",
+        "MedioDePago": 0,
+        "DiaDeEntrega": 0,
+        "Estado": 0,
+        "DineroACobrar": 0,
+        "ProductosOfrecidos": [
+          {
+            "CERVEZA 1L": 1800
+          },
+          {
+            "FERNET 750": 3200
+          }
+        ]
+      },
+      "Tipo": 0
+    },
+    "FechaPedido": "2024-07-05T15:19:36.2042595-03:00",
+    "Estado": 1
   }
 ]

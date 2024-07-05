@@ -38,5 +38,15 @@
     "Monto": 13700,
     "Levantado": true,
     "Cobrado": true
+  },
+  {
+    "NroMesa": 9,
+    "MedioPagoCuenta": 0,
+    "Fecha": "2024-07-05T15:21:11.5594512-03:00",
+    "Nombre": "FELIPE GODOY",
+    "Perfil": 2,
+    "Monto": 6200,
+    "Levantado": true,
+    "Cobrado": true
   }
 ]

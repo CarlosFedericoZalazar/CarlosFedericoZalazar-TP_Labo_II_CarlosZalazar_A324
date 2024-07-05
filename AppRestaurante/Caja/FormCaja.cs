@@ -49,6 +49,7 @@ namespace AppRestaurante.Caja
         private void btnPagoProveedores_Click(object sender, EventArgs e)
         {
             Encargado.LiquidarProveedores();
+            txtDineroCaja.Text = $"$ {Encargado.Caja.Dinero.ToString()}";
         }
 
         private void button1_Click(object sender, EventArgs e)
